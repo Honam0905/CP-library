@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: PARS_yosupo.test.cpp
+    title: PARS_yosupo.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"debug.hpp\"\nvoid __print(int x) {cerr << x;}\nvoid __print(long\
@@ -47,8 +50,9 @@ data:
   path: debug.hpp
   requiredBy: []
   timestamp: '2024-05-13 08:03:39+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - PARS_yosupo.test.cpp
 documentation_of: debug.hpp
 layout: document
 redirect_from:
