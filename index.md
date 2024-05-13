@@ -3,18 +3,18 @@ data:
   libraryCategories:
   - name: DS
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DS/fenwick_tree.hpp
       title: DS/fenwick_tree.hpp
   - name: Misc
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Misc/debug.hpp
       title: Misc/debug.hpp
     - icon: ':warning:'
       path: Misc/faster_io.hpp
       title: Misc/faster_io.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Misc/marco.hpp
       title: Misc/marco.hpp
   verificationCategories:
@@ -23,5 +23,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: example.test.cpp
       title: example.test.cpp
+  - name: test/yosupo
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/PARS_yosupo.test.cpp
+      title: test/yosupo/PARS_yosupo.test.cpp
 layout: toppage
 ---

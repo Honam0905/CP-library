@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/PARS_yosupo.test.cpp
+    title: test/yosupo/PARS_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Misc/marco.hpp\"\n// Judges with GCC >= 12 only needs Ofast\n\
@@ -89,8 +92,9 @@ data:
   path: Misc/marco.hpp
   requiredBy: []
   timestamp: '2024-05-13 12:33:07+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/PARS_yosupo.test.cpp
 documentation_of: Misc/marco.hpp
 layout: document
 redirect_from:
