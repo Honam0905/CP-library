@@ -9,6 +9,9 @@ data:
   - name: Misc
     pages:
     - icon: ':warning:'
+      path: Misc/debug.hpp
+      title: Misc/debug.hpp
+    - icon: ':warning:'
       path: Misc/faster_io.hpp
       title: Misc/faster_io.hpp
   verificationCategories:
