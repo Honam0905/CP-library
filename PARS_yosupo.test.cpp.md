@@ -1,14 +1,11 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: Fenwick_tree.hpp
-    title: Fenwick_tree.hpp
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes: {}
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.12.3/x64/lib/python3.12/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
@@ -31,13 +28,12 @@ data:
     \ x; cin>>p>>x;\n            ft.update(p + 1, x);\n        } else {\n        \
     \    int l, r; cin>>l>>r;\n            cout<<ft.prefix(l,r)<<'\\n';\n        }\n\
     \    }\n// cerr << \"Time elapsed: \" << TIME << \" s.\\n\";\n}\n}\n"
-  dependsOn:
-  - Fenwick_tree.hpp
+  dependsOn: []
   isVerificationFile: true
   path: PARS_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-05-13 12:09:00+07:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '1970-01-01 00:00:00+00:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: PARS_yosupo.test.cpp
 layout: document

@@ -8,12 +8,12 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"fast_io.hpp\"\n\n#include <unistd.h>\n#include <algorithm>\n\
+  bundledCode: "#line 2 \"Misc/fast_io.hpp\"\n\n#include <unistd.h>\n#include <algorithm>\n\
     #include <array>\n#include <cassert>\n#include <cctype>\n#include <cstring>\n\
     #include <sstream>\n#include <string>\n#include <type_traits>\n#include <vector>\n\
-    #include <bit>\n#include <cstdint>\n#line 16 \"fast_io.hpp\"\n#include <numeric>\n\
-    #line 18 \"fast_io.hpp\"\n\nnamespace yosupo {\n\nnamespace internal {\n\ntemplate\
-    \ <class T>\nusing is_signed_int128 =\n    typename std::conditional<std::is_same<T,\
+    #include <bit>\n#include <cstdint>\n#line 16 \"Misc/fast_io.hpp\"\n#include <numeric>\n\
+    #line 18 \"Misc/fast_io.hpp\"\n\nnamespace yosupo {\n\nnamespace internal {\n\n\
+    template <class T>\nusing is_signed_int128 =\n    typename std::conditional<std::is_same<T,\
     \ __int128_t>::value ||\n                                  std::is_same<T, __int128>::value,\n\
     \                              std::true_type,\n                             \
     \ std::false_type>::type;\n\ntemplate <class T>\nusing is_unsigned_int128 =\n\
@@ -321,15 +321,15 @@ data:
     \ namespace yosupo;\nScanner sc(stdin);\nPrinter pr(stdout);\n"
   dependsOn: []
   isVerificationFile: false
-  path: fast_io.hpp
+  path: Misc/fast_io.hpp
   requiredBy: []
-  timestamp: '2024-05-13 07:56:20+07:00'
+  timestamp: '2024-05-13 12:19:22+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: fast_io.hpp
+documentation_of: Misc/fast_io.hpp
 layout: document
 redirect_from:
-- /library/fast_io.hpp
-- /library/fast_io.hpp.html
-title: fast_io.hpp
+- /library/Misc/fast_io.hpp
+- /library/Misc/fast_io.hpp.html
+title: Misc/fast_io.hpp
 ---
