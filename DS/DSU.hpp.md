@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/aizu/disjointset.test.cpp
+    title: test/aizu/disjointset.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/unionfind_yosupo.test.cpp
     title: test/yosupo/unionfind_yosupo.test.cpp
   _isVerificationFailed: false
@@ -37,6 +40,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/unionfind_yosupo.test.cpp
+  - test/aizu/disjointset.test.cpp
 documentation_of: DS/DSU.hpp
 layout: document
 redirect_from:

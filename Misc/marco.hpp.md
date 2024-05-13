@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: test/aizu/disjointset.test.cpp
+    title: test/aizu/disjointset.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/PARS_yosupo.test.cpp
     title: test/yosupo/PARS_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
@@ -99,6 +102,7 @@ data:
   verifiedWith:
   - test/yosupo/unionfind_yosupo.test.cpp
   - test/yosupo/PARS_yosupo.test.cpp
+  - test/aizu/disjointset.test.cpp
 documentation_of: Misc/marco.hpp
 layout: document
 redirect_from:

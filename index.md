@@ -26,6 +26,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: example.test.cpp
       title: example.test.cpp
+  - name: test/aizu
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aizu/disjointset.test.cpp
+      title: test/aizu/disjointset.test.cpp
   - name: test/yosupo
     pages:
     - icon: ':heavy_check_mark:'
