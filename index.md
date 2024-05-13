@@ -6,11 +6,11 @@ data:
     - icon: ':warning:'
       path: Fenwick_tree.hpp
       title: Fenwick_tree.hpp
-    - icon: ':warning:'
-      path: debug.hpp
-      title: debug.hpp
   - name: Misc
     pages:
+    - icon: ':warning:'
+      path: Misc/debug.hpp
+      title: Misc/debug.hpp
     - icon: ':warning:'
       path: Misc/fast_io.hpp
       title: Misc/fast_io.hpp

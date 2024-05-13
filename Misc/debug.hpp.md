@@ -8,8 +8,8 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"debug.hpp\"\nvoid __print(int x) {cerr << x;}\nvoid __print(long\
-    \ x) {cerr << x;}\nvoid __print(long long x) {cerr << x;}\nvoid __print(unsigned\
+  bundledCode: "#line 2 \"Misc/debug.hpp\"\nvoid __print(int x) {cerr << x;}\nvoid\
+    \ __print(long x) {cerr << x;}\nvoid __print(long long x) {cerr << x;}\nvoid __print(unsigned\
     \ x) {cerr << x;}\nvoid __print(unsigned long x) {cerr << x;}\nvoid __print(unsigned\
     \ long long x) {cerr << x;}\nvoid __print(float x) {cerr << x;}\nvoid __print(double\
     \ x) {cerr << x;}\nvoid __print(long double x) {cerr << x;}\nvoid __print(char\
@@ -44,15 +44,15 @@ data:
     \ dbg(...) cerr << \"[\" << #__VA_ARGS__ << \"]:\"; dbg_out(__VA_ARGS__);\n"
   dependsOn: []
   isVerificationFile: false
-  path: debug.hpp
+  path: Misc/debug.hpp
   requiredBy: []
-  timestamp: '2024-05-13 08:03:39+07:00'
+  timestamp: '2024-05-13 12:19:42+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: debug.hpp
+documentation_of: Misc/debug.hpp
 layout: document
 redirect_from:
-- /library/debug.hpp
-- /library/debug.hpp.html
-title: debug.hpp
+- /library/Misc/debug.hpp
+- /library/Misc/debug.hpp.html
+title: Misc/debug.hpp
 ---
