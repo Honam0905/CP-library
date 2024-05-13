@@ -3,23 +3,18 @@ data:
   libraryCategories:
   - name: .
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: Fenwick_tree.hpp
       title: Fenwick_tree.hpp
-    - icon: ':x:'
+    - icon: ':warning:'
       path: debug.hpp
       title: debug.hpp
-    - icon: ':x:'
+    - icon: ':warning:'
       path: fast_io.hpp
       title: fast_io.hpp
-    - icon: ':x:'
+    - icon: ':warning:'
       path: marco.hpp
       title: marco.hpp
-  verificationCategories:
-  - name: .
-    pages:
-    - icon: ':x:'
-      path: PARS_yosupo.test.cpp
-      title: PARS_yosupo.test.cpp
+  verificationCategories: []
 layout: toppage
 ---

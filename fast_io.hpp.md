@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: PARS_yosupo.test.cpp
-    title: PARS_yosupo.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 2 \"fast_io.hpp\"\n\n#include <unistd.h>\n#include <algorithm>\n\
@@ -327,9 +324,8 @@ data:
   path: fast_io.hpp
   requiredBy: []
   timestamp: '2024-05-13 07:56:20+07:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - PARS_yosupo.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: fast_io.hpp
 layout: document
 redirect_from:
