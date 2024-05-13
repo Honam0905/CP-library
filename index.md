@@ -1,11 +1,11 @@
 ---
 data:
   libraryCategories:
-  - name: .
+  - name: DS
     pages:
     - icon: ':warning:'
-      path: Fenwick_tree.hpp
-      title: Fenwick_tree.hpp
+      path: DS/Fenwick_tree.hpp
+      title: DS/Fenwick_tree.hpp
   - name: Misc
     pages:
     - icon: ':warning:'

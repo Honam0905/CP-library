@@ -8,8 +8,8 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"Fenwick_tree.hpp\"\nstruct Fenwick{\n\tvector<ll> s;\n \
-    \   int n;\n\tFenwick(int n) : n(n),s(n+1,0) {}\n\tvoid update(int pos, ll dif)\
+  bundledCode: "#line 2 \"DS/Fenwick_tree.hpp\"\nstruct Fenwick{\n\tvector<ll> s;\n\
+    \    int n;\n\tFenwick(int n) : n(n),s(n+1,0) {}\n\tvoid update(int pos, ll dif)\
     \ {\n        for (; pos <= n; pos += pos & -pos) s[pos] += dif;\n    }\n    ll\
     \ query(int pos) {\n        ll res = 0;\n        for (; pos > 0; pos -= pos &\
     \ -pos) res += s[pos];\n        return res;\n    }\n    ll prefix(int l,int r){\n\
@@ -32,15 +32,15 @@ data:
     \t}\n};\n"
   dependsOn: []
   isVerificationFile: false
-  path: Fenwick_tree.hpp
+  path: DS/Fenwick_tree.hpp
   requiredBy: []
-  timestamp: '2024-05-13 12:09:00+07:00'
+  timestamp: '2024-05-13 12:20:01+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: Fenwick_tree.hpp
+documentation_of: DS/Fenwick_tree.hpp
 layout: document
 redirect_from:
-- /library/Fenwick_tree.hpp
-- /library/Fenwick_tree.hpp.html
-title: Fenwick_tree.hpp
+- /library/DS/Fenwick_tree.hpp
+- /library/DS/Fenwick_tree.hpp.html
+title: DS/Fenwick_tree.hpp
 ---
