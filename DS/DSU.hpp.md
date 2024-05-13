@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/unionfind_yosupo.test.cpp
+    title: test/yosupo/unionfind_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"DS/DSU.hpp\"\n/**\n * Description: Disjoint Set Union with\
@@ -31,8 +34,9 @@ data:
   path: DS/DSU.hpp
   requiredBy: []
   timestamp: '2024-05-13 13:03:39+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/unionfind_yosupo.test.cpp
 documentation_of: DS/DSU.hpp
 layout: document
 redirect_from:

@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: DS
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DS/DSU.hpp
       title: DS/DSU.hpp
     - icon: ':heavy_check_mark:'
@@ -31,5 +31,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/PARS_yosupo.test.cpp
       title: test/yosupo/PARS_yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/unionfind_yosupo.test.cpp
+      title: test/yosupo/unionfind_yosupo.test.cpp
 layout: toppage
 ---

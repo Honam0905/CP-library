@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/PARS_yosupo.test.cpp
     title: test/yosupo/PARS_yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/unionfind_yosupo.test.cpp
+    title: test/yosupo/unionfind_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -134,6 +137,7 @@ data:
   timestamp: '2024-05-13 12:48:47+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/yosupo/unionfind_yosupo.test.cpp
   - test/yosupo/PARS_yosupo.test.cpp
 documentation_of: Misc/debug.hpp
 layout: document
