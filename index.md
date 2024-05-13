@@ -3,6 +3,9 @@ data:
   libraryCategories:
   - name: DS
     pages:
+    - icon: ':warning:'
+      path: DS/DSU.hpp
+      title: DS/DSU.hpp
     - icon: ':heavy_check_mark:'
       path: DS/fenwick_tree.hpp
       title: DS/fenwick_tree.hpp
