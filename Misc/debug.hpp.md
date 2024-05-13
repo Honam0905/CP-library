@@ -11,45 +11,127 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Misc/debug.hpp\"\nvoid __print(int x) {cerr << x;}\nvoid\
-    \ __print(long x) {cerr << x;}\nvoid __print(long long x) {cerr << x;}\nvoid __print(unsigned\
-    \ x) {cerr << x;}\nvoid __print(unsigned long x) {cerr << x;}\nvoid __print(unsigned\
-    \ long long x) {cerr << x;}\nvoid __print(float x) {cerr << x;}\nvoid __print(double\
-    \ x) {cerr << x;}\nvoid __print(long double x) {cerr << x;}\nvoid __print(char\
-    \ x) {cerr << '\\'' << x << '\\'';}\nvoid __print(const char *x) {cerr << '\\\"\
-    ' << x << '\\\"';}\nvoid __print(const string &x) {cerr << '\\\"' << x << '\\\"\
-    ';}\nvoid __print(bool x) {cerr << (x ? \"true\" : \"false\");}\n \ntemplate<typename\
-    \ T, typename V>\nvoid __print(const pair<T, V> &x) {cerr << '{'; __print(x.first);\
-    \ cerr << \", \"; __print(x.second); cerr << '}';}\ntemplate<typename T>\nvoid\
-    \ __print(const T &x) {int f = 0; cerr << '{'; for (auto &i: x) cerr << (f++ ?\
-    \ \", \" : \"\"), __print(i); cerr << \"}\";}\nvoid _print() {cerr << \"]\\n\"\
-    ;}\ntemplate <typename T, typename... V>\nvoid _print(T t, V... v) {__print(t);\
-    \ if (sizeof...(v)) cerr << \", \"; _print(v...);}\n \nvoid dbg_out() { cerr <<\
-    \ endl; }\ntemplate<typename Head, typename... Tail> void dbg_out(Head H, Tail...\
-    \ T) { __print(H); if (sizeof...(T)) cerr << \", \"; dbg_out(T...); }\n#define\
-    \ dbg(...) cerr << \"[\" << #__VA_ARGS__ << \"]:\"; dbg_out(__VA_ARGS__);\n"
-  code: "void __print(int x) {cerr << x;}\nvoid __print(long x) {cerr << x;}\nvoid\
-    \ __print(long long x) {cerr << x;}\nvoid __print(unsigned x) {cerr << x;}\nvoid\
-    \ __print(unsigned long x) {cerr << x;}\nvoid __print(unsigned long long x) {cerr\
-    \ << x;}\nvoid __print(float x) {cerr << x;}\nvoid __print(double x) {cerr <<\
-    \ x;}\nvoid __print(long double x) {cerr << x;}\nvoid __print(char x) {cerr <<\
-    \ '\\'' << x << '\\'';}\nvoid __print(const char *x) {cerr << '\\\"' << x << '\\\
-    \"';}\nvoid __print(const string &x) {cerr << '\\\"' << x << '\\\"';}\nvoid __print(bool\
-    \ x) {cerr << (x ? \"true\" : \"false\");}\n \ntemplate<typename T, typename V>\n\
-    void __print(const pair<T, V> &x) {cerr << '{'; __print(x.first); cerr << \",\
-    \ \"; __print(x.second); cerr << '}';}\ntemplate<typename T>\nvoid __print(const\
-    \ T &x) {int f = 0; cerr << '{'; for (auto &i: x) cerr << (f++ ? \", \" : \"\"\
-    ), __print(i); cerr << \"}\";}\nvoid _print() {cerr << \"]\\n\";}\ntemplate <typename\
-    \ T, typename... V>\nvoid _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr\
-    \ << \", \"; _print(v...);}\n \nvoid dbg_out() { cerr << endl; }\ntemplate<typename\
-    \ Head, typename... Tail> void dbg_out(Head H, Tail... T) { __print(H); if (sizeof...(T))\
-    \ cerr << \", \"; dbg_out(T...); }\n#define dbg(...) cerr << \"[\" << #__VA_ARGS__\
-    \ << \"]:\"; dbg_out(__VA_ARGS__);\n"
+  bundledCode: '#line 1 "Misc/debug.hpp"
+
+    void __print(int x) {cerr << x;}
+
+    void __print(long x) {cerr << x;}
+
+    void __print(long long x) {cerr << x;}
+
+    void __print(unsigned x) {cerr << x;}
+
+    void __print(unsigned long x) {cerr << x;}
+
+    void __print(unsigned long long x) {cerr << x;}
+
+    void __print(float x) {cerr << x;}
+
+    void __print(double x) {cerr << x;}
+
+    void __print(long double x) {cerr << x;}
+
+    void __print(char x) {cerr << ''\'''' << x << ''\'''';}
+
+    void __print(const char *x) {cerr << ''\"'' << x << ''\"'';}
+
+    void __print(const string &x) {cerr << ''\"'' << x << ''\"'';}
+
+    void __print(bool x) {cerr << (x ? "true" : "false");}
+
+
+    template<typename T, typename V>
+
+    void __print(const pair<T, V> &x) {cerr << ''{''; __print(x.first); cerr << ",
+    "; __print(x.second); cerr << ''}'';}
+
+    template<typename T>
+
+    void __print(const T &x) {int f = 0; cerr << ''{''; for (auto &i: x) cerr << (f++
+    ? ", " : ""), __print(i); cerr << "}";}
+
+    template<>
+
+    void __print(const vector<bool> &x) {int f = 0; cerr << ''{''; for (size_t i =
+    0; i < x.size(); ++i) cerr << (f++ ? ", " : ""), __print(x[i]); cerr << "}";}
+
+    void _print() {cerr << "]\n";}
+
+    template <typename T, typename... V>
+
+    void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v...);}
+
+
+    void dbg_out() { cerr << endl; }
+
+    template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { __print(H);
+    if (sizeof...(T)) cerr << ", "; dbg_out(T...); }
+
+    #define dbg(...) cerr << "[" << #__VA_ARGS__ << "]:"; dbg_out(__VA_ARGS__);
+
+    '
+  code: 'void __print(int x) {cerr << x;}
+
+    void __print(long x) {cerr << x;}
+
+    void __print(long long x) {cerr << x;}
+
+    void __print(unsigned x) {cerr << x;}
+
+    void __print(unsigned long x) {cerr << x;}
+
+    void __print(unsigned long long x) {cerr << x;}
+
+    void __print(float x) {cerr << x;}
+
+    void __print(double x) {cerr << x;}
+
+    void __print(long double x) {cerr << x;}
+
+    void __print(char x) {cerr << ''\'''' << x << ''\'''';}
+
+    void __print(const char *x) {cerr << ''\"'' << x << ''\"'';}
+
+    void __print(const string &x) {cerr << ''\"'' << x << ''\"'';}
+
+    void __print(bool x) {cerr << (x ? "true" : "false");}
+
+
+    template<typename T, typename V>
+
+    void __print(const pair<T, V> &x) {cerr << ''{''; __print(x.first); cerr << ",
+    "; __print(x.second); cerr << ''}'';}
+
+    template<typename T>
+
+    void __print(const T &x) {int f = 0; cerr << ''{''; for (auto &i: x) cerr << (f++
+    ? ", " : ""), __print(i); cerr << "}";}
+
+    template<>
+
+    void __print(const vector<bool> &x) {int f = 0; cerr << ''{''; for (size_t i =
+    0; i < x.size(); ++i) cerr << (f++ ? ", " : ""), __print(x[i]); cerr << "}";}
+
+    void _print() {cerr << "]\n";}
+
+    template <typename T, typename... V>
+
+    void _print(T t, V... v) {__print(t); if (sizeof...(v)) cerr << ", "; _print(v...);}
+
+
+    void dbg_out() { cerr << endl; }
+
+    template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { __print(H);
+    if (sizeof...(T)) cerr << ", "; dbg_out(T...); }
+
+    #define dbg(...) cerr << "[" << #__VA_ARGS__ << "]:"; dbg_out(__VA_ARGS__);
+
+    '
   dependsOn: []
   isVerificationFile: false
   path: Misc/debug.hpp
   requiredBy: []
-  timestamp: '2024-05-13 12:29:49+07:00'
+  timestamp: '2024-05-13 12:48:47+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/PARS_yosupo.test.cpp
