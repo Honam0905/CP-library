@@ -2,9 +2,15 @@
 #include "marco.hpp"
 #include "fast_io.hpp"
 #include "Fenwick_tree.hpp"
-void solve()
+int main(){
+FT;
+int t=1; 
+//sc.read(t); int tc=0;
+while(t--)
 {
-    int n,q; sc.read(n,q);
+//tc++;
+//cout << "Case #" << tc << ": ";
+int n,q; sc.read(n,q);
     vector<ll> a(n);
     rep(i,n) sc.read(a[i]);
     Fenwick ft(n);
@@ -20,16 +26,6 @@ void solve()
             pr.writeln();
         }
     }
-}
-int main(){
-FT;
-int t=1; 
-//sc.read(t); int tc=0;
-while(t--)
-{
-//tc++;
-//cout << "Case #" << tc << ": ";
-solve();
 // cerr << "Time elapsed: " << TIME << " s.\n";
 }
 }
