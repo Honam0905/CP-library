@@ -14,6 +14,9 @@ data:
     - icon: ':warning:'
       path: Misc/faster_io.hpp
       title: Misc/faster_io.hpp
+    - icon: ':warning:'
+      path: Misc/marco.hpp
+      title: Misc/marco.hpp
   verificationCategories:
   - name: .
     pages:
