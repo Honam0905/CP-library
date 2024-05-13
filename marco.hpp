@@ -18,8 +18,6 @@ typedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_upda
 - find_by_order(k): return iterator to the k-th smallest element
 - order_of_key(x): the number of elements that are strictly smaller
 */
-#include<bits/stdc++.h>
-using namespace std;
 
 using ld = long double;
 using ll = long long;
