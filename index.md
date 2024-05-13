@@ -1,6 +1,11 @@
 ---
 data:
-  libraryCategories: []
+  libraryCategories:
+  - name: DS
+    pages:
+    - icon: ':warning:'
+      path: DS/fenwick_tree.hpp
+      title: DS/fenwick_tree.hpp
   verificationCategories:
   - name: .
     pages:
