@@ -9,6 +9,9 @@ data:
     - icon: ':warning:'
       path: fast_io.hpp
       title: fast_io.hpp
+    - icon: ':warning:'
+      path: marco.hpp
+      title: marco.hpp
   verificationCategories: []
 layout: toppage
 ---
