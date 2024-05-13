@@ -79,7 +79,7 @@ data:
     \ cerr << \", \"; dbg_out(T...); }\n#define dbg(...) cerr << \"[\" << #__VA_ARGS__\
     \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/tree_diameter_yosupo.test.cpp\"\
     \nconst int INF=1e9;\nconst ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT,\
-    \ Saigon-----------------\n#line 1 \"tree/Tree_diameter.hpp\"\n/*\n   @brief:Tree-Diameter\n\
+    \ Saigon-----------------\n#line 2 \"tree/Tree_diameter.hpp\"\n/*\n   @brief:Tree-Diameter\n\
     \   author:Kiffaz\n*/\ntemplate<typename T> struct tree_diameter {\n    struct\
     \ Edge {\n        int to;\n        T weight;\n    };\n\n    int n;\n    std::vector<std::vector<Edge>>\
     \ adj;\n\n    tree_diameter(int size) : n(size), adj(size) {}\n\n    void add_edge(int\
@@ -122,7 +122,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/tree_diameter_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-05-13 22:20:37+07:00'
+  timestamp: '2024-05-13 22:23:40+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/tree_diameter_yosupo.test.cpp
