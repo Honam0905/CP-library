@@ -23,6 +23,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: Misc/marco.hpp
       title: Misc/marco.hpp
+  - name: tree
+    pages:
+    - icon: ':warning:'
+      path: tree/Tree_diameter.hpp
+      title: tree/Tree_diameter.hpp
   verificationCategories:
   - name: .
     pages:
