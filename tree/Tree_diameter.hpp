@@ -1,3 +1,4 @@
+#pragma once
 /*
    @brief:Tree-Diameter
    author:Kiffaz
