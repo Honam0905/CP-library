@@ -18,18 +18,17 @@ data:
     #include <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\ntypedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update>\
     \ ods;\n- insert(x),erase(x)\n- find_by_order(k): return iterator to the k-th\
     \ smallest element\n- order_of_key(x): the number of elements that are strictly\
-    \ smaller\n*/\n#include<bits/stdc++.h>\nusing namespace std;\n\nusing ld = long\
-    \ double;\nusing ll = long long;\nusing u32 = unsigned int;\nusing u64 = unsigned\
-    \ long long;\nusing i128 = __int128;\nusing u128 = unsigned __int128;\nusing f128\
-    \ = __float128;\n \n \n#define pii pair<int,int>\n#define pll pair<ll,ll>\n \n\
-    #define all(x) (x).begin(),(x).end()\n#define rall(x) (x).rbegin(),(x).rend()\n\
-    #define ars(x) (x),(x+n)\n \n#define TIME  (1.0 * clock() / CLOCKS_PER_SEC)\n\
-    \ \n#define For(i,a,b) for (int i=(a); i<(b); i++)\n#define rep(i,a) For(i,0,a)\n\
-    #define rev(i,a,b) for (int i=(a); i>(b); i--)\n#define FOR(i,a,b) for (int i=(a);\
-    \ i<=(b); i++)\n#define REP(i,a) FOR(i,1,a)\n#define REV(i,a,b) for (int i=(a);\
-    \ i>=(b); i--)\n \n#define pb push_back\n#define eb emplace_back\n#define mp make_pair\n\
-    #define fi first\n#define se second\n#define FT ios_base::sync_with_stdio(false);\
-    \ cin.tie(nullptr);\n \nmt19937 rng(chrono::steady_clock::now().time_since_epoch().count());\n\
+    \ smaller\n*/\n\nusing ld = long double;\nusing ll = long long;\nusing u32 = unsigned\
+    \ int;\nusing u64 = unsigned long long;\nusing i128 = __int128;\nusing u128 =\
+    \ unsigned __int128;\nusing f128 = __float128;\n \n \n#define pii pair<int,int>\n\
+    #define pll pair<ll,ll>\n \n#define all(x) (x).begin(),(x).end()\n#define rall(x)\
+    \ (x).rbegin(),(x).rend()\n#define ars(x) (x),(x+n)\n \n#define TIME  (1.0 * clock()\
+    \ / CLOCKS_PER_SEC)\n \n#define For(i,a,b) for (int i=(a); i<(b); i++)\n#define\
+    \ rep(i,a) For(i,0,a)\n#define rev(i,a,b) for (int i=(a); i>(b); i--)\n#define\
+    \ FOR(i,a,b) for (int i=(a); i<=(b); i++)\n#define REP(i,a) FOR(i,1,a)\n#define\
+    \ REV(i,a,b) for (int i=(a); i>=(b); i--)\n \n#define pb push_back\n#define eb\
+    \ emplace_back\n#define mp make_pair\n#define fi first\n#define se second\n#define\
+    \ FT ios_base::sync_with_stdio(false); cin.tie(nullptr);\n \nmt19937 rng(chrono::steady_clock::now().time_since_epoch().count());\n\
     \nusing vi=vector<int>;\nusing vll = vector<ll>;\ntemplate <class T>\nusing vc\
     \ = vector<T>;\ntemplate <class T>\nusing vvc = vector<vc<T>>;\ntemplate <class\
     \ T>\nusing vvvc = vector<vvc<T>>;\ntemplate <class T>\nusing vvvvc = vector<vvvc<T>>;\n\
@@ -56,18 +55,17 @@ data:
     using namespace __gnu_pbds;\ntypedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update>\
     \ ods;\n- insert(x),erase(x)\n- find_by_order(k): return iterator to the k-th\
     \ smallest element\n- order_of_key(x): the number of elements that are strictly\
-    \ smaller\n*/\n#include<bits/stdc++.h>\nusing namespace std;\n\nusing ld = long\
-    \ double;\nusing ll = long long;\nusing u32 = unsigned int;\nusing u64 = unsigned\
-    \ long long;\nusing i128 = __int128;\nusing u128 = unsigned __int128;\nusing f128\
-    \ = __float128;\n \n \n#define pii pair<int,int>\n#define pll pair<ll,ll>\n \n\
-    #define all(x) (x).begin(),(x).end()\n#define rall(x) (x).rbegin(),(x).rend()\n\
-    #define ars(x) (x),(x+n)\n \n#define TIME  (1.0 * clock() / CLOCKS_PER_SEC)\n\
-    \ \n#define For(i,a,b) for (int i=(a); i<(b); i++)\n#define rep(i,a) For(i,0,a)\n\
-    #define rev(i,a,b) for (int i=(a); i>(b); i--)\n#define FOR(i,a,b) for (int i=(a);\
-    \ i<=(b); i++)\n#define REP(i,a) FOR(i,1,a)\n#define REV(i,a,b) for (int i=(a);\
-    \ i>=(b); i--)\n \n#define pb push_back\n#define eb emplace_back\n#define mp make_pair\n\
-    #define fi first\n#define se second\n#define FT ios_base::sync_with_stdio(false);\
-    \ cin.tie(nullptr);\n \nmt19937 rng(chrono::steady_clock::now().time_since_epoch().count());\n\
+    \ smaller\n*/\n\nusing ld = long double;\nusing ll = long long;\nusing u32 = unsigned\
+    \ int;\nusing u64 = unsigned long long;\nusing i128 = __int128;\nusing u128 =\
+    \ unsigned __int128;\nusing f128 = __float128;\n \n \n#define pii pair<int,int>\n\
+    #define pll pair<ll,ll>\n \n#define all(x) (x).begin(),(x).end()\n#define rall(x)\
+    \ (x).rbegin(),(x).rend()\n#define ars(x) (x),(x+n)\n \n#define TIME  (1.0 * clock()\
+    \ / CLOCKS_PER_SEC)\n \n#define For(i,a,b) for (int i=(a); i<(b); i++)\n#define\
+    \ rep(i,a) For(i,0,a)\n#define rev(i,a,b) for (int i=(a); i>(b); i--)\n#define\
+    \ FOR(i,a,b) for (int i=(a); i<=(b); i++)\n#define REP(i,a) FOR(i,1,a)\n#define\
+    \ REV(i,a,b) for (int i=(a); i>=(b); i--)\n \n#define pb push_back\n#define eb\
+    \ emplace_back\n#define mp make_pair\n#define fi first\n#define se second\n#define\
+    \ FT ios_base::sync_with_stdio(false); cin.tie(nullptr);\n \nmt19937 rng(chrono::steady_clock::now().time_since_epoch().count());\n\
     \nusing vi=vector<int>;\nusing vll = vector<ll>;\ntemplate <class T>\nusing vc\
     \ = vector<T>;\ntemplate <class T>\nusing vvc = vector<vc<T>>;\ntemplate <class\
     \ T>\nusing vvvc = vector<vvc<T>>;\ntemplate <class T>\nusing vvvvc = vector<vvvc<T>>;\n\
@@ -88,7 +86,7 @@ data:
   isVerificationFile: false
   path: marco.hpp
   requiredBy: []
-  timestamp: '2024-05-13 08:02:29+07:00'
+  timestamp: '2024-05-13 08:10:31+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: marco.hpp
