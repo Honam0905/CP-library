@@ -25,7 +25,7 @@ data:
       title: Misc/marco.hpp
   - name: tree
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: tree/Tree_diameter.hpp
       title: tree/Tree_diameter.hpp
   verificationCategories:
@@ -47,6 +47,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/RMQ_yosupo.test.cpp
       title: test/yosupo/RMQ_yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/tree_diameter_yosupo.test.cpp
+      title: test/yosupo/tree_diameter_yosupo.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/unionfind_yosupo.test.cpp
       title: test/yosupo/unionfind_yosupo.test.cpp

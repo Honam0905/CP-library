@@ -13,6 +13,9 @@ data:
     path: test/yosupo/RMQ_yosupo.test.cpp
     title: test/yosupo/RMQ_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/tree_diameter_yosupo.test.cpp
+    title: test/yosupo/tree_diameter_yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/unionfind_yosupo.test.cpp
     title: test/yosupo/unionfind_yosupo.test.cpp
   _isVerificationFailed: false
@@ -145,6 +148,7 @@ data:
   verifiedWith:
   - test/yosupo/unionfind_yosupo.test.cpp
   - test/yosupo/RMQ_yosupo.test.cpp
+  - test/yosupo/tree_diameter_yosupo.test.cpp
   - test/yosupo/PARS_yosupo.test.cpp
   - test/aizu/disjointset.test.cpp
 documentation_of: Misc/debug.hpp
