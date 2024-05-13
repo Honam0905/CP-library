@@ -1,3 +1,4 @@
+#pragma once
 struct Fenwick{
 	vector<ll> s;
     int n;
