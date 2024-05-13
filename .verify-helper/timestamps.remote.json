@@ -2,6 +2,6 @@
 "example.test.cpp": "2024-05-13 11:58:53 +0700",
 "test/aizu/disjointset.test.cpp": "2024-05-13 13:22:07 +0700",
 "test/yosupo/PARS_yosupo.test.cpp": "2024-05-13 19:11:44 +0700",
-"test/yosupo/unionfind_yosupo.test.cpp": "2024-05-13 13:13:20 +0700",
-"yosupo/RMQ_yosupo.test.cpp": "2024-05-13 22:02:15 +0700"
+"test/yosupo/RMQ_yosupo.test.cpp": "2024-05-13 22:04:36 +0700",
+"test/yosupo/unionfind_yosupo.test.cpp": "2024-05-13 13:13:20 +0700"
 }
