@@ -55,7 +55,7 @@ data:
     \ <typename T> bool chkmin(T &x,T y){return x>y?x=y,1:0;}\ntemplate <typename\
     \ T> bool chkmax(T &x,T y){return x<y?x=y,1:0;}\n \ntemplate<class T> using pq\
     \ = priority_queue<T>;\ntemplate<class T> using pqg = priority_queue<T, vector<T>,\
-    \ greater<T>>;\n#line 1 \"Fenwick_tree.hpp\"\nstruct Fenwick{\n\tvector<ll> s;\n\
+    \ greater<T>>;\n#line 2 \"Fenwick_tree.hpp\"\nstruct Fenwick{\n\tvector<ll> s;\n\
     \    int n;\n\tFenwick(int n) : n(n),s(n+1,0) {}\n\tvoid update(int pos, ll dif)\
     \ {\n        for (; pos <= n; pos += pos & -pos) s[pos] += dif;\n    }\n    ll\
     \ query(int pos) {\n        ll res = 0;\n        for (; pos > 0; pos -= pos &\
@@ -88,7 +88,7 @@ data:
   isVerificationFile: true
   path: PARS_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-05-13 12:06:01+07:00'
+  timestamp: '2024-05-13 12:09:00+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: PARS_yosupo.test.cpp
