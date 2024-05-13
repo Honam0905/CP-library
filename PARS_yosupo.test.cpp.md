@@ -241,25 +241,22 @@ data:
     \tif (sum <= 0) return -1;\n\t\tint pos = 0;\n\t\tfor (int pw = 1 << 25; pw; pw\
     \ >>= 1) {\n\t\t\tif (pos + pw <= s.size() && s[pos + pw-1] < sum)\n\t\t\t\tpos\
     \ += pw, sum -= s[pos-1];\n\t\t}\n\t\treturn pos;\n\t}\n};\n#line 6 \"PARS_yosupo.test.cpp\"\
-    \n\nvoid solve()\n{\n    int n,q; sc.read(n,q);\n    vector<ll> a(n);\n    rep(i,n)\
-    \ sc.read(a[i]);\n    Fenwick ft(n);\n    rep(i,n) ft.update(i+1,a[i]);\n    while\
-    \ (q--) {\n        int op; sc.read(op);\n        if (op == 0) {\n            int\
-    \ p, x; sc.read(p,x);\n            ft.update(p + 1, x);\n        } else {\n  \
-    \          int l, r; sc.read(l,r);\n            pr.write(ft.prefix(l,r));\n  \
-    \          pr.writeln();\n        }\n    }\n}\n\nint main(){\nFT;\nint t=1; \n\
-    //sc.read(t); int tc=0;\nwhile(t--)\n{\n//tc++;\n//cout << \"Case #\" << tc <<\
-    \ \": \";\nsolve();\n// cerr << \"Time elapsed: \" << TIME << \" s.\\n\";\n}\n\
-    }\n"
+    \n\nint main(){\nFT;\nint t=1; \n//sc.read(t); int tc=0;\nwhile(t--)\n{\n//tc++;\n\
+    //cout << \"Case #\" << tc << \": \";\nint n,q; cin>>n>>q;\n    vector<ll> a(n);\n\
+    \    rep(i,n) cin>>a[i];\n    Fenwick ft(n);\n    rep(i,n) ft.update(i+1,a[i]);\n\
+    \    while (q--) {\n        int op; cin>>op;\n        if (op == 0) {\n       \
+    \     int p, x; cin>>p>>x;\n            ft.update(p + 1, x);\n        } else {\n\
+    \            int l, r; sc.read(l,r);\n            cout<<ft.prefix(l,r)<<'\\n';\n\
+    \        }\n    }\n// cerr << \"Time elapsed: \" << TIME << \" s.\\n\";\n}\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
     #include \"marco.hpp\"\n#include \"debug.hpp\"\n#include \"fast_io.hpp\"\n#include\
-    \ \"Fenwick_tree.hpp\"\n\nvoid solve()\n{\n    int n,q; sc.read(n,q);\n    vector<ll>\
-    \ a(n);\n    rep(i,n) sc.read(a[i]);\n    Fenwick ft(n);\n    rep(i,n) ft.update(i+1,a[i]);\n\
-    \    while (q--) {\n        int op; sc.read(op);\n        if (op == 0) {\n   \
-    \         int p, x; sc.read(p,x);\n            ft.update(p + 1, x);\n        }\
-    \ else {\n            int l, r; sc.read(l,r);\n            pr.write(ft.prefix(l,r));\n\
-    \            pr.writeln();\n        }\n    }\n}\n\nint main(){\nFT;\nint t=1;\
-    \ \n//sc.read(t); int tc=0;\nwhile(t--)\n{\n//tc++;\n//cout << \"Case #\" << tc\
-    \ << \": \";\nsolve();\n// cerr << \"Time elapsed: \" << TIME << \" s.\\n\";\n\
+    \ \"Fenwick_tree.hpp\"\n\nint main(){\nFT;\nint t=1; \n//sc.read(t); int tc=0;\n\
+    while(t--)\n{\n//tc++;\n//cout << \"Case #\" << tc << \": \";\nint n,q; cin>>n>>q;\n\
+    \    vector<ll> a(n);\n    rep(i,n) cin>>a[i];\n    Fenwick ft(n);\n    rep(i,n)\
+    \ ft.update(i+1,a[i]);\n    while (q--) {\n        int op; cin>>op;\n        if\
+    \ (op == 0) {\n            int p, x; cin>>p>>x;\n            ft.update(p + 1,\
+    \ x);\n        } else {\n            int l, r; sc.read(l,r);\n            cout<<ft.prefix(l,r)<<'\\\
+    n';\n        }\n    }\n// cerr << \"Time elapsed: \" << TIME << \" s.\\n\";\n\
     }\n}\n"
   dependsOn:
   - marco.hpp
@@ -269,7 +266,7 @@ data:
   isVerificationFile: true
   path: PARS_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-05-13 08:20:58+07:00'
+  timestamp: '2024-05-13 08:45:46+07:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: PARS_yosupo.test.cpp
