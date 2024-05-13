@@ -6,7 +6,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DS/DSU.hpp
       title: DS/DSU.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DS/Sparse_table.hpp
       title: DS/Sparse_table.hpp
     - icon: ':heavy_check_mark:'
@@ -42,5 +42,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/unionfind_yosupo.test.cpp
       title: test/yosupo/unionfind_yosupo.test.cpp
+  - name: yosupo
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: yosupo/RMQ_yosupo.test.cpp
+      title: yosupo/RMQ_yosupo.test.cpp
 layout: toppage
 ---

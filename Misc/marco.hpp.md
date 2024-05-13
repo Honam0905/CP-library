@@ -12,6 +12,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/unionfind_yosupo.test.cpp
     title: test/yosupo/unionfind_yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: yosupo/RMQ_yosupo.test.cpp
+    title: yosupo/RMQ_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -100,6 +103,7 @@ data:
   timestamp: '2024-05-13 12:33:07+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - yosupo/RMQ_yosupo.test.cpp
   - test/yosupo/unionfind_yosupo.test.cpp
   - test/yosupo/PARS_yosupo.test.cpp
   - test/aizu/disjointset.test.cpp
