@@ -20,11 +20,13 @@ data:
   verificationCategories:
   - name: .
     pages:
-    - icon: ':x:'
-      path: PARS_yosupo.test.cpp
-      title: PARS_yosupo.test.cpp
     - icon: ':heavy_check_mark:'
       path: example.test.cpp
       title: example.test.cpp
+  - name: test/yosupo
+    pages:
+    - icon: ':x:'
+      path: test/yosupo/PARS_yosupo.test.cpp
+      title: test/yosupo/PARS_yosupo.test.cpp
 layout: toppage
 ---

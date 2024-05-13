@@ -30,15 +30,15 @@ data:
     \    }\n// cerr << \"Time elapsed: \" << TIME << \" s.\\n\";\n}\n}\n"
   dependsOn: []
   isVerificationFile: true
-  path: PARS_yosupo.test.cpp
+  path: test/yosupo/PARS_yosupo.test.cpp
   requiredBy: []
   timestamp: '1970-01-01 00:00:00+00:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: PARS_yosupo.test.cpp
+documentation_of: test/yosupo/PARS_yosupo.test.cpp
 layout: document
 redirect_from:
-- /verify/PARS_yosupo.test.cpp
-- /verify/PARS_yosupo.test.cpp.html
-title: PARS_yosupo.test.cpp
+- /verify/test/yosupo/PARS_yosupo.test.cpp
+- /verify/test/yosupo/PARS_yosupo.test.cpp.html
+title: test/yosupo/PARS_yosupo.test.cpp
 ---
