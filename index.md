@@ -15,6 +15,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: marco.hpp
       title: marco.hpp
+  - name: Misc
+    pages:
+    - icon: ':warning:'
+      path: Misc/marco.hpp
+      title: Misc/marco.hpp
   verificationCategories:
   - name: .
     pages:
