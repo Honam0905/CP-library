@@ -7,12 +7,12 @@ struct Fenwick{
 	void update(int pos, ll dif) { //a[pos]=a[pos]+dif
         for (; pos <= n; pos += pos & -pos) s[pos] += dif;
     }
-    ll query(int pos) { 
+    ll query(int pos) { //sum [1,pos]
         ll res = 0;
         for (; pos > 0; pos -= pos & -pos) res += s[pos];
         return res;
     }
-    ll prefix(int l,int r){
+    ll prefix(int l,int r){ //sum [l+1,r]
          if(l==r) return 0;
          return query(r)-query(l);
     }
