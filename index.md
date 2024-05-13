@@ -12,9 +12,6 @@ data:
     - icon: ':warning:'
       path: fast_io.hpp
       title: fast_io.hpp
-    - icon: ':heavy_check_mark:'
-      path: marco.hpp
-      title: marco.hpp
   - name: Misc
     pages:
     - icon: ':warning:'
