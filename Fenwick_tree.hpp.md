@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: PARS_yosupo.test.cpp
     title: PARS_yosupo.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Fenwick_tree.hpp\"\nstruct Fenwick{\n\tvector<ll> s;\n \
@@ -37,7 +37,7 @@ data:
   path: Fenwick_tree.hpp
   requiredBy: []
   timestamp: '2024-05-13 07:46:24+07:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - PARS_yosupo.test.cpp
 documentation_of: Fenwick_tree.hpp
