@@ -82,19 +82,20 @@ data:
     \ Saigon-----------------\n#line 2 \"DS/fenwick_tree.hpp\"\n\nstruct Fenwick{\n\
     \tvector<ll> s;\n    int n;\n\tFenwick(int n) : n(n),s(n+1,0) {}\n\tvoid update(int\
     \ pos, ll dif) { //a[pos]=a[pos]+dif\n        for (; pos <= n; pos += pos & -pos)\
-    \ s[pos] += dif;\n    }\n    ll query(int pos) { \n        ll res = 0;\n     \
-    \   for (; pos > 0; pos -= pos & -pos) res += s[pos];\n        return res;\n \
-    \   }\n    ll prefix(int l,int r){\n         if(l==r) return 0;\n         return\
-    \ query(r)-query(l);\n    }\n\tint lower_bound(ll sum) {// min pos st sum of [0,\
-    \ pos] >= sum\n\t\t// Returns n if no sum is >= sum, or -1 if empty sum is.\n\t\
-    \tif (sum <= 0) return -1;\n\t\tint pos = 0;\n\t\tfor (int pw = 1 << 25; pw; pw\
-    \ >>= 1) {\n\t\t\tif (pos + pw <= s.size() && s[pos + pw-1] < sum)\n\t\t\t\tpos\
-    \ += pw, sum -= s[pos-1];\n\t\t}\n\t\treturn pos;\n\t}\n};\n#line 8 \"test/yosupo/PARS_yosupo.test.cpp\"\
-    \nint main() {\n    int n,q; cin>>n>>q;\n    vector<ll> a(n);\n    rep(i,n) cin>>a[i];\n\
-    \    Fenwick ft(n);\n    rep(i,n) ft.update(i+1,a[i]);\n    while (q--) {\n  \
-    \      int op; cin>>op;\n        if (op == 0) {\n            int p, x; cin>>p>>x;\n\
-    \            ft.update(p + 1, x);\n        } else {\n            int l, r; cin>>l>>r;\n\
-    \            cout<<ft.prefix(l,r)<<'\\n';\n        }\n    }\n    return 0;\n}\n"
+    \ s[pos] += dif;\n    }\n    ll query(int pos) { //sum [1,pos]\n        ll res\
+    \ = 0;\n        for (; pos > 0; pos -= pos & -pos) res += s[pos];\n        return\
+    \ res;\n    }\n    ll prefix(int l,int r){ //sum [l+1,r]\n         if(l==r) return\
+    \ 0;\n         return query(r)-query(l);\n    }\n\tint lower_bound(ll sum) {//\
+    \ min pos st sum of [0, pos] >= sum\n\t\t// Returns n if no sum is >= sum, or\
+    \ -1 if empty sum is.\n\t\tif (sum <= 0) return -1;\n\t\tint pos = 0;\n\t\tfor\
+    \ (int pw = 1 << 25; pw; pw >>= 1) {\n\t\t\tif (pos + pw <= s.size() && s[pos\
+    \ + pw-1] < sum)\n\t\t\t\tpos += pw, sum -= s[pos-1];\n\t\t}\n\t\treturn pos;\n\
+    \t}\n};\n#line 8 \"test/yosupo/PARS_yosupo.test.cpp\"\nint main() {\n    int n,q;\
+    \ cin>>n>>q;\n    vector<ll> a(n);\n    rep(i,n) cin>>a[i];\n    Fenwick ft(n);\n\
+    \    rep(i,n) ft.update(i+1,a[i]);\n    while (q--) {\n        int op; cin>>op;\n\
+    \        if (op == 0) {\n            int p, x; cin>>p>>x;\n            ft.update(p\
+    \ + 1, x);\n        } else {\n            int l, r; cin>>l>>r;\n            cout<<ft.prefix(l,r)<<'\\\
+    n';\n        }\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
     #include \"Misc/marco.hpp\"\n#include \"Misc/debug.hpp\"\nconst int INF=1e9;\n\
     const ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT, Saigon-----------------\n\
@@ -111,7 +112,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/PARS_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-05-13 12:48:47+07:00'
+  timestamp: '2024-05-13 19:11:44+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/PARS_yosupo.test.cpp
