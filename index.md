@@ -40,12 +40,10 @@ data:
       path: test/yosupo/PARS_yosupo.test.cpp
       title: test/yosupo/PARS_yosupo.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/yosupo/RMQ_yosupo.test.cpp
+      title: test/yosupo/RMQ_yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/unionfind_yosupo.test.cpp
       title: test/yosupo/unionfind_yosupo.test.cpp
-  - name: yosupo
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: yosupo/RMQ_yosupo.test.cpp
-      title: yosupo/RMQ_yosupo.test.cpp
 layout: toppage
 ---

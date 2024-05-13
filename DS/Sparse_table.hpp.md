@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: yosupo/RMQ_yosupo.test.cpp
-    title: yosupo/RMQ_yosupo.test.cpp
+    path: test/yosupo/RMQ_yosupo.test.cpp
+    title: test/yosupo/RMQ_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -42,7 +42,7 @@ data:
   timestamp: '2024-05-13 21:55:17+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - yosupo/RMQ_yosupo.test.cpp
+  - test/yosupo/RMQ_yosupo.test.cpp
 documentation_of: DS/Sparse_table.hpp
 layout: document
 redirect_from:
