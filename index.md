@@ -6,6 +6,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: DS/DSU.hpp
       title: DS/DSU.hpp
+    - icon: ':warning:'
+      path: DS/Sparse_table.hpp
+      title: DS/Sparse_table.hpp
     - icon: ':heavy_check_mark:'
       path: DS/fenwick_tree.hpp
       title: DS/fenwick_tree.hpp
