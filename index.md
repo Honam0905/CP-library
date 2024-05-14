@@ -42,6 +42,9 @@ data:
   - name: test/yosupo
     pages:
     - icon: ':heavy_check_mark:'
+      path: test/yosupo/MST_yosupo.test.cpp
+      title: test/yosupo/MST_yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/PARS_yosupo.test.cpp
       title: test/yosupo/PARS_yosupo.test.cpp
     - icon: ':heavy_check_mark:'
