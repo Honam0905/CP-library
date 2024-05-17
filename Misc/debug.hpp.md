@@ -149,12 +149,12 @@ data:
   timestamp: '2024-05-13 12:48:47+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aizu/disjointset.test.cpp
   - test/yosupo/unionfind_yosupo.test.cpp
   - test/yosupo/RMQ_yosupo.test.cpp
   - test/yosupo/tree_diameter_yosupo.test.cpp
   - test/yosupo/PARS_yosupo.test.cpp
   - test/yosupo/MST_yosupo.test.cpp
-  - test/aizu/disjointset.test.cpp
 documentation_of: Misc/debug.hpp
 layout: document
 redirect_from:

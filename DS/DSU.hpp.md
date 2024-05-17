@@ -42,9 +42,9 @@ data:
   timestamp: '2024-05-13 13:03:39+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aizu/disjointset.test.cpp
   - test/yosupo/unionfind_yosupo.test.cpp
   - test/yosupo/MST_yosupo.test.cpp
-  - test/aizu/disjointset.test.cpp
 documentation_of: DS/DSU.hpp
 layout: document
 redirect_from:
