@@ -23,6 +23,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: Misc/marco.hpp
       title: Misc/marco.hpp
+  - name: .
+    pages:
+    - icon: ':warning:'
+      path: Segment_tree.hpp
+      title: Segment_tree.hpp
   - name: tree
     pages:
     - icon: ':heavy_check_mark:'
