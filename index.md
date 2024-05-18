@@ -6,7 +6,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DS/DSU.hpp
       title: DS/DSU.hpp
-    - icon: ':x:'
+    - icon: ':warning:'
       path: DS/Segment_tree.hpp
       title: DS/Segment_tree.hpp
     - icon: ':heavy_check_mark:'
@@ -17,13 +17,13 @@ data:
       title: DS/fenwick_tree.hpp
   - name: Misc
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Misc/debug.hpp
       title: Misc/debug.hpp
     - icon: ':warning:'
       path: Misc/faster_io.hpp
       title: Misc/faster_io.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Misc/marco.hpp
       title: Misc/marco.hpp
   - name: tree
@@ -42,9 +42,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aizu/disjointset.test.cpp
       title: test/aizu/disjointset.test.cpp
-    - icon: ':x:'
-      path: test/aizu/seg_tree.test.cpp
-      title: test/aizu/seg_tree.test.cpp
   - name: test/yosupo
     pages:
     - icon: ':heavy_check_mark:'

@@ -6,9 +6,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aizu/disjointset.test.cpp
     title: test/aizu/disjointset.test.cpp
-  - icon: ':x:'
-    path: test/aizu/seg_tree.test.cpp
-    title: test/aizu/seg_tree.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/MST_yosupo.test.cpp
     title: test/yosupo/MST_yosupo.test.cpp
@@ -24,9 +21,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/unionfind_yosupo.test.cpp
     title: test/yosupo/unionfind_yosupo.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: '#line 1 "Misc/debug.hpp"
@@ -150,9 +147,8 @@ data:
   path: Misc/debug.hpp
   requiredBy: []
   timestamp: '2024-05-13 12:48:47+07:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aizu/seg_tree.test.cpp
   - test/aizu/disjointset.test.cpp
   - test/yosupo/unionfind_yosupo.test.cpp
   - test/yosupo/RMQ_yosupo.test.cpp
