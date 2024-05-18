@@ -43,6 +43,9 @@ data:
       path: test/aizu/1_seg_tree.test.cpp
       title: test/aizu/1_seg_tree.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/aizu/2_segment_tree.test.cpp
+      title: test/aizu/2_segment_tree.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/aizu/disjointset.test.cpp
       title: test/aizu/disjointset.test.cpp
   - name: test/yosupo

@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aizu/1_seg_tree.test.cpp
     title: test/aizu/1_seg_tree.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/aizu/2_segment_tree.test.cpp
+    title: test/aizu/2_segment_tree.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -44,6 +47,7 @@ data:
   timestamp: '2024-05-18 23:16:59+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aizu/2_segment_tree.test.cpp
   - test/aizu/1_seg_tree.test.cpp
 documentation_of: DS/Segment_tree.hpp
 layout: document
