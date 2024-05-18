@@ -5,11 +5,11 @@ private:
     vector<T> t;
 
     T op(T a, T b) { //operation 
-        return min(a, b);  
+        return a+b;  
     }
 
     T e() { // modify depend on the problem
-        return INT_MAX;  
+        return 0;  
     }
 
 public:
@@ -23,6 +23,10 @@ public:
 
     void build() { //not necessary
         for (int i = n - 1; i > 0; --i) t[i] = op(t[i << 1], t[i << 1 | 1]);
+    }
+
+    void add(int p, T value) {
+        for (t[p += n] += value; p > 1; p >>= 1)  t[p >> 1] = op(t[p], t[p ^ 1]);
     }
 
     void modify(int p, T value) {
