@@ -1,20 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: DS/Segment_tree.hpp
     title: DS/Segment_tree.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Misc/debug.hpp
     title: Misc/debug.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Misc/marco.hpp
     title: Misc/marco.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_A
@@ -81,20 +81,22 @@ data:
     const int INF=1e9;\nconst ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT,\
     \ Saigon-----------------\n#line 2 \"DS/Segment_tree.hpp\"\ntemplate <class T>\
     \ class SegTree {\nprivate:\n    int n;  // array size\n    vector<T> t;\n\n \
-    \   T op(T a, T b) { //operation \n        return min(a, b);  \n    }\n\n    T\
-    \ e() { // modify depend on the problem\n        return INT_MAX;  \n    }\n\n\
-    public:\n    SegTree(int size) {\n        n = size;\n        t.resize(4 * n);\n\
-    \        for (int i = 0; i < 4 * n; i++) {\n            t[i] = e();\n        }\n\
-    \    }\n\n    void build() { //not necessary\n        for (int i = n - 1; i >\
-    \ 0; --i) t[i] = op(t[i << 1], t[i << 1 | 1]);\n    }\n\n    void modify(int p,\
-    \ T value) {\n        for (t[p += n] = value; p > 1; p >>= 1)  t[p >> 1] = op(t[p],\
-    \ t[p ^ 1]);\n    }\n\n    T query(int l, int r) {\n        T res = e();\n   \
-    \     for (l += n, r += n; l < r; l >>= 1, r >>= 1) {\n            if (l & 1)\
-    \ res = op(res, t[l++]);\n            if (r & 1) res = op(res, t[--r]);\n    \
-    \    }\n        return res;\n    }\n};\n#line 8 \"test/aizu/seg_tree.test.cpp\"\
-    \n\nint main() {\n  int n,q,op,l,r; cin>>n>>q;\n  SegTree<int>st(n);\n  while(q--){\n\
-    \    cin>>op>>l>>r;\n    if(op==0){\n        st.modify(l,r);\n    }if(op==1){\n\
-    \        cout<<st.query(l,r+1)<<'\\n';\n    }\n  }\n    return 0;\n}\n"
+    \   T op(T a, T b) { //operation \n        return a+b;  \n    }\n\n    T e() {\
+    \ // modify depend on the problem\n        return 0;  \n    }\n\npublic:\n   \
+    \ SegTree(int size) {\n        n = size;\n        t.resize(4 * n);\n        for\
+    \ (int i = 0; i < 4 * n; i++) {\n            t[i] = e();\n        }\n    }\n\n\
+    \    void build() { //not necessary\n        for (int i = n - 1; i > 0; --i) t[i]\
+    \ = op(t[i << 1], t[i << 1 | 1]);\n    }\n\n    void add(int p, T value) {\n \
+    \       for (t[p += n] += value; p > 1; p >>= 1)  t[p >> 1] = op(t[p], t[p ^ 1]);\n\
+    \    }\n\n    void modify(int p, T value) {\n        for (t[p += n] = value; p\
+    \ > 1; p >>= 1)  t[p >> 1] = op(t[p], t[p ^ 1]);\n    }\n\n    T query(int l,\
+    \ int r) {\n        T res = e();\n        for (l += n, r += n; l < r; l >>= 1,\
+    \ r >>= 1) {\n            if (l & 1) res = op(res, t[l++]);\n            if (r\
+    \ & 1) res = op(res, t[--r]);\n        }\n        return res;\n    }\n};\n#line\
+    \ 8 \"test/aizu/seg_tree.test.cpp\"\n\nint main() {\n  int n,q,op,l,r; cin>>n>>q;\n\
+    \  SegTree<int>st(n);\n  while(q--){\n    cin>>op>>l>>r;\n    if(op==0){\n   \
+    \     st.modify(l,r);\n    }if(op==1){\n        cout<<st.query(l,r+1)<<'\\n';\n\
+    \    }\n  }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/DSL_2_A\"\n#include\
     \ \"Misc/marco.hpp\"\n#include \"Misc/debug.hpp\"\nconst int INF=1e9;\nconst ll\
     \ INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT, Saigon-----------------\n\
@@ -109,8 +111,8 @@ data:
   isVerificationFile: true
   path: test/aizu/seg_tree.test.cpp
   requiredBy: []
-  timestamp: '2024-05-18 22:41:26+07:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-05-18 22:58:06+07:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/aizu/seg_tree.test.cpp
 layout: document

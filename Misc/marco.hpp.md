@@ -6,7 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aizu/disjointset.test.cpp
     title: test/aizu/disjointset.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/aizu/seg_tree.test.cpp
     title: test/aizu/seg_tree.test.cpp
   - icon: ':heavy_check_mark:'
@@ -24,9 +24,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/unionfind_yosupo.test.cpp
     title: test/yosupo/unionfind_yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Misc/marco.hpp\"\n// Judges with GCC >= 12 only needs Ofast\n\
@@ -110,7 +110,7 @@ data:
   path: Misc/marco.hpp
   requiredBy: []
   timestamp: '2024-05-13 12:33:07+07:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aizu/seg_tree.test.cpp
   - test/aizu/disjointset.test.cpp
