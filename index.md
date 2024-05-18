@@ -6,6 +6,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: DS/DSU.hpp
       title: DS/DSU.hpp
+    - icon: ':warning:'
+      path: DS/Segment_tree.hpp
+      title: DS/Segment_tree.hpp
     - icon: ':heavy_check_mark:'
       path: DS/Sparse_table.hpp
       title: DS/Sparse_table.hpp
@@ -23,11 +26,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: Misc/marco.hpp
       title: Misc/marco.hpp
-  - name: .
-    pages:
-    - icon: ':warning:'
-      path: Segment_tree.hpp
-      title: Segment_tree.hpp
   - name: tree
     pages:
     - icon: ':heavy_check_mark:'
