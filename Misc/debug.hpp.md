@@ -7,6 +7,9 @@ data:
     path: test/aizu/disjointset.test.cpp
     title: test/aizu/disjointset.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/aizu/seg_tree.test.cpp
+    title: test/aizu/seg_tree.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/MST_yosupo.test.cpp
     title: test/yosupo/MST_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
@@ -149,6 +152,7 @@ data:
   timestamp: '2024-05-13 12:48:47+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/aizu/seg_tree.test.cpp
   - test/aizu/disjointset.test.cpp
   - test/yosupo/unionfind_yosupo.test.cpp
   - test/yosupo/RMQ_yosupo.test.cpp

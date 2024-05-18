@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aizu/seg_tree.test.cpp
+    title: test/aizu/seg_tree.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"DS/Segment_tree.hpp\"\ntemplate <class T> class SegTree\
@@ -38,8 +41,9 @@ data:
   path: DS/Segment_tree.hpp
   requiredBy: []
   timestamp: '2024-05-18 22:38:20+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aizu/seg_tree.test.cpp
 documentation_of: DS/Segment_tree.hpp
 layout: document
 redirect_from:

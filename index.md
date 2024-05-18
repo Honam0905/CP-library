@@ -6,7 +6,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DS/DSU.hpp
       title: DS/DSU.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DS/Segment_tree.hpp
       title: DS/Segment_tree.hpp
     - icon: ':heavy_check_mark:'
@@ -42,6 +42,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aizu/disjointset.test.cpp
       title: test/aizu/disjointset.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aizu/seg_tree.test.cpp
+      title: test/aizu/seg_tree.test.cpp
   - name: test/yosupo
     pages:
     - icon: ':heavy_check_mark:'
