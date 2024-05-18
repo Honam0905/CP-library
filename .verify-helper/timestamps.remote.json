@@ -1,6 +1,7 @@
 {
 "example.test.cpp": "2024-05-13 11:58:53 +0700",
 "test/aizu/1_seg_tree.test.cpp": "2024-05-18 23:20:33 +0700",
+"test/aizu/2_segment_tree.test.cpp": "2024-05-18 23:24:16 +0700",
 "test/aizu/disjointset.test.cpp": "2024-05-13 13:22:07 +0700",
 "test/yosupo/MST_yosupo.test.cpp": "2024-05-14 12:40:35 +0700",
 "test/yosupo/PARS_yosupo.test.cpp": "2024-05-13 19:11:44 +0700",
