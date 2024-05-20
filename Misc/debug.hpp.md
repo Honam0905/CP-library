@@ -22,11 +22,11 @@ data:
     path: test/yosupo/Ds/unionfind_yosupo.test.cpp
     title: test/yosupo/Ds/unionfind_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/LCA_yosupo.test.cpp
-    title: test/yosupo/LCA_yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/yosupo/MST_yosupo.test.cpp
     title: test/yosupo/MST_yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Tree/LCA_yosupo.test.cpp
+    title: test/yosupo/Tree/LCA_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/tree_diameter_yosupo.test.cpp
     title: test/yosupo/tree_diameter_yosupo.test.cpp
@@ -166,7 +166,7 @@ data:
   - test/yosupo/Ds/PARS_yosupo.test.cpp
   - test/yosupo/tree_diameter_yosupo.test.cpp
   - test/yosupo/MST_yosupo.test.cpp
-  - test/yosupo/LCA_yosupo.test.cpp
+  - test/yosupo/Tree/LCA_yosupo.test.cpp
 documentation_of: Misc/debug.hpp
 layout: document
 redirect_from:

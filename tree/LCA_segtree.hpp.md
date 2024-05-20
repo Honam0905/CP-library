@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/LCA_yosupo.test.cpp
-    title: test/yosupo/LCA_yosupo.test.cpp
+    path: test/yosupo/Tree/LCA_yosupo.test.cpp
+    title: test/yosupo/Tree/LCA_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -70,7 +70,7 @@ data:
   timestamp: '2024-05-20 13:04:46+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/LCA_yosupo.test.cpp
+  - test/yosupo/Tree/LCA_yosupo.test.cpp
 documentation_of: tree/LCA_segtree.hpp
 layout: document
 redirect_from:

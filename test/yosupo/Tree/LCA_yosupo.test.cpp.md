@@ -20,9 +20,9 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/lca
     links:
     - https://judge.yosupo.jp/problem/lca
-  bundledCode: "#line 1 \"test/yosupo/LCA_yosupo.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/lca\"\
-    \n#line 2 \"Misc/marco.hpp\"\n// Judges with GCC >= 12 only needs Ofast\n// #pragma\
-    \ GCC optimize(\"O3,no-stack-protector,fast-math,unroll-loops,tree-vectorize\"\
+  bundledCode: "#line 1 \"test/yosupo/Tree/LCA_yosupo.test.cpp\"\n#define PROBLEM\
+    \ \"https://judge.yosupo.jp/problem/lca\"\n#line 2 \"Misc/marco.hpp\"\n// Judges\
+    \ with GCC >= 12 only needs Ofast\n// #pragma GCC optimize(\"O3,no-stack-protector,fast-math,unroll-loops,tree-vectorize\"\
     )\n// MLE optimization\n// #pragma GCC optimize(\"conserve-stack\")\n// Old judges\n\
     // #pragma GCC target(\"sse4.2,popcnt,lzcnt,abm,mmx,fma,bmi,bmi2\")\n// New judges.\
     \ Test with assert(__builtin_cpu_supports(\"avx2\"));\n// #pragma GCC target(\"\
@@ -77,7 +77,7 @@ data:
     \ _print(v...);}\n\nvoid dbg_out() { cerr << endl; }\ntemplate<typename Head,\
     \ typename... Tail> void dbg_out(Head H, Tail... T) { __print(H); if (sizeof...(T))\
     \ cerr << \", \"; dbg_out(T...); }\n#define dbg(...) cerr << \"[\" << #__VA_ARGS__\
-    \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/LCA_yosupo.test.cpp\"\
+    \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/Tree/LCA_yosupo.test.cpp\"\
     \nconst int INF=1e9;\nconst ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT,\
     \ Saigon-----------------\n#line 2 \"tree/LCA_segtree.hpp\"\n/*\n  LCA -O(logN)\
     \ query and O(n) preprocessing\n  @see https://cp-algorithms.com/graph/lca.html\n\
@@ -105,7 +105,7 @@ data:
     \ ? left : right;\n    }\n\n    int lca(int u, int v) {\n        int left = first[u],\
     \ right = first[v];\n        if (left > right)\n            swap(left, right);\n\
     \        return query(1, 0, euler.size() - 1, left, right);\n    }\n};\n#line\
-    \ 8 \"test/yosupo/LCA_yosupo.test.cpp\"\nint main() {\n int n,q,x; cin>>n>>q;\n\
+    \ 8 \"test/yosupo/Tree/LCA_yosupo.test.cpp\"\nint main() {\n int n,q,x; cin>>n>>q;\n\
     \ vvc<int>adj(n); \n For(i,1,n){\n    cin>>x;\n    adj[x].push_back(i);\n }\n\
     \ LCA lca(adj);\n for(;q--;){\n    int u,v; cin>>u>>v;\n    cout<<lca.lca(u,v)<<'\\\
     n';\n }\n    return 0;\n}\n"
@@ -120,15 +120,15 @@ data:
   - Misc/debug.hpp
   - tree/LCA_segtree.hpp
   isVerificationFile: true
-  path: test/yosupo/LCA_yosupo.test.cpp
+  path: test/yosupo/Tree/LCA_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-05-20 13:10:08+07:00'
+  timestamp: '2024-05-20 13:19:42+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/yosupo/LCA_yosupo.test.cpp
+documentation_of: test/yosupo/Tree/LCA_yosupo.test.cpp
 layout: document
 redirect_from:
-- /verify/test/yosupo/LCA_yosupo.test.cpp
-- /verify/test/yosupo/LCA_yosupo.test.cpp.html
-title: test/yosupo/LCA_yosupo.test.cpp
+- /verify/test/yosupo/Tree/LCA_yosupo.test.cpp
+- /verify/test/yosupo/Tree/LCA_yosupo.test.cpp.html
+title: test/yosupo/Tree/LCA_yosupo.test.cpp
 ---
