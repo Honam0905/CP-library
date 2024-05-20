@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: DS/Sparse_table.hpp
     title: DS/Sparse_table.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Misc/debug.hpp
     title: Misc/debug.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Misc/marco.hpp
     title: Misc/marco.hpp
   _extendedRequiredBy: []
@@ -20,9 +20,9 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/staticrmq
     links:
     - https://judge.yosupo.jp/problem/staticrmq
-  bundledCode: "#line 1 \"test/yosupo/RMQ_yosupo.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\
-    \n#line 2 \"Misc/marco.hpp\"\n// Judges with GCC >= 12 only needs Ofast\n// #pragma\
-    \ GCC optimize(\"O3,no-stack-protector,fast-math,unroll-loops,tree-vectorize\"\
+  bundledCode: "#line 1 \"test/yosupo/Ds/RMQ_yosupo.test.cpp\"\n#define PROBLEM \"\
+    https://judge.yosupo.jp/problem/staticrmq\"\n#line 2 \"Misc/marco.hpp\"\n// Judges\
+    \ with GCC >= 12 only needs Ofast\n// #pragma GCC optimize(\"O3,no-stack-protector,fast-math,unroll-loops,tree-vectorize\"\
     )\n// MLE optimization\n// #pragma GCC optimize(\"conserve-stack\")\n// Old judges\n\
     // #pragma GCC target(\"sse4.2,popcnt,lzcnt,abm,mmx,fma,bmi,bmi2\")\n// New judges.\
     \ Test with assert(__builtin_cpu_supports(\"avx2\"));\n// #pragma GCC target(\"\
@@ -77,7 +77,7 @@ data:
     \ _print(v...);}\n\nvoid dbg_out() { cerr << endl; }\ntemplate<typename Head,\
     \ typename... Tail> void dbg_out(Head H, Tail... T) { __print(H); if (sizeof...(T))\
     \ cerr << \", \"; dbg_out(T...); }\n#define dbg(...) cerr << \"[\" << #__VA_ARGS__\
-    \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/RMQ_yosupo.test.cpp\"\
+    \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/Ds/RMQ_yosupo.test.cpp\"\
     \nconst int INF=1e9;\nconst ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT,\
     \ Saigon-----------------\n#line 2 \"DS/Sparse_table.hpp\"\n/**\n * Author: Johan\
     \ Sannemo, pajenegod\n * Date: 2015-02-06\n * License: CC0\n * Source: Folklore\n\
@@ -90,7 +90,7 @@ data:
     \ - pw * 2 + 1);\n\t\t\trep(j,jmp[k].size())\n\t\t\t\tjmp[k][j] = min(jmp[k -\
     \ 1][j], jmp[k - 1][j + pw]);\n\t\t}\n\t}\n\tT query(int a, int b) {\n\t\tassert(a\
     \ < b); // or return inf if a == b\n\t\tint dep = 31 - __builtin_clz(b - a);\n\
-    \t\treturn min(jmp[dep][a], jmp[dep][b - (1 << dep)]);\n\t}\n};\n#line 8 \"test/yosupo/RMQ_yosupo.test.cpp\"\
+    \t\treturn min(jmp[dep][a], jmp[dep][b - (1 << dep)]);\n\t}\n};\n#line 8 \"test/yosupo/Ds/RMQ_yosupo.test.cpp\"\
     \n\nint main() {\n  int n,q,l,r; cin>>n>>q;\n  vi a(n);\n  rep(i,n) cin>>a[i];\n\
     \  sparsetable<int>st(a);\n  while(q--){\n    cin>>l>>r;\n    cout<<st.query(l,r)<<'\\\
     n';\n  }\n    return 0;\n}\n"
@@ -105,15 +105,15 @@ data:
   - Misc/debug.hpp
   - DS/Sparse_table.hpp
   isVerificationFile: true
-  path: test/yosupo/RMQ_yosupo.test.cpp
+  path: test/yosupo/Ds/RMQ_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-05-13 22:04:36+07:00'
+  timestamp: '2024-05-20 13:14:22+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/yosupo/RMQ_yosupo.test.cpp
+documentation_of: test/yosupo/Ds/RMQ_yosupo.test.cpp
 layout: document
 redirect_from:
-- /verify/test/yosupo/RMQ_yosupo.test.cpp
-- /verify/test/yosupo/RMQ_yosupo.test.cpp.html
-title: test/yosupo/RMQ_yosupo.test.cpp
+- /verify/test/yosupo/Ds/RMQ_yosupo.test.cpp
+- /verify/test/yosupo/Ds/RMQ_yosupo.test.cpp.html
+title: test/yosupo/Ds/RMQ_yosupo.test.cpp
 ---

@@ -12,18 +12,18 @@ data:
     - icon: ':heavy_check_mark:'
       path: DS/Sparse_table.hpp
       title: DS/Sparse_table.hpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: DS/fenwick_tree.hpp
       title: DS/fenwick_tree.hpp
   - name: Misc
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Misc/debug.hpp
       title: Misc/debug.hpp
     - icon: ':warning:'
       path: Misc/faster_io.hpp
       title: Misc/faster_io.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Misc/marco.hpp
       title: Misc/marco.hpp
   - name: tree
@@ -56,9 +56,12 @@ data:
       title: test/aizu/disjointset.test.cpp
   - name: test/yosupo/Ds
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Ds/PARS_yosupo.test.cpp
       title: test/yosupo/Ds/PARS_yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Ds/RMQ_yosupo.test.cpp
+      title: test/yosupo/Ds/RMQ_yosupo.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Ds/unionfind_yosupo.test.cpp
       title: test/yosupo/Ds/unionfind_yosupo.test.cpp
@@ -70,9 +73,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/MST_yosupo.test.cpp
       title: test/yosupo/MST_yosupo.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/yosupo/RMQ_yosupo.test.cpp
-      title: test/yosupo/RMQ_yosupo.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/tree_diameter_yosupo.test.cpp
       title: test/yosupo/tree_diameter_yosupo.test.cpp
