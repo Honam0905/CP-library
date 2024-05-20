@@ -12,6 +12,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aizu/disjointset.test.cpp
     title: test/aizu/disjointset.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Ds/PARS_yosupo.test.cpp
+    title: test/yosupo/Ds/PARS_yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Ds/unionfind_yosupo.test.cpp
+    title: test/yosupo/Ds/unionfind_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/LCA_yosupo.test.cpp
     title: test/yosupo/LCA_yosupo.test.cpp
@@ -19,20 +25,14 @@ data:
     path: test/yosupo/MST_yosupo.test.cpp
     title: test/yosupo/MST_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/PARS_yosupo.test.cpp
-    title: test/yosupo/PARS_yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
     path: test/yosupo/RMQ_yosupo.test.cpp
     title: test/yosupo/RMQ_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/tree_diameter_yosupo.test.cpp
     title: test/yosupo/tree_diameter_yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/unionfind_yosupo.test.cpp
-    title: test/yosupo/unionfind_yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Misc/marco.hpp\"\n// Judges with GCC >= 12 only needs Ofast\n\
@@ -116,15 +116,15 @@ data:
   path: Misc/marco.hpp
   requiredBy: []
   timestamp: '2024-05-13 12:33:07+07:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aizu/2_segment_tree.test.cpp
   - test/aizu/disjointset.test.cpp
   - test/aizu/1_seg_tree.test.cpp
-  - test/yosupo/unionfind_yosupo.test.cpp
+  - test/yosupo/Ds/unionfind_yosupo.test.cpp
+  - test/yosupo/Ds/PARS_yosupo.test.cpp
   - test/yosupo/RMQ_yosupo.test.cpp
   - test/yosupo/tree_diameter_yosupo.test.cpp
-  - test/yosupo/PARS_yosupo.test.cpp
   - test/yosupo/MST_yosupo.test.cpp
   - test/yosupo/LCA_yosupo.test.cpp
 documentation_of: Misc/marco.hpp

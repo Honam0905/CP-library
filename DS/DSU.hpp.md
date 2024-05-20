@@ -7,11 +7,11 @@ data:
     path: test/aizu/disjointset.test.cpp
     title: test/aizu/disjointset.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Ds/unionfind_yosupo.test.cpp
+    title: test/yosupo/Ds/unionfind_yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/MST_yosupo.test.cpp
     title: test/yosupo/MST_yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/unionfind_yosupo.test.cpp
-    title: test/yosupo/unionfind_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -43,7 +43,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aizu/disjointset.test.cpp
-  - test/yosupo/unionfind_yosupo.test.cpp
+  - test/yosupo/Ds/unionfind_yosupo.test.cpp
   - test/yosupo/MST_yosupo.test.cpp
 documentation_of: DS/DSU.hpp
 layout: document
