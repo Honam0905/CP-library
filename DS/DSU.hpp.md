@@ -10,8 +10,8 @@ data:
     path: test/yosupo/Ds/unionfind_yosupo.test.cpp
     title: test/yosupo/Ds/unionfind_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/MST_yosupo.test.cpp
-    title: test/yosupo/MST_yosupo.test.cpp
+    path: test/yosupo/Graph/MST_yosupo.test.cpp
+    title: test/yosupo/Graph/MST_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -44,7 +44,7 @@ data:
   verifiedWith:
   - test/aizu/disjointset.test.cpp
   - test/yosupo/Ds/unionfind_yosupo.test.cpp
-  - test/yosupo/MST_yosupo.test.cpp
+  - test/yosupo/Graph/MST_yosupo.test.cpp
 documentation_of: DS/DSU.hpp
 layout: document
 redirect_from:

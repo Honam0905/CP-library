@@ -65,11 +65,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Ds/unionfind_yosupo.test.cpp
       title: test/yosupo/Ds/unionfind_yosupo.test.cpp
-  - name: test/yosupo
+  - name: test/yosupo/Graph
     pages:
     - icon: ':heavy_check_mark:'
-      path: test/yosupo/MST_yosupo.test.cpp
-      title: test/yosupo/MST_yosupo.test.cpp
+      path: test/yosupo/Graph/MST_yosupo.test.cpp
+      title: test/yosupo/Graph/MST_yosupo.test.cpp
   - name: test/yosupo/Tree
     pages:
     - icon: ':heavy_check_mark:'
