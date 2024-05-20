@@ -31,6 +31,9 @@ data:
     - icon: ':warning:'
       path: tree/LCA_kactl.hpp
       title: tree/LCA_kactl.hpp
+    - icon: ':warning:'
+      path: tree/LCA_segtree.hpp
+      title: tree/LCA_segtree.hpp
     - icon: ':heavy_check_mark:'
       path: tree/Tree_diameter.hpp
       title: tree/Tree_diameter.hpp
