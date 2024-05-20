@@ -28,6 +28,9 @@ data:
       title: Misc/marco.hpp
   - name: tree
     pages:
+    - icon: ':warning:'
+      path: tree/LCA_kactl.hpp
+      title: tree/LCA_kactl.hpp
     - icon: ':heavy_check_mark:'
       path: tree/Tree_diameter.hpp
       title: tree/Tree_diameter.hpp
