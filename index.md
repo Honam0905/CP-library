@@ -31,7 +31,7 @@ data:
     - icon: ':warning:'
       path: tree/LCA_kactl.hpp
       title: tree/LCA_kactl.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: tree/LCA_segtree.hpp
       title: tree/LCA_segtree.hpp
     - icon: ':heavy_check_mark:'
@@ -56,6 +56,9 @@ data:
       title: test/aizu/disjointset.test.cpp
   - name: test/yosupo
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/LCA_yosupo.test.cpp
+      title: test/yosupo/LCA_yosupo.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/MST_yosupo.test.cpp
       title: test/yosupo/MST_yosupo.test.cpp

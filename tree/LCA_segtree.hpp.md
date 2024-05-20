@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/LCA_yosupo.test.cpp
+    title: test/yosupo/LCA_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links:
     - https://cp-algorithms.com/graph/lca.html
@@ -65,8 +68,9 @@ data:
   path: tree/LCA_segtree.hpp
   requiredBy: []
   timestamp: '2024-05-20 13:04:46+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/LCA_yosupo.test.cpp
 documentation_of: tree/LCA_segtree.hpp
 layout: document
 redirect_from:

@@ -13,6 +13,9 @@ data:
     path: test/aizu/disjointset.test.cpp
     title: test/aizu/disjointset.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/LCA_yosupo.test.cpp
+    title: test/yosupo/LCA_yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/MST_yosupo.test.cpp
     title: test/yosupo/MST_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
@@ -123,6 +126,7 @@ data:
   - test/yosupo/tree_diameter_yosupo.test.cpp
   - test/yosupo/PARS_yosupo.test.cpp
   - test/yosupo/MST_yosupo.test.cpp
+  - test/yosupo/LCA_yosupo.test.cpp
 documentation_of: Misc/marco.hpp
 layout: document
 redirect_from:
