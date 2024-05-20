@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/tree_diameter_yosupo.test.cpp
-    title: test/yosupo/tree_diameter_yosupo.test.cpp
+    path: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
+    title: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -66,7 +66,7 @@ data:
   timestamp: '2024-05-13 22:23:40+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/tree_diameter_yosupo.test.cpp
+  - test/yosupo/Tree/tree_diameter_yosupo.test.cpp
 documentation_of: tree/Tree_diameter.hpp
 layout: document
 redirect_from:

@@ -28,8 +28,8 @@ data:
     path: test/yosupo/Tree/LCA_yosupo.test.cpp
     title: test/yosupo/Tree/LCA_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/tree_diameter_yosupo.test.cpp
-    title: test/yosupo/tree_diameter_yosupo.test.cpp
+    path: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
+    title: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -164,8 +164,8 @@ data:
   - test/yosupo/Ds/unionfind_yosupo.test.cpp
   - test/yosupo/Ds/RMQ_yosupo.test.cpp
   - test/yosupo/Ds/PARS_yosupo.test.cpp
-  - test/yosupo/tree_diameter_yosupo.test.cpp
   - test/yosupo/MST_yosupo.test.cpp
+  - test/yosupo/Tree/tree_diameter_yosupo.test.cpp
   - test/yosupo/Tree/LCA_yosupo.test.cpp
 documentation_of: Misc/debug.hpp
 layout: document

@@ -20,8 +20,8 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/tree_diameter
     links:
     - https://judge.yosupo.jp/problem/tree_diameter
-  bundledCode: "#line 1 \"test/yosupo/tree_diameter_yosupo.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/tree_diameter\"\n#line 2 \"Misc/marco.hpp\"\
+  bundledCode: "#line 1 \"test/yosupo/Tree/tree_diameter_yosupo.test.cpp\"\n#define\
+    \ PROBLEM \"https://judge.yosupo.jp/problem/tree_diameter\"\n#line 2 \"Misc/marco.hpp\"\
     \n// Judges with GCC >= 12 only needs Ofast\n// #pragma GCC optimize(\"O3,no-stack-protector,fast-math,unroll-loops,tree-vectorize\"\
     )\n// MLE optimization\n// #pragma GCC optimize(\"conserve-stack\")\n// Old judges\n\
     // #pragma GCC target(\"sse4.2,popcnt,lzcnt,abm,mmx,fma,bmi,bmi2\")\n// New judges.\
@@ -77,7 +77,7 @@ data:
     \ _print(v...);}\n\nvoid dbg_out() { cerr << endl; }\ntemplate<typename Head,\
     \ typename... Tail> void dbg_out(Head H, Tail... T) { __print(H); if (sizeof...(T))\
     \ cerr << \", \"; dbg_out(T...); }\n#define dbg(...) cerr << \"[\" << #__VA_ARGS__\
-    \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/tree_diameter_yosupo.test.cpp\"\
+    \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/Tree/tree_diameter_yosupo.test.cpp\"\
     \nconst int INF=1e9;\nconst ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT,\
     \ Saigon-----------------\n#line 2 \"tree/Tree_diameter.hpp\"\n/*\n   @brief:Tree-Diameter\n\
     \   author:Kiffaz\n*/\ntemplate<typename T> struct tree_diameter {\n    struct\
@@ -102,7 +102,7 @@ data:
     \  if (!visited[edge.to] && find_path(edge.to, target)) {\n                  \
     \  return true;\n                }\n            }\n            path.pop_back();\n\
     \            return false;\n        };\n\n        find_path(second_farthest, first_farthest);\n\
-    \n        return {max_dist, path};\n    }\n};\n#line 8 \"test/yosupo/tree_diameter_yosupo.test.cpp\"\
+    \n        return {max_dist, path};\n    }\n};\n#line 8 \"test/yosupo/Tree/tree_diameter_yosupo.test.cpp\"\
     \nint main() {\n  FT;\n  int n; cin>>n;\n  tree_diameter<ll>tre(n);\n  rep(i,n-1){\n\
     \     ll a,b,c; cin>>a>>b>>c;\n     tre.add_edge(a,b,c,true);\n  }\n  auto [wei,pat]=tre.get_diameter();\n\
     \  cout<<wei<<\" \"<<pat.size()<<'\\n';\n  rep(i,pat.size()){\n     cout<<pat[i]<<\"\
@@ -120,15 +120,15 @@ data:
   - Misc/debug.hpp
   - tree/Tree_diameter.hpp
   isVerificationFile: true
-  path: test/yosupo/tree_diameter_yosupo.test.cpp
+  path: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-05-13 22:23:40+07:00'
+  timestamp: '2024-05-20 13:22:14+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/yosupo/tree_diameter_yosupo.test.cpp
+documentation_of: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
 layout: document
 redirect_from:
-- /verify/test/yosupo/tree_diameter_yosupo.test.cpp
-- /verify/test/yosupo/tree_diameter_yosupo.test.cpp.html
-title: test/yosupo/tree_diameter_yosupo.test.cpp
+- /verify/test/yosupo/Tree/tree_diameter_yosupo.test.cpp
+- /verify/test/yosupo/Tree/tree_diameter_yosupo.test.cpp.html
+title: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
 ---
