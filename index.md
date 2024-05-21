@@ -29,6 +29,9 @@ data:
   - name: Modint
     pages:
     - icon: ':warning:'
+      path: Modint/Barrett_reduction.hpp
+      title: Modint/Barrett_reduction.hpp
+    - icon: ':warning:'
       path: Modint/dynamic_modint.hpp
       title: Modint/dynamic_modint.hpp
   - name: tree
