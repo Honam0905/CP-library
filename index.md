@@ -15,6 +15,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: DS/fenwick_tree.hpp
       title: DS/fenwick_tree.hpp
+  - name: Math/Combinatorics
+    pages:
+    - icon: ':warning:'
+      path: Math/Combinatorics/Comb_common.hpp
+      title: Math/Combinatorics/Comb_common.hpp
   - name: Misc
     pages:
     - icon: ':heavy_check_mark:'
