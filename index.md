@@ -28,7 +28,7 @@ data:
       title: Misc/marco.hpp
   - name: tree
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: tree/LCA_kactl.hpp
       title: tree/LCA_kactl.hpp
     - icon: ':heavy_check_mark:'
@@ -75,6 +75,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Tree/LCA_yosupo.test.cpp
       title: test/yosupo/Tree/LCA_yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Tree/LCA_yosupo_2.test.cpp
+      title: test/yosupo/Tree/LCA_yosupo_2.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
       title: test/yosupo/Tree/tree_diameter_yosupo.test.cpp

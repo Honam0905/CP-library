@@ -28,6 +28,9 @@ data:
     path: test/yosupo/Tree/LCA_yosupo.test.cpp
     title: test/yosupo/Tree/LCA_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Tree/LCA_yosupo_2.test.cpp
+    title: test/yosupo/Tree/LCA_yosupo_2.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
     title: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
   _isVerificationFailed: false
@@ -166,6 +169,7 @@ data:
   - test/yosupo/Ds/PARS_yosupo.test.cpp
   - test/yosupo/Graph/MST_yosupo.test.cpp
   - test/yosupo/Tree/tree_diameter_yosupo.test.cpp
+  - test/yosupo/Tree/LCA_yosupo_2.test.cpp
   - test/yosupo/Tree/LCA_yosupo.test.cpp
 documentation_of: Misc/debug.hpp
 layout: document

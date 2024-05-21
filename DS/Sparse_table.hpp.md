@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Ds/RMQ_yosupo.test.cpp
     title: test/yosupo/Ds/RMQ_yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Tree/LCA_yosupo_2.test.cpp
+    title: test/yosupo/Tree/LCA_yosupo_2.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -43,6 +46,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Ds/RMQ_yosupo.test.cpp
+  - test/yosupo/Tree/LCA_yosupo_2.test.cpp
 documentation_of: DS/Sparse_table.hpp
 layout: document
 redirect_from:

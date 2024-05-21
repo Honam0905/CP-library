@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Tree/LCA_yosupo_2.test.cpp
+    title: test/yosupo/Tree/LCA_yosupo_2.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"tree/LCA_kactl.hpp\"\nstruct LCA {\n\tint T = 0;\n\tvi time,\
@@ -28,8 +31,9 @@ data:
   path: tree/LCA_kactl.hpp
   requiredBy: []
   timestamp: '2024-05-20 12:58:32+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Tree/LCA_yosupo_2.test.cpp
 documentation_of: tree/LCA_kactl.hpp
 layout: document
 redirect_from:
