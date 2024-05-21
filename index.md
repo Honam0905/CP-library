@@ -26,11 +26,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: Misc/marco.hpp
       title: Misc/marco.hpp
-  - name: Modint
-    pages:
-    - icon: ':warning:'
-      path: Modint/dynamic_modint.hpp
-      title: Modint/dynamic_modint.hpp
   - name: tree
     pages:
     - icon: ':heavy_check_mark:'
