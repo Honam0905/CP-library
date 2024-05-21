@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: tree/LCA_kactl.hpp
+    title: tree/LCA_kactl.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Ds/RMQ_yosupo.test.cpp
@@ -41,7 +44,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: DS/Sparse_table.hpp
-  requiredBy: []
+  requiredBy:
+  - tree/LCA_kactl.hpp
   timestamp: '2024-05-13 21:55:17+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

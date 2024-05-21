@@ -93,7 +93,7 @@ data:
     \ - pw * 2 + 1);\n\t\t\trep(j,jmp[k].size())\n\t\t\t\tjmp[k][j] = min(jmp[k -\
     \ 1][j], jmp[k - 1][j + pw]);\n\t\t}\n\t}\n\tT query(int a, int b) {\n\t\tassert(a\
     \ < b); // or return inf if a == b\n\t\tint dep = 31 - __builtin_clz(b - a);\n\
-    \t\treturn min(jmp[dep][a], jmp[dep][b - (1 << dep)]);\n\t}\n};\n#line 2 \"tree/LCA_kactl.hpp\"\
+    \t\treturn min(jmp[dep][a], jmp[dep][b - (1 << dep)]);\n\t}\n};\n#line 3 \"tree/LCA_kactl.hpp\"\
     \nstruct LCA {\n\tint T = 0;\n\tvi time, path, ret;\n\tsparsetable<int> rmq;\n\
     \n\tLCA(vector<vi>& C) : time(sz(C)), rmq((dfs(C,0,-1), ret)) {}\n\tvoid dfs(vector<vi>&\
     \ C, int v, int par) {\n\t\ttime[v] = T++;\n\t\tfor (int y : C[v]) if (y != par)\
@@ -121,7 +121,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/Tree/LCA_yosupo_2.test.cpp
   requiredBy: []
-  timestamp: '2024-05-21 09:47:57+07:00'
+  timestamp: '2024-05-21 21:24:29+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Tree/LCA_yosupo_2.test.cpp
