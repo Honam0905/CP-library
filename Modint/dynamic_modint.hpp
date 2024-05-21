@@ -1,3 +1,4 @@
+#pragma once
 template <int id>
 struct dynamic_modint {
   int x;
