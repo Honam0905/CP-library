@@ -8,5 +8,6 @@
 "test/yosupo/Ds/unionfind_yosupo.test.cpp": "2024-05-20 13:13:15 +0700",
 "test/yosupo/Graph/MST_yosupo.test.cpp": "2024-05-20 13:24:30 +0700",
 "test/yosupo/Tree/LCA_yosupo.test.cpp": "2024-05-20 13:19:42 +0700",
+"test/yosupo/Tree/LCA_yosupo_2.test.cpp": "2024-05-21 09:47:57 +0700",
 "test/yosupo/Tree/tree_diameter_yosupo.test.cpp": "2024-05-20 13:22:14 +0700"
 }
