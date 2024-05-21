@@ -1,4 +1,5 @@
 #pragma once
+#include "Modint/Barrett_reduction.hpp"
 template <int id>
 struct dynamic_modint {
   int x;
