@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: Modint/dynamic_modint.hpp
+    title: Modint/dynamic_modint.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -43,7 +46,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: Modint/Barrett_reduction.hpp
-  requiredBy: []
+  requiredBy:
+  - Modint/dynamic_modint.hpp
   timestamp: '2024-05-21 21:44:40+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
