@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Modint/dynamic_modint.hpp\"\ntemplate <int id>\nstruct dynamic_modint\
+  bundledCode: "#line 2 \"Modint/dynamic_modint.hpp\"\ntemplate <int id>\nstruct dynamic_modint\
     \ {\n  int x;\n\n  dynamic_modint() : x(0) {}\n\n  dynamic_modint(int64_t y) {\n\
     \    int z = y % get_mod();\n    if (z < 0) z += get_mod();\n    x = z;\n  }\n\
     \n  dynamic_modint &operator+=(const dynamic_modint &p) {\n    if ((x += p.x)\
@@ -41,7 +41,7 @@ data:
     \ static void set_mod(int md) {\n    assert(0 < md && md <= (1LL << 30) - 1);\n\
     \    get_mod() = md;\n    barrett() = Barrett(md);\n  }\n};\n\nusing modint =\
     \ dynamic_modint<-1>;\n"
-  code: "template <int id>\nstruct dynamic_modint {\n  int x;\n\n  dynamic_modint()\
+  code: "#pragma once\ntemplate <int id>\nstruct dynamic_modint {\n  int x;\n\n  dynamic_modint()\
     \ : x(0) {}\n\n  dynamic_modint(int64_t y) {\n    int z = y % get_mod();\n   \
     \ if (z < 0) z += get_mod();\n    x = z;\n  }\n\n  dynamic_modint &operator+=(const\
     \ dynamic_modint &p) {\n    if ((x += p.x) >= get_mod()) x -= get_mod();\n   \
@@ -78,7 +78,7 @@ data:
   isVerificationFile: false
   path: Modint/dynamic_modint.hpp
   requiredBy: []
-  timestamp: '2024-05-21 20:36:45+07:00'
+  timestamp: '2024-05-21 20:52:09+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Modint/dynamic_modint.hpp
