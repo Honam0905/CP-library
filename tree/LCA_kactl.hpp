@@ -1,4 +1,5 @@
 #pragma once
+#include "DS/Sparse_table.hpp"
 struct LCA {
 	int T = 0;
 	vi time, path, ret;
