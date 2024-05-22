@@ -47,6 +47,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Modint/dynamic_modint.hpp
       title: Modint/dynamic_modint.hpp
+    - icon: ':warning:'
+      path: Modint/montgomery_modint.hpp
+      title: montgomery modint(static modint)
   - name: NT/prime
     pages:
     - icon: ':heavy_check_mark:'
