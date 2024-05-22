@@ -27,7 +27,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/BC_prime_mod.test.cpp
     title: test/yosupo/Math/BC_prime_mod.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/prime_test.test.cpp
     title: test/yosupo/Math/prime_test.test.cpp
   - icon: ':heavy_check_mark:'
@@ -39,9 +39,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
     title: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: '#line 1 "Misc/debug.hpp"
@@ -165,7 +165,7 @@ data:
   path: Misc/debug.hpp
   requiredBy: []
   timestamp: '2024-05-13 12:48:47+07:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aizu/2_segment_tree.test.cpp
   - test/aizu/disjointset.test.cpp

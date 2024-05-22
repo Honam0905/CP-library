@@ -22,23 +22,23 @@ data:
       title: Math/Combinatorics/Comb_common.hpp
   - name: Misc
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Misc/debug.hpp
       title: Misc/debug.hpp
     - icon: ':warning:'
       path: Misc/faster_io.hpp
       title: Misc/faster_io.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Misc/marco.hpp
       title: Misc/marco.hpp
   - name: Mod
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Mod/mod_pow.hpp
       title: Mod/mod_pow.hpp
   - name: Modint
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Modint/Barrett_reduction.hpp
       title: Modint/Barrett_reduction.hpp
     - icon: ':heavy_check_mark:'
@@ -46,7 +46,7 @@ data:
       title: Modint/dynamic_modint.hpp
   - name: NT/prime
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: NT/prime/prime_test.hpp
       title: NT/prime/prime_test.hpp
   - name: tree
@@ -98,7 +98,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/BC_prime_mod.test.cpp
       title: test/yosupo/Math/BC_prime_mod.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/prime_test.test.cpp
       title: test/yosupo/Math/prime_test.test.cpp
   - name: test/yosupo/Tree

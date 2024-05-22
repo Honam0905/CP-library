@@ -4,13 +4,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: Math/Combinatorics/Comb_common.hpp
     title: Math/Combinatorics/Comb_common.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Misc/debug.hpp
     title: Misc/debug.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Misc/marco.hpp
     title: Misc/marco.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Modint/Barrett_reduction.hpp
     title: Modint/Barrett_reduction.hpp
   - icon: ':heavy_check_mark:'

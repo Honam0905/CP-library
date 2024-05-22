@@ -1,26 +1,26 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Misc/debug.hpp
     title: Misc/debug.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Misc/marco.hpp
     title: Misc/marco.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Mod/mod_pow.hpp
     title: Mod/mod_pow.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Modint/Barrett_reduction.hpp
     title: Modint/Barrett_reduction.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: NT/prime/prime_test.hpp
     title: NT/prime/prime_test.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/primality_test
@@ -119,13 +119,14 @@ data:
     \ : {2, 325, 9375, 28178, 450775, 9780504, 1795265022}) {\n        if (n == a)\n\
     \            return true;\n        if (check_composite(n, a, d, r))\n        \
     \    return false;\n    }\n    return true;\n}\n#line 8 \"test/yosupo/Math/prime_test.test.cpp\"\
-    \n\nint main() {\n    u64 n; cin>>n;\n    cout<<(MillerRabin(n)?\"Yes\":\"No\"\
-    )<<'\\n';\n    return 0;\n}\n"
+    \n\nint main() {\n    int t; cin>>t;\n    while(t--){\n      u64 n; cin>>n;\n\
+    \      cout<<(MillerRabin(n)?\"Yes\":\"No\")<<'\\n';\n    }\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/primality_test\"\n#include\
     \ \"Misc/marco.hpp\"\n#include \"Misc/debug.hpp\"\nconst int INF=1e9;\nconst ll\
     \ INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT, Saigon-----------------\n\
-    #include \"NT/prime/prime_test.hpp\"\n\nint main() {\n    u64 n; cin>>n;\n   \
-    \ cout<<(MillerRabin(n)?\"Yes\":\"No\")<<'\\n';\n    return 0;\n}\n"
+    #include \"NT/prime/prime_test.hpp\"\n\nint main() {\n    int t; cin>>t;\n   \
+    \ while(t--){\n      u64 n; cin>>n;\n      cout<<(MillerRabin(n)?\"Yes\":\"No\"\
+    )<<'\\n';\n    }\n    return 0;\n}\n"
   dependsOn:
   - Misc/marco.hpp
   - Misc/debug.hpp
@@ -135,8 +136,8 @@ data:
   isVerificationFile: true
   path: test/yosupo/Math/prime_test.test.cpp
   requiredBy: []
-  timestamp: '2024-05-22 09:36:50+07:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-05-22 09:38:59+07:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Math/prime_test.test.cpp
 layout: document
