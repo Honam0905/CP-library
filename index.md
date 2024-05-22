@@ -44,6 +44,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: Modint/dynamic_modint.hpp
       title: Modint/dynamic_modint.hpp
+  - name: NT/prime
+    pages:
+    - icon: ':warning:'
+      path: NT/prime/prime_test.hpp
+      title: NT/prime/prime_test.hpp
   - name: tree
     pages:
     - icon: ':heavy_check_mark:'

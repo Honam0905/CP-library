@@ -4,7 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: Modint/Barrett_reduction.hpp
     title: Modint/Barrett_reduction.hpp
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: NT/prime/prime_test.hpp
+    title: NT/prime/prime_test.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -42,7 +45,8 @@ data:
   - Modint/Barrett_reduction.hpp
   isVerificationFile: false
   path: Mod/mod_pow.hpp
-  requiredBy: []
+  requiredBy:
+  - NT/prime/prime_test.hpp
   timestamp: '2024-05-22 09:24:19+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
