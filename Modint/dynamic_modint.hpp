@@ -28,7 +28,7 @@ struct dynamic_modint {
   }
 
   dynamic_modint &operator/=(const dynamic_modint &p) {
-    *this *= p.inverse();
+    *this *= p.inv();
     return *this;
   }
 
