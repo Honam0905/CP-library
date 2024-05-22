@@ -31,6 +31,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: Misc/marco.hpp
       title: Misc/marco.hpp
+  - name: Mod
+    pages:
+    - icon: ':warning:'
+      path: Mod/mod_pow.hpp
+      title: Mod/mod_pow.hpp
   - name: Modint
     pages:
     - icon: ':heavy_check_mark:'

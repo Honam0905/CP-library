@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':warning:'
+    path: Mod/mod_pow.hpp
+    title: Mod/mod_pow.hpp
   - icon: ':heavy_check_mark:'
     path: Modint/dynamic_modint.hpp
     title: Modint/dynamic_modint.hpp
@@ -50,6 +53,7 @@ data:
   isVerificationFile: false
   path: Modint/Barrett_reduction.hpp
   requiredBy:
+  - Mod/mod_pow.hpp
   - Modint/dynamic_modint.hpp
   timestamp: '2024-05-21 21:44:40+07:00'
   verificationStatus: LIBRARY_ALL_AC
