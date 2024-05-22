@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: DS/Sparse_table.hpp
     title: DS/Sparse_table.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Misc/debug.hpp
     title: Misc/debug.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Misc/marco.hpp
     title: Misc/marco.hpp
   _extendedRequiredBy: []
