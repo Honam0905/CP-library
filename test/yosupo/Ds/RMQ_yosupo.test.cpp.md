@@ -79,21 +79,17 @@ data:
     \ cerr << \", \"; dbg_out(T...); }\n#define dbg(...) cerr << \"[\" << #__VA_ARGS__\
     \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/Ds/RMQ_yosupo.test.cpp\"\
     \nconst int INF=1e9;\nconst ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT,\
-    \ Saigon-----------------\n#line 2 \"DS/Sparse_table.hpp\"\n/**\n * Author: Johan\
-    \ Sannemo, pajenegod\n * Date: 2015-02-06\n * License: CC0\n * Source: Folklore\n\
-    \ * Description: Range Minimum Queries on an array. Returns\n * min(V[a], V[a\
-    \ + 1], ... V[b - 1]) in constant time.\n * Usage:\n *  RMQ rmq(values);\n * \
-    \ rmq.query(inclusive, exclusive);\n * Time: $O(|V| \\log |V| + Q)$\n * Status:\
-    \ stress-tested\n */\n\ntemplate<class T>\nstruct sparsetable {\n\tvector<vector<T>>\
-    \ jmp;\n\tsparsetable(const vector<T>& V) : jmp(1, V) {\n\t\tfor (int pw = 1,\
-    \ k = 1; pw * 2 <= V.size(); pw *= 2, ++k) {\n\t\t\tjmp.emplace_back(V.size()\
-    \ - pw * 2 + 1);\n\t\t\trep(j,jmp[k].size())\n\t\t\t\tjmp[k][j] = min(jmp[k -\
-    \ 1][j], jmp[k - 1][j + pw]);\n\t\t}\n\t}\n\tT query(int a, int b) {\n\t\tassert(a\
-    \ < b); // or return inf if a == b\n\t\tint dep = 31 - __builtin_clz(b - a);\n\
-    \t\treturn min(jmp[dep][a], jmp[dep][b - (1 << dep)]);\n\t}\n};\n#line 8 \"test/yosupo/Ds/RMQ_yosupo.test.cpp\"\
-    \n\nint main() {\n  int n,q,l,r; cin>>n>>q;\n  vi a(n);\n  rep(i,n) cin>>a[i];\n\
-    \  sparsetable<int>st(a);\n  while(q--){\n    cin>>l>>r;\n    cout<<st.query(l,r)<<'\\\
-    n';\n  }\n    return 0;\n}\n"
+    \ Saigon-----------------\n#line 2 \"DS/Sparse_table.hpp\"\n\ntemplate<class T>\n\
+    struct sparsetable {\n\tvector<vector<T>> jmp;\n\tsparsetable(const vector<T>&\
+    \ V) : jmp(1, V) {\n\t\tfor (int pw = 1, k = 1; pw * 2 <= V.size(); pw *= 2, ++k)\
+    \ {\n\t\t\tjmp.emplace_back(V.size() - pw * 2 + 1);\n\t\t\trep(j,jmp[k].size())\n\
+    \t\t\t\tjmp[k][j] = min(jmp[k - 1][j], jmp[k - 1][j + pw]);\n\t\t}\n\t}\n\tT query(int\
+    \ a, int b) {\n\t\tassert(a < b); // or return inf if a == b\n\t\tint dep = 31\
+    \ - __builtin_clz(b - a);\n\t\treturn min(jmp[dep][a], jmp[dep][b - (1 << dep)]);\n\
+    \t}\n};\n#line 8 \"test/yosupo/Ds/RMQ_yosupo.test.cpp\"\n\nint main() {\n  int\
+    \ n,q,l,r; cin>>n>>q;\n  vi a(n);\n  rep(i,n) cin>>a[i];\n  sparsetable<int>st(a);\n\
+    \  while(q--){\n    cin>>l>>r;\n    cout<<st.query(l,r)<<'\\n';\n  }\n    return\
+    \ 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n#include \"\
     Misc/marco.hpp\"\n#include \"Misc/debug.hpp\"\nconst int INF=1e9;\nconst ll INFI=1e15;\n\
     //----------Author: Nguyen Ho Nam,UIT, Saigon-----------------\n#include \"DS/Sparse_table.hpp\"\
@@ -107,7 +103,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/Ds/RMQ_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-05-20 13:14:22+07:00'
+  timestamp: '2024-05-22 23:06:51+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Ds/RMQ_yosupo.test.cpp
