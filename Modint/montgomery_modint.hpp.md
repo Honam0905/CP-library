@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/aizu/pow_aizu.test.cpp
+    title: test/aizu/pow_aizu.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: montgomery modint(static modint)
     links: []
@@ -82,8 +85,9 @@ data:
   path: Modint/montgomery_modint.hpp
   requiredBy: []
   timestamp: '2024-05-22 19:41:34+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/aizu/pow_aizu.test.cpp
 documentation_of: Modint/montgomery_modint.hpp
 layout: document
 redirect_from:

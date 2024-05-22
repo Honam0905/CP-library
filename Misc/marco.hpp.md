@@ -13,6 +13,9 @@ data:
     path: test/aizu/disjointset.test.cpp
     title: test/aizu/disjointset.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/aizu/pow_aizu.test.cpp
+    title: test/aizu/pow_aizu.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Ds/PARS_yosupo.test.cpp
     title: test/yosupo/Ds/PARS_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
@@ -133,6 +136,7 @@ data:
   - test/aizu/2_segment_tree.test.cpp
   - test/aizu/disjointset.test.cpp
   - test/aizu/1_seg_tree.test.cpp
+  - test/aizu/pow_aizu.test.cpp
   - test/yosupo/Ds/unionfind_yosupo.test.cpp
   - test/yosupo/Ds/RMQ_yosupo.test.cpp
   - test/yosupo/Ds/PARS_yosupo.test.cpp

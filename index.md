@@ -47,7 +47,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Modint/dynamic_modint.hpp
       title: Modint/dynamic_modint.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Modint/montgomery_modint.hpp
       title: montgomery modint(static modint)
   - name: NT/prime
@@ -83,6 +83,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aizu/disjointset.test.cpp
       title: test/aizu/disjointset.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aizu/pow_aizu.test.cpp
+      title: test/aizu/pow_aizu.test.cpp
   - name: test/yosupo/Ds
     pages:
     - icon: ':heavy_check_mark:'
