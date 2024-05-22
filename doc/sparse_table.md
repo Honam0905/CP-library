@@ -11,4 +11,4 @@ Also work for max queries
 *  rmq.query(inclusive, exclusive);
 
 ## Time:
-* $O(|V| \log |V| + Q)$
+* $O(V\log(V)+Q)$
