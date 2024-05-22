@@ -3,6 +3,7 @@
 "test/aizu/1_seg_tree.test.cpp": "2024-05-18 23:20:33 +0700",
 "test/aizu/2_segment_tree.test.cpp": "2024-05-18 23:24:16 +0700",
 "test/aizu/disjointset.test.cpp": "2024-05-13 13:22:07 +0700",
+"test/aizu/pow_aizu.test.cpp": "2024-05-22 19:46:35 +0700",
 "test/yosupo/Ds/PARS_yosupo.test.cpp": "2024-05-20 13:13:41 +0700",
 "test/yosupo/Ds/RMQ_yosupo.test.cpp": "2024-05-20 13:14:22 +0700",
 "test/yosupo/Ds/unionfind_yosupo.test.cpp": "2024-05-20 13:13:15 +0700",
