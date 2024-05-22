@@ -7,6 +7,7 @@
 "test/yosupo/Ds/RMQ_yosupo.test.cpp": "2024-05-20 13:14:22 +0700",
 "test/yosupo/Ds/unionfind_yosupo.test.cpp": "2024-05-20 13:13:15 +0700",
 "test/yosupo/Graph/MST_yosupo.test.cpp": "2024-05-20 13:24:30 +0700",
+"test/yosupo/Math/BC_prime_mod.test.cpp": "2024-05-22 09:05:10 +0700",
 "test/yosupo/Tree/LCA_yosupo.test.cpp": "2024-05-20 13:19:42 +0700",
 "test/yosupo/Tree/LCA_yosupo_2.test.cpp": "2024-05-21 21:24:29 +0700",
 "test/yosupo/Tree/tree_diameter_yosupo.test.cpp": "2024-05-20 13:22:14 +0700"
