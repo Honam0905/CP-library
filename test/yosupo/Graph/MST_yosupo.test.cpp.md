@@ -79,23 +79,20 @@ data:
     \ cerr << \", \"; dbg_out(T...); }\n#define dbg(...) cerr << \"[\" << #__VA_ARGS__\
     \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/Graph/MST_yosupo.test.cpp\"\
     \nconst int INF=1e9;\nconst ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT,\
-    \ Saigon-----------------\n#line 2 \"DS/DSU.hpp\"\n/**\n * Description: Disjoint\
-    \ Set Union with path compression\n \t* and union by size. Add edges and test\
-    \ connectivity. \n \t* Use for Kruskal's or Boruvka's minimum spanning tree.\n\
-    \ * Time: O(\\alpha(N))\n * Source: CSAcademy, KACTL\n * Verification: *\n */\n\
-    struct DSU {\n\tvector<int> e; void init(int N) { e = vector<int>(N,-1); }\n\t\
-    int get(int x) { return e[x] < 0 ? x : e[x] = get(e[x]); } \n\tbool same(int a,\
-    \ int b) { return get(a) == get(b); }\n\tint size(int x) { return -e[get(x)];\
-    \ }\n\tbool unite(int x, int y) { // union by size\n\t\tx = get(x), y = get(y);\
-    \ if (x == y) return 0;\n\t\tif (e[x] > e[y]) swap(x,y);\n\t\te[x] += e[y]; e[y]\
-    \ = x; return 1;\n\t}\n};\n#line 8 \"test/yosupo/Graph/MST_yosupo.test.cpp\"\n\
-    int n,m,x,y,w,total=0;\ntypedef tuple<int, int, int, int> edge;\nint main() {\n\
-    \   cin>>n>>m;\n    vector<edge>edges(m);\n    rep(_,m){\n       cin>>x>>y>>w;\n\
-    \       edges.emplace_back(w,x,y,_);\n    }\n    sort(all(edges));\n    vector<int>ans;\n\
-    \    ll res=0;\n    DSU d;\n    d.init(n);\n    for(const auto& [c,a,b,id]:edges){\n\
-    \        if(d.unite(a,b)){ \n        res+=c; \n        ans.push_back(id);\n  \
-    \      if(ans.size()==n-1) break;\n        }\n    }\n    cout<<res<<'\\n';\n \
-    \   for(auto x:ans) cout<<x<<\" \";\n    return 0;\n}\n"
+    \ Saigon-----------------\n#line 2 \"DS/DSU.hpp\"\nstruct DSU {\n\tvector<int>\
+    \ e; void init(int N) { e = vector<int>(N,-1); }\n\tint get(int x) { return e[x]\
+    \ < 0 ? x : e[x] = get(e[x]); } \n\tbool same(int a, int b) { return get(a) ==\
+    \ get(b); }\n\tint size(int x) { return -e[get(x)]; }\n\tbool unite(int x, int\
+    \ y) { // union by size\n\t\tx = get(x), y = get(y); if (x == y) return 0;\n\t\
+    \tif (e[x] > e[y]) swap(x,y);\n\t\te[x] += e[y]; e[y] = x; return 1;\n\t}\n};\n\
+    #line 8 \"test/yosupo/Graph/MST_yosupo.test.cpp\"\nint n,m,x,y,w,total=0;\ntypedef\
+    \ tuple<int, int, int, int> edge;\nint main() {\n   cin>>n>>m;\n    vector<edge>edges(m);\n\
+    \    rep(_,m){\n       cin>>x>>y>>w;\n       edges.emplace_back(w,x,y,_);\n  \
+    \  }\n    sort(all(edges));\n    vector<int>ans;\n    ll res=0;\n    DSU d;\n\
+    \    d.init(n);\n    for(const auto& [c,a,b,id]:edges){\n        if(d.unite(a,b)){\
+    \ \n        res+=c; \n        ans.push_back(id);\n        if(ans.size()==n-1)\
+    \ break;\n        }\n    }\n    cout<<res<<'\\n';\n    for(auto x:ans) cout<<x<<\"\
+    \ \";\n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/minimum_spanning_tree\"\
     \n#include \"Misc/marco.hpp\"\n#include \"Misc/debug.hpp\"\nconst int INF=1e9;\n\
     const ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT, Saigon-----------------\n\
@@ -113,7 +110,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/Graph/MST_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-05-20 13:24:30+07:00'
+  timestamp: '2024-05-22 23:19:36+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Graph/MST_yosupo.test.cpp
