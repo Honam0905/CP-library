@@ -25,6 +25,9 @@ data:
     path: test/yosupo/Graph/MST_yosupo.test.cpp
     title: test/yosupo/Graph/MST_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/BC_prime_mod.test.cpp
+    title: test/yosupo/Math/BC_prime_mod.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/LCA_yosupo.test.cpp
     title: test/yosupo/Tree/LCA_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
@@ -168,6 +171,7 @@ data:
   - test/yosupo/Ds/RMQ_yosupo.test.cpp
   - test/yosupo/Ds/PARS_yosupo.test.cpp
   - test/yosupo/Graph/MST_yosupo.test.cpp
+  - test/yosupo/Math/BC_prime_mod.test.cpp
   - test/yosupo/Tree/tree_diameter_yosupo.test.cpp
   - test/yosupo/Tree/LCA_yosupo_2.test.cpp
   - test/yosupo/Tree/LCA_yosupo.test.cpp
