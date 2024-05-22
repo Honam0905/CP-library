@@ -7,7 +7,10 @@ const ll INFI=1e15;
 #include "NT/prime/prime_test.hpp"
 
 int main() {
-    u64 n; cin>>n;
-    cout<<(MillerRabin(n)?"Yes":"No")<<'\n';
+    int t; cin>>t;
+    while(t--){
+      u64 n; cin>>n;
+      cout<<(MillerRabin(n)?"Yes":"No")<<'\n';
+    }
     return 0;
 }
