@@ -1,12 +1,4 @@
 #pragma once
-/**
- * Description: Disjoint Set Union with path compression
- 	* and union by size. Add edges and test connectivity. 
- 	* Use for Kruskal's or Boruvka's minimum spanning tree.
- * Time: O(\alpha(N))
- * Source: CSAcademy, KACTL
- * Verification: *
- */
 struct DSU {
 	vector<int> e; void init(int N) { e = vector<int>(N,-1); }
 	int get(int x) { return e[x] < 0 ? x : e[x] = get(e[x]); } 
