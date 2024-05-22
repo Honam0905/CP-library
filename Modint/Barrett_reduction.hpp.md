@@ -5,6 +5,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: Mod/mod_pow.hpp
     title: Mod/mod_pow.hpp
+  - icon: ':warning:'
+    path: Mod/mod_sqrt.hpp
+    title: Mod/mod_sqrt.hpp
   - icon: ':heavy_check_mark:'
     path: Modint/dynamic_modint.hpp
     title: Modint/dynamic_modint.hpp
@@ -61,6 +64,7 @@ data:
   requiredBy:
   - NT/prime/prime_test.hpp
   - Mod/mod_pow.hpp
+  - Mod/mod_sqrt.hpp
   - Modint/dynamic_modint.hpp
   timestamp: '2024-05-21 21:44:40+07:00'
   verificationStatus: LIBRARY_ALL_AC

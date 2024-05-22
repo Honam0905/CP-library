@@ -5,6 +5,9 @@ data:
     path: Modint/Barrett_reduction.hpp
     title: Modint/Barrett_reduction.hpp
   _extendedRequiredBy:
+  - icon: ':warning:'
+    path: Mod/mod_sqrt.hpp
+    title: Mod/mod_sqrt.hpp
   - icon: ':heavy_check_mark:'
     path: NT/prime/prime_test.hpp
     title: NT/prime/prime_test.hpp
@@ -50,6 +53,7 @@ data:
   path: Mod/mod_pow.hpp
   requiredBy:
   - NT/prime/prime_test.hpp
+  - Mod/mod_sqrt.hpp
   timestamp: '2024-05-22 09:24:19+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
