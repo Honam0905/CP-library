@@ -5,13 +5,16 @@ data:
     path: Modint/Barrett_reduction.hpp
     title: Modint/Barrett_reduction.hpp
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Mod/mod_sqrt.hpp
     title: Mod/mod_sqrt.hpp
   - icon: ':heavy_check_mark:'
     path: NT/prime/prime_test.hpp
     title: NT/prime/prime_test.hpp
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
+    title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/prime_test.test.cpp
     title: test/yosupo/Math/prime_test.test.cpp
@@ -58,6 +61,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Math/prime_test.test.cpp
+  - test/yosupo/Math/mod_sqrt_yosupo.test.cpp
 documentation_of: Mod/mod_pow.hpp
 layout: document
 redirect_from:
