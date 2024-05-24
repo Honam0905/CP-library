@@ -57,7 +57,7 @@ data:
       title: NT/prime/prime_test.hpp
   - name: NT/prime/sieve
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: NT/prime/sieve/bitset_sieve_odd.hpp
       title: NT/prime/sieve/bitset_sieve_odd.hpp
     - icon: ':warning:'
@@ -133,6 +133,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/enum_prime_3.test.cpp
       title: test/yosupo/Math/enum_prime_3.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Math/enum_prime_4.test.cpp
+      title: test/yosupo/Math/enum_prime_4.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
       title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp

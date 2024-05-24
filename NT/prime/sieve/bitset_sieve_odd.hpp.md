@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/enum_prime_4.test.cpp
+    title: test/yosupo/Math/enum_prime_4.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"NT/prime/sieve/bitset_sieve_odd.hpp\"\ntemplate<class T>\n\
@@ -33,8 +36,9 @@ data:
   path: NT/prime/sieve/bitset_sieve_odd.hpp
   requiredBy: []
   timestamp: '2024-05-24 13:30:30+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Math/enum_prime_4.test.cpp
 documentation_of: NT/prime/sieve/bitset_sieve_odd.hpp
 layout: document
 redirect_from:
