@@ -1,6 +1,6 @@
 #pragma once
 template<class T>
-vector<T> linear_sieve(T n) {
+vector<T> sieve(T n) {
     vector<bool> is_prime(n+1, true);
     vector<T> primes;
 
