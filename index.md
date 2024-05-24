@@ -58,6 +58,9 @@ data:
   - name: NT/prime/sieve
     pages:
     - icon: ':warning:'
+      path: NT/prime/sieve/bitset_sieve_odd.hpp
+      title: NT/prime/sieve/bitset_sieve_odd.hpp
+    - icon: ':warning:'
       path: NT/prime/sieve/fast_sieve.hpp
       title: NT/prime/sieve/fast_sieve.hpp
     - icon: ':warning:'
