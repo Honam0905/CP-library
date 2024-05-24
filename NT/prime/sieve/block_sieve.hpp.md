@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"NT/prime/block_sieve.hpp\"\ntemplate<class T>\nvector<T>\
+  bundledCode: "#line 2 \"NT/prime/sieve/block_sieve.hpp\"\ntemplate<class T>\nvector<T>\
     \ block_sieve(T L, T R) {\n    T lim = sqrt(R);\n    vector<char> mark(lim + 1,\
     \ false);\n    vector<T> primes;\n\n    for (T i = 2; i <= lim; ++i) {\n     \
     \   if (!mark[i]) {\n            primes.emplace_back(i);\n            for (T j\
@@ -31,15 +31,15 @@ data:
     \ isPrime;\n}\n"
   dependsOn: []
   isVerificationFile: false
-  path: NT/prime/block_sieve.hpp
+  path: NT/prime/sieve/block_sieve.hpp
   requiredBy: []
-  timestamp: '2024-05-24 22:25:10+07:00'
+  timestamp: '2024-05-24 22:28:23+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: NT/prime/block_sieve.hpp
+documentation_of: NT/prime/sieve/block_sieve.hpp
 layout: document
 redirect_from:
-- /library/NT/prime/block_sieve.hpp
-- /library/NT/prime/block_sieve.hpp.html
-title: NT/prime/block_sieve.hpp
+- /library/NT/prime/sieve/block_sieve.hpp
+- /library/NT/prime/sieve/block_sieve.hpp.html
+title: NT/prime/sieve/block_sieve.hpp
 ---
