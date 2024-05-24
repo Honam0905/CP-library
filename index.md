@@ -52,6 +52,9 @@ data:
       title: montgomery modint(static modint)
   - name: NT/prime
     pages:
+    - icon: ':warning:'
+      path: NT/prime/block_sieve.hpp
+      title: NT/prime/block_sieve.hpp
     - icon: ':heavy_check_mark:'
       path: NT/prime/prime_test.hpp
       title: NT/prime/prime_test.hpp
