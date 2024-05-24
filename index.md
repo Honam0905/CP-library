@@ -58,6 +58,9 @@ data:
   - name: NT/prime/sieve
     pages:
     - icon: ':warning:'
+      path: NT/prime/sieve/kim_walisch_sieve.hpp
+      title: NT/prime/sieve/kim_walisch_sieve.hpp
+    - icon: ':warning:'
       path: NT/prime/sieve/linear_sieve.hpp
       title: NT/prime/sieve/linear_sieve.hpp
   - name: tree
