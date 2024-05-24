@@ -31,6 +31,9 @@ data:
     path: test/yosupo/Math/BC_prime_mod.test.cpp
     title: test/yosupo/Math/BC_prime_mod.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/enum_prime_1.test.cpp
+    title: test/yosupo/Math/enum_prime_1.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
     title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
@@ -142,6 +145,7 @@ data:
   - test/yosupo/Ds/PARS_yosupo.test.cpp
   - test/yosupo/Graph/MST_yosupo.test.cpp
   - test/yosupo/Math/prime_test.test.cpp
+  - test/yosupo/Math/enum_prime_1.test.cpp
   - test/yosupo/Math/mod_sqrt_yosupo.test.cpp
   - test/yosupo/Math/BC_prime_mod.test.cpp
   - test/yosupo/Tree/tree_diameter_yosupo.test.cpp
