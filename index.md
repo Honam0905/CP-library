@@ -63,7 +63,7 @@ data:
     - icon: ':warning:'
       path: NT/prime/sieve/block_sieve.hpp
       title: NT/prime/sieve/block_sieve.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: NT/prime/sieve/fast_sieve.hpp
       title: NT/prime/sieve/fast_sieve.hpp
     - icon: ':heavy_check_mark:'
@@ -130,6 +130,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/enum_prime_2.test.cpp
       title: test/yosupo/Math/enum_prime_2.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Math/enum_prime_3.test.cpp
+      title: test/yosupo/Math/enum_prime_3.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
       title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp

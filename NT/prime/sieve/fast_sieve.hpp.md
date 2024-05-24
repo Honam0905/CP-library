@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/enum_prime_3.test.cpp
+    title: test/yosupo/Math/enum_prime_3.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"NT/prime/sieve/fast_sieve.hpp\"\nconst int WHEEL = 3 * 5\
@@ -104,8 +107,9 @@ data:
   path: NT/prime/sieve/fast_sieve.hpp
   requiredBy: []
   timestamp: '2024-05-24 13:26:37+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Math/enum_prime_3.test.cpp
 documentation_of: NT/prime/sieve/fast_sieve.hpp
 layout: document
 redirect_from:
