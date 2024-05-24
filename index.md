@@ -55,6 +55,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: NT/prime/prime_test.hpp
       title: NT/prime/prime_test.hpp
+  - name: NT/prime/sieve
+    pages:
+    - icon: ':warning:'
+      path: NT/prime/sieve/linear_sieve.hpp
+      title: NT/prime/sieve/linear_sieve.hpp
   - name: tree
     pages:
     - icon: ':heavy_check_mark:'
