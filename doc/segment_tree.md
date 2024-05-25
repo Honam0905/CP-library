@@ -1,4 +1,5 @@
 ---
+title: Segment tree
 documentation_of: //DS/Segment_tree.hpp
 ---
 
