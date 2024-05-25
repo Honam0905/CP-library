@@ -43,7 +43,7 @@ data:
   - test/yosupo/Tree/LCA_yosupo_2.test.cpp
 documentation_of: DS/Sparse_table.hpp
 layout: document
-title: Sparse table(KACLT version)
+title: Sparse table(KACTL version)
 ---
 
 ## Description:

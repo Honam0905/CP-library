@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: DS/Sparse_table.hpp
-    title: Sparse table(KACLT version)
+    title: Sparse table(KACTL version)
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
