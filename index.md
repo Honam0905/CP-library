@@ -11,7 +11,7 @@ data:
       title: DS/Segment_tree.hpp
     - icon: ':heavy_check_mark:'
       path: DS/Sparse_table.hpp
-      title: DS/Sparse_table.hpp
+      title: Sparse table(KACLT version)
     - icon: ':heavy_check_mark:'
       path: DS/fenwick_tree.hpp
       title: DS/fenwick_tree.hpp
