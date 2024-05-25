@@ -61,7 +61,7 @@ Atcoder segment tree
 ## Usage:
 
 * define op() for operation and e() for identity element
-* SegTree<T>st(size,op,e)
+* SegTree<>st(size,op,e)
 
 ## Time:
 * $O(n)$ for build()
