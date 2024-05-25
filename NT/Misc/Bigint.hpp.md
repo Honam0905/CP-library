@@ -8,9 +8,9 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"NT/Bigint.hpp\"\ntemplate <long long base = 1000000LL, int\
-    \ digit = 6>\nstruct BigInt{\n    int sign = 1;\n    vector<long long> val;\n\n\
-    \    constexpr BigInt(const long long _val = 0) noexcept {\n        if(_val !=\
+  bundledCode: "#line 2 \"NT/Misc/Bigint.hpp\"\ntemplate <long long base = 1000000LL,\
+    \ int digit = 6>\nstruct BigInt{\n    int sign = 1;\n    vector<long long> val;\n\
+    \n    constexpr BigInt(const long long _val = 0) noexcept {\n        if(_val !=\
     \ 0) val.assign(1, _val);\n        if(_val < 0) sign = -1;\n    }\n    constexpr\
     \ BigInt(const vector<long long> &_val) noexcept : val(_val) {}\n    constexpr\
     \ BigInt(const string &s) noexcept {\n        stoi(s);\n    }\n\nprivate:\n  \
@@ -306,15 +306,15 @@ data:
     \ }\n};\n"
   dependsOn: []
   isVerificationFile: false
-  path: NT/Bigint.hpp
+  path: NT/Misc/Bigint.hpp
   requiredBy: []
-  timestamp: '2024-05-25 22:46:58+07:00'
+  timestamp: '2024-05-25 22:48:50+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: NT/Bigint.hpp
+documentation_of: NT/Misc/Bigint.hpp
 layout: document
 redirect_from:
-- /library/NT/Bigint.hpp
-- /library/NT/Bigint.hpp.html
-title: NT/Bigint.hpp
+- /library/NT/Misc/Bigint.hpp
+- /library/NT/Misc/Bigint.hpp.html
+title: NT/Misc/Bigint.hpp
 ---

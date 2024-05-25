@@ -45,16 +45,16 @@ data:
     - icon: ':heavy_check_mark:'
       path: Modint/montgomery_modint.hpp
       title: montgomery modint(static modint)
-  - name: NT
-    pages:
-    - icon: ':warning:'
-      path: NT/Bigint.hpp
-      title: NT/Bigint.hpp
   - name: NT/Combinatorics
     pages:
     - icon: ':heavy_check_mark:'
       path: NT/Combinatorics/Comb_common.hpp
       title: NT/Combinatorics/Comb_common.hpp
+  - name: NT/Misc
+    pages:
+    - icon: ':warning:'
+      path: NT/Misc/Bigint.hpp
+      title: NT/Misc/Bigint.hpp
   - name: NT/prime
     pages:
     - icon: ':heavy_check_mark:'
