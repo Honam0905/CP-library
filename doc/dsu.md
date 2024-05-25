@@ -1,4 +1,5 @@
 ---
+title: DSU 
 documentation_of: //DS/DSU.hpp
 ---
 
