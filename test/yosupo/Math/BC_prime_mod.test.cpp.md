@@ -166,7 +166,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/Math/BC_prime_mod.test.cpp
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
+  timestamp: '2024-05-25 08:53:05+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Math/BC_prime_mod.test.cpp

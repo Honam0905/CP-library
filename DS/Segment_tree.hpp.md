@@ -51,8 +51,17 @@ data:
   - test/aizu/1_seg_tree.test.cpp
 documentation_of: DS/Segment_tree.hpp
 layout: document
-redirect_from:
-- /library/DS/Segment_tree.hpp
-- /library/DS/Segment_tree.hpp.html
-title: DS/Segment_tree.hpp
 ---
+
+## Description:
+Segment tree with fast optimization and based on
+Atcoder segment tree
+
+## Usage:
+
+* define op() for operation and e() for identity element
+* SegTree<T>st(size,op,e)
+
+## Time:
+* $O(n)$ for build()
+* $O(log(n))$ for add(),modify(),query()
