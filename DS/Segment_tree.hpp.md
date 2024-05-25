@@ -51,6 +51,7 @@ data:
   - test/aizu/1_seg_tree.test.cpp
 documentation_of: DS/Segment_tree.hpp
 layout: document
+title: Segment tree
 ---
 
 ## Description:

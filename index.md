@@ -8,7 +8,7 @@ data:
       title: DSU
     - icon: ':heavy_check_mark:'
       path: DS/Segment_tree.hpp
-      title: DS/Segment_tree.hpp
+      title: Segment tree
     - icon: ':heavy_check_mark:'
       path: DS/Sparse_table.hpp
       title: Sparse table(KACTL version)
