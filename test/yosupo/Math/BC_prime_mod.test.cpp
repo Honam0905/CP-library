@@ -5,7 +5,7 @@ const int INF=1e9;
 const ll INFI=1e15;
 //----------Author: Nguyen Ho Nam,UIT, Saigon-----------------
 #include "Modint/dynamic_modint.hpp"
-#include "Math/Combinatorics/Comb_common.hpp"
+#include "NT/Combinatorics/Comb_common.hpp"
 using mint=modint;
 int main() {
     ll tt,m; cin>>tt>>m;
