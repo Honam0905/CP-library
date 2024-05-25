@@ -1,4 +1,5 @@
 ---
+title: Sparse table(KACLT version)
 documentation_of: //DS/Sparse_table.hpp
 ---
 
