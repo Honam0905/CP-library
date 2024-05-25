@@ -8,16 +8,13 @@ data:
   - icon: ':heavy_check_mark:'
     path: Mod/mod_sqrt.hpp
     title: Mod/mod_sqrt.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':warning:'
     path: Modint/dynamic_modint.hpp
     title: Modint/dynamic_modint.hpp
   - icon: ':heavy_check_mark:'
     path: NT/prime/prime_test.hpp
     title: NT/prime/prime_test.hpp
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Math/BC_prime_mod.test.cpp
-    title: test/yosupo/Math/BC_prime_mod.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
     title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
@@ -74,7 +71,6 @@ data:
   verifiedWith:
   - test/yosupo/Math/prime_test.test.cpp
   - test/yosupo/Math/mod_sqrt_yosupo.test.cpp
-  - test/yosupo/Math/BC_prime_mod.test.cpp
 documentation_of: Modint/Barrett_reduction.hpp
 layout: document
 redirect_from:

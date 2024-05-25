@@ -15,11 +15,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: DS/fenwick_tree.hpp
       title: DS/fenwick_tree.hpp
-  - name: Math/Combinatorics
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: Math/Combinatorics/Comb_common.hpp
-      title: Math/Combinatorics/Comb_common.hpp
   - name: Misc
     pages:
     - icon: ':heavy_check_mark:'
@@ -44,12 +39,17 @@ data:
     - icon: ':heavy_check_mark:'
       path: Modint/Barrett_reduction.hpp
       title: Modint/Barrett_reduction.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: Modint/dynamic_modint.hpp
       title: Modint/dynamic_modint.hpp
     - icon: ':heavy_check_mark:'
       path: Modint/montgomery_modint.hpp
       title: montgomery modint(static modint)
+  - name: NT/Combinatorics
+    pages:
+    - icon: ':warning:'
+      path: NT/Combinatorics/Comb_common.hpp
+      title: NT/Combinatorics/Comb_common.hpp
   - name: NT/prime
     pages:
     - icon: ':heavy_check_mark:'
@@ -121,7 +121,7 @@ data:
       title: test/yosupo/Graph/MST_yosupo.test.cpp
   - name: test/yosupo/Math
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/yosupo/Math/BC_prime_mod.test.cpp
       title: test/yosupo/Math/BC_prime_mod.test.cpp
     - icon: ':heavy_check_mark:'
