@@ -41,6 +41,7 @@ data:
   - test/yosupo/Graph/MST_yosupo.test.cpp
 documentation_of: DS/DSU.hpp
 layout: document
+title: DSU
 ---
 
 ## Description:

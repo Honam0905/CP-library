@@ -5,7 +5,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: DS/DSU.hpp
-      title: DS/DSU.hpp
+      title: DSU
     - icon: ':heavy_check_mark:'
       path: DS/Segment_tree.hpp
       title: DS/Segment_tree.hpp
