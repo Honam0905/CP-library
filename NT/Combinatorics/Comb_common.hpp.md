@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/BC_prime_mod.test.cpp
+    title: test/yosupo/Math/BC_prime_mod.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"NT/Combinatorics/Comb_common.hpp\"\ntemplate<class T>\n\
@@ -41,8 +44,9 @@ data:
   path: NT/Combinatorics/Comb_common.hpp
   requiredBy: []
   timestamp: '2024-05-25 08:47:49+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Math/BC_prime_mod.test.cpp
 documentation_of: NT/Combinatorics/Comb_common.hpp
 layout: document
 redirect_from:

@@ -39,7 +39,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Modint/Barrett_reduction.hpp
       title: Modint/Barrett_reduction.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Modint/dynamic_modint.hpp
       title: Modint/dynamic_modint.hpp
     - icon: ':heavy_check_mark:'
@@ -47,7 +47,7 @@ data:
       title: montgomery modint(static modint)
   - name: NT/Combinatorics
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: NT/Combinatorics/Comb_common.hpp
       title: NT/Combinatorics/Comb_common.hpp
   - name: NT/prime
@@ -121,7 +121,7 @@ data:
       title: test/yosupo/Graph/MST_yosupo.test.cpp
   - name: test/yosupo/Math
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/BC_prime_mod.test.cpp
       title: test/yosupo/Math/BC_prime_mod.test.cpp
     - icon: ':heavy_check_mark:'
