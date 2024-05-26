@@ -77,6 +77,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: NT/prime/sieve/linear_sieve.hpp
       title: NT/prime/sieve/linear_sieve.hpp
+  - name: String
+    pages:
+    - icon: ':warning:'
+      path: String/Z_algorithm.hpp
+      title: String/Z_algorithm.hpp
   - name: tree
     pages:
     - icon: ':heavy_check_mark:'
