@@ -81,7 +81,7 @@ data:
     pages:
     - icon: ':warning:'
       path: String/Z_algorithm.hpp
-      title: String/Z_algorithm.hpp
+      title: Z algorithm
   - name: tree
     pages:
     - icon: ':heavy_check_mark:'
