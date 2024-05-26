@@ -12,8 +12,8 @@ number of characters starting from the position i that coincide with the first c
 * vector<int> ans=z_algorithm(s);
 
 ## Constraints:
-*0<=n<=10<sup>8</sup><br>
-*T is int, uint, ll, or ull
+* 0<=n<=10<sup>8</sup><br>
+* T is int, uint, ll, or ull
 
 ## Time:
 * $O(N)$
