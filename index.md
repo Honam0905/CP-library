@@ -79,7 +79,7 @@ data:
       title: NT/prime/sieve/linear_sieve.hpp
   - name: String
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: String/Z_algorithm.hpp
       title: Z algorithm
   - name: tree
@@ -163,5 +163,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
       title: test/yosupo/Tree/tree_diameter_yosupo.test.cpp
+  - name: test/yosupo/string
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/string/Zalgorithm.test.cpp
+      title: test/yosupo/string/Zalgorithm.test.cpp
 layout: toppage
 ---
