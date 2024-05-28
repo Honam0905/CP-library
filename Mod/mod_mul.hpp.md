@@ -25,7 +25,7 @@ data:
     \ a = rem(n), r = m == 1 ? 0 : 1;\n    while (p) {\n      if (p & 1) r = rem(u64(r)\
     \ * a);\n      a = rem(u64(a) * a);\n      p >>= 1;\n    }\n    return r;\n  }\n\
     \  constexpr inline u32 mul(u32 a, u32 b) {\n    return rem(u64(a) * b);\n  }\n\
-    };\n#line 3 \"Mod/modmul.hpp\"\nlong long modmul(long long a,long long b,long\
+    };\n#line 3 \"Mod/mod_mul.hpp\"\nlong long modmul(long long a,long long b,long\
     \ long mod){\n    Barrett br(mod);\n    return br.mul(a, b);\n}\n\n//or\n//only\
     \ good for long long or int64_t\nlong long modmul2(long long a,long long b,long\
     \ long mod){\n   return (a*b)%mod;\n}\n"
@@ -36,15 +36,15 @@ data:
   dependsOn:
   - Modint/Barrett_reduction.hpp
   isVerificationFile: false
-  path: Mod/modmul.hpp
+  path: Mod/mod_mul.hpp
   requiredBy: []
-  timestamp: '2024-05-28 20:47:21+07:00'
+  timestamp: '2024-05-28 20:49:08+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: Mod/modmul.hpp
+documentation_of: Mod/mod_mul.hpp
 layout: document
 redirect_from:
-- /library/Mod/modmul.hpp
-- /library/Mod/modmul.hpp.html
-title: Mod/modmul.hpp
+- /library/Mod/mod_mul.hpp
+- /library/Mod/mod_mul.hpp.html
+title: Mod/mod_mul.hpp
 ---
