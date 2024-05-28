@@ -43,8 +43,11 @@ data:
   verifiedWith: []
 documentation_of: Mod/mod_mul.hpp
 layout: document
-redirect_from:
-- /library/Mod/mod_mul.hpp
-- /library/Mod/mod_mul.hpp.html
-title: Mod/mod_mul.hpp
+title: mod_mul
 ---
+
+## Description:
+There are some other version like:<br>
+*Kactl version:https://github.com/kth-competitive-programming/kactl/blob/main/content/number-theory/ModMulLL.h<br>
+*Codeforces blog:https://codeforces.com/blog/entry/96759
+

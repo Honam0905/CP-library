@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: Mod/mod_mul.hpp
-    title: Mod/mod_mul.hpp
+    title: mod_mul
   - icon: ':heavy_check_mark:'
     path: Mod/mod_pow.hpp
     title: Mod/mod_pow.hpp
