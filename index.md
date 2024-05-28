@@ -34,6 +34,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Mod/mod_sqrt.hpp
       title: Mod/mod_sqrt.hpp
+    - icon: ':warning:'
+      path: Mod/modmul.hpp
+      title: Mod/modmul.hpp
   - name: Modint
     pages:
     - icon: ':heavy_check_mark:'
