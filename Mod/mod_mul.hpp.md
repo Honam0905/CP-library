@@ -25,20 +25,25 @@ data:
     \ a = rem(n), r = m == 1 ? 0 : 1;\n    while (p) {\n      if (p & 1) r = rem(u64(r)\
     \ * a);\n      a = rem(u64(a) * a);\n      p >>= 1;\n    }\n    return r;\n  }\n\
     \  constexpr inline u32 mul(u32 a, u32 b) {\n    return rem(u64(a) * b);\n  }\n\
-    };\n#line 3 \"Mod/mod_mul.hpp\"\nlong long modmul(long long a,long long b,long\
-    \ long mod){\n    Barrett br(mod);\n    return br.mul(a, b);\n}\n\n//or\n//only\
-    \ good for long long or int64_t\nlong long modmul2(long long a,long long b,long\
-    \ long mod){\n   return (a*b)%mod;\n}\n"
-  code: "#pragma once\n#include \"Modint/Barrett_reduction.hpp\"\nlong long modmul(long\
-    \ long a,long long b,long long mod){\n    Barrett br(mod);\n    return br.mul(a,\
-    \ b);\n}\n\n//or\n//only good for long long or int64_t\nlong long modmul2(long\
-    \ long a,long long b,long long mod){\n   return (a*b)%mod;\n}\n"
+    };\n#line 3 \"Mod/mod_mul.hpp\"\nll modmul(ll a,ll b,ll mod){\n    Barrett br(mod);\n\
+    \    return br.mul(a, b);\n}\n\nll mod_pow(ll a, ll n, ll mod) {\n  a %= mod;\n\
+    \  Barrett bt(mod);\n  ll p = a;\n  ll v = 1;\n  while (n) {\n    if (n & 1) v\
+    \ = bt.mul(v, p);\n    p = bt.mul(p, p);\n    n >>= 1;\n  }\n  return v;\n}\n\
+    //or\n//only good for long long or int64_t\nlong long modmul2(long long a,long\
+    \ long b,long long mod){\n   return (a*b)%mod;\n}\n"
+  code: "#pragma once\n#include \"Modint/Barrett_reduction.hpp\"\nll modmul(ll a,ll\
+    \ b,ll mod){\n    Barrett br(mod);\n    return br.mul(a, b);\n}\n\nll mod_pow(ll\
+    \ a, ll n, ll mod) {\n  a %= mod;\n  Barrett bt(mod);\n  ll p = a;\n  ll v = 1;\n\
+    \  while (n) {\n    if (n & 1) v = bt.mul(v, p);\n    p = bt.mul(p, p);\n    n\
+    \ >>= 1;\n  }\n  return v;\n}\n//or\n//only good for long long or int64_t\nlong\
+    \ long modmul2(long long a,long long b,long long mod){\n   return (a*b)%mod;\n\
+    }\n"
   dependsOn:
   - Modint/Barrett_reduction.hpp
   isVerificationFile: false
   path: Mod/mod_mul.hpp
   requiredBy: []
-  timestamp: '2024-05-28 20:49:08+07:00'
+  timestamp: '2024-05-29 09:32:46+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Mod/mod_mul.hpp
