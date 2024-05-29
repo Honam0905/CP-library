@@ -34,10 +34,7 @@ data:
     - icon: ':warning:'
       path: Mod/mod_mul.hpp
       title: Mod/mod_mul.hpp
-    - icon: ':heavy_check_mark:'
-      path: Mod/mod_pow.hpp
-      title: Mod/mod_pow.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: Mod/mod_sqrt.hpp
       title: Mod/mod_sqrt.hpp
   - name: Modint
@@ -63,7 +60,7 @@ data:
       title: NT/Misc/Bigint.hpp
   - name: NT/prime
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: NT/prime/prime_test.hpp
       title: NT/prime/prime_test.hpp
   - name: NT/prime/sieve
@@ -152,10 +149,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/enum_prime_4.test.cpp
       title: test/yosupo/Math/enum_prime_4.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
       title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: test/yosupo/Math/prime_test.test.cpp
       title: test/yosupo/Math/prime_test.test.cpp
   - name: test/yosupo/Tree
