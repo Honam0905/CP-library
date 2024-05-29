@@ -2,9 +2,6 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
-    path: Mod/mod_mul.hpp
-    title: mod_mul
   - icon: ':heavy_check_mark:'
     path: Mod/mod_pow.hpp
     title: Mod/mod_pow.hpp
@@ -70,7 +67,6 @@ data:
   requiredBy:
   - NT/prime/prime_test.hpp
   - Mod/mod_pow.hpp
-  - Mod/mod_mul.hpp
   - Mod/mod_sqrt.hpp
   - Modint/dynamic_modint.hpp
   timestamp: '2024-05-21 21:44:40+07:00'
