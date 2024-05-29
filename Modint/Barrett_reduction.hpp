@@ -40,3 +40,27 @@ struct Barrett {
     return rem(u64(a) * b);
   }
 };
+
+//u64 version:
+struct Barrett_64 {
+  u128 mod, mh, ml;
+
+  explicit Barrett_64(u64 mod = 1) : mod(mod) {
+    u128 m = u128(-1) / mod;
+    if (m * mod + mod == u128(0)) ++m;
+    mh = m >> 64;
+    ml = m & u64(-1);
+  }
+
+  u64 umod() const { return mod; }
+
+  u64 rem(u128 x) {
+    u128 z = (x & u64(-1)) * ml;
+    z = (x & u64(-1)) * mh + (x >> 64) * ml + (z >> 64);
+    z = (x >> 64) * mh + (z >> 64);
+    x -= z * mod;
+    return x < mod ? x : x - mod;
+  }
+
+  u64 mul(u64 a, u64 b) { return rem(u128(a) * b); }
+};
