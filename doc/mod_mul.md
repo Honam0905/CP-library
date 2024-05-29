@@ -1,5 +1,4 @@
 ---
-title: mod_mul
 documentation_of: //Mod/mod_mul.hpp
 ---
 
