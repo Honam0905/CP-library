@@ -28,14 +28,21 @@ data:
     \ a = rem(n), r = m == 1 ? 0 : 1;\n    while (p) {\n      if (p & 1) r = rem(u64(r)\
     \ * a);\n      a = rem(u64(a) * a);\n      p >>= 1;\n    }\n    return r;\n  }\n\
     \  constexpr inline u32 mul(u32 a, u32 b) {\n    return rem(u64(a) * b);\n  }\n\
-    };\n#line 3 \"Modint/dynamic_modint.hpp\"\ntemplate <int id>\nstruct dynamic_modint\
-    \ {\n  int x;\n\n  dynamic_modint() : x(0) {}\n\n  dynamic_modint(int64_t y) {\n\
-    \    int z = y % get_mod();\n    if (z < 0) z += get_mod();\n    x = z;\n  }\n\
-    \n  dynamic_modint &operator+=(const dynamic_modint &p) {\n    if ((x += p.x)\
-    \ >= get_mod()) x -= get_mod();\n    return *this;\n  }\n\n  dynamic_modint &operator-=(const\
-    \ dynamic_modint &p) {\n    if ((x += get_mod() - p.x) >= get_mod()) x -= get_mod();\n\
-    \    return *this;\n  }\n\n  dynamic_modint &operator*=(const dynamic_modint &p)\
-    \ {\n    x = rem((unsigned long long)x * p.x);\n    return *this;\n  }\n\n  dynamic_modint\
+    };\n\n//u64 version:\nstruct Barrett_64 {\n  u128 mod, mh, ml;\n\n  explicit Barrett_64(u64\
+    \ mod = 1) : mod(mod) {\n    u128 m = u128(-1) / mod;\n    if (m * mod + mod ==\
+    \ u128(0)) ++m;\n    mh = m >> 64;\n    ml = m & u64(-1);\n  }\n\n  u64 umod()\
+    \ const { return mod; }\n\n  u64 rem(u128 x) {\n    u128 z = (x & u64(-1)) * ml;\n\
+    \    z = (x & u64(-1)) * mh + (x >> 64) * ml + (z >> 64);\n    z = (x >> 64) *\
+    \ mh + (z >> 64);\n    x -= z * mod;\n    return x < mod ? x : x - mod;\n  }\n\
+    \n  u64 mul(u64 a, u64 b) { return rem(u128(a) * b); }\n};\n#line 3 \"Modint/dynamic_modint.hpp\"\
+    \ntemplate <int id>\nstruct dynamic_modint {\n  int x;\n\n  dynamic_modint() :\
+    \ x(0) {}\n\n  dynamic_modint(int64_t y) {\n    int z = y % get_mod();\n    if\
+    \ (z < 0) z += get_mod();\n    x = z;\n  }\n\n  dynamic_modint &operator+=(const\
+    \ dynamic_modint &p) {\n    if ((x += p.x) >= get_mod()) x -= get_mod();\n   \
+    \ return *this;\n  }\n\n  dynamic_modint &operator-=(const dynamic_modint &p)\
+    \ {\n    if ((x += get_mod() - p.x) >= get_mod()) x -= get_mod();\n    return\
+    \ *this;\n  }\n\n  dynamic_modint &operator*=(const dynamic_modint &p) {\n   \
+    \ x = rem((unsigned long long)x * p.x);\n    return *this;\n  }\n\n  dynamic_modint\
     \ &operator/=(const dynamic_modint &p) {\n    *this *= p.inv();\n    return *this;\n\
     \  }\n\n  dynamic_modint operator-() const { return dynamic_modint(-x); }\n  dynamic_modint\
     \ operator+() const { return *this; }\n\n  dynamic_modint operator+(const dynamic_modint\
@@ -98,7 +105,7 @@ data:
   isVerificationFile: false
   path: Modint/dynamic_modint.hpp
   requiredBy: []
-  timestamp: '2024-05-22 08:45:41+07:00'
+  timestamp: '2024-05-29 22:19:57+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Math/BC_prime_mod.test.cpp

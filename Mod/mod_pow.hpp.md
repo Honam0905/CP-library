@@ -37,12 +37,19 @@ data:
     \ a = rem(n), r = m == 1 ? 0 : 1;\n    while (p) {\n      if (p & 1) r = rem(u64(r)\
     \ * a);\n      a = rem(u64(a) * a);\n      p >>= 1;\n    }\n    return r;\n  }\n\
     \  constexpr inline u32 mul(u32 a, u32 b) {\n    return rem(u64(a) * b);\n  }\n\
-    };\n#line 3 \"Mod/mod_pow.hpp\"\n// int\nll mod_pow(ll a, ll n, int mod) {\n \
-    \ a %= mod;\n  Barrett bt(mod);\n  ll p = a;\n  ll v = 1;\n  while (n) {\n   \
-    \ if (n & 1) v = bt.mul(v, p);\n    p = bt.mul(p, p);\n    n >>= 1;\n  }\n  return\
-    \ v;\n}\n//long long \nll mod_pow_long(ll a, ll n, ll mod) {\n  a %= mod;\n  ll\
-    \ p = a;\n  ll v = 1;\n  while (n) {\n    if (n & 1) v = i128(v) * p % mod;\n\
-    \    p = i128(p) * p % mod;\n    n >>= 1;\n  }\n  return v;\n}\n"
+    };\n\n//u64 version:\nstruct Barrett_64 {\n  u128 mod, mh, ml;\n\n  explicit Barrett_64(u64\
+    \ mod = 1) : mod(mod) {\n    u128 m = u128(-1) / mod;\n    if (m * mod + mod ==\
+    \ u128(0)) ++m;\n    mh = m >> 64;\n    ml = m & u64(-1);\n  }\n\n  u64 umod()\
+    \ const { return mod; }\n\n  u64 rem(u128 x) {\n    u128 z = (x & u64(-1)) * ml;\n\
+    \    z = (x & u64(-1)) * mh + (x >> 64) * ml + (z >> 64);\n    z = (x >> 64) *\
+    \ mh + (z >> 64);\n    x -= z * mod;\n    return x < mod ? x : x - mod;\n  }\n\
+    \n  u64 mul(u64 a, u64 b) { return rem(u128(a) * b); }\n};\n#line 3 \"Mod/mod_pow.hpp\"\
+    \n// int\nll mod_pow(ll a, ll n, int mod) {\n  a %= mod;\n  Barrett bt(mod);\n\
+    \  ll p = a;\n  ll v = 1;\n  while (n) {\n    if (n & 1) v = bt.mul(v, p);\n \
+    \   p = bt.mul(p, p);\n    n >>= 1;\n  }\n  return v;\n}\n//long long \nll mod_pow_long(ll\
+    \ a, ll n, ll mod) {\n  a %= mod;\n  ll p = a;\n  ll v = 1;\n  while (n) {\n \
+    \   if (n & 1) v = i128(v) * p % mod;\n    p = i128(p) * p % mod;\n    n >>= 1;\n\
+    \  }\n  return v;\n}\n"
   code: "#pragma once\n#include \"Modint/Barrett_reduction.hpp\"\n// int\nll mod_pow(ll\
     \ a, ll n, int mod) {\n  a %= mod;\n  Barrett bt(mod);\n  ll p = a;\n  ll v =\
     \ 1;\n  while (n) {\n    if (n & 1) v = bt.mul(v, p);\n    p = bt.mul(p, p);\n\
@@ -57,7 +64,7 @@ data:
   requiredBy:
   - NT/prime/prime_test.hpp
   - Mod/mod_sqrt.hpp
-  timestamp: '2024-05-22 09:24:19+07:00'
+  timestamp: '2024-05-29 22:19:57+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Math/prime_test.test.cpp

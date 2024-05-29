@@ -99,13 +99,20 @@ data:
     \ inline i64 pow(u64 n, i64 p) {\n    u32 a = rem(n), r = m == 1 ? 0 : 1;\n  \
     \  while (p) {\n      if (p & 1) r = rem(u64(r) * a);\n      a = rem(u64(a) *\
     \ a);\n      p >>= 1;\n    }\n    return r;\n  }\n  constexpr inline u32 mul(u32\
-    \ a, u32 b) {\n    return rem(u64(a) * b);\n  }\n};\n#line 3 \"Mod/mod_pow.hpp\"\
-    \n// int\nll mod_pow(ll a, ll n, int mod) {\n  a %= mod;\n  Barrett bt(mod);\n\
-    \  ll p = a;\n  ll v = 1;\n  while (n) {\n    if (n & 1) v = bt.mul(v, p);\n \
-    \   p = bt.mul(p, p);\n    n >>= 1;\n  }\n  return v;\n}\n//long long \nll mod_pow_long(ll\
-    \ a, ll n, ll mod) {\n  a %= mod;\n  ll p = a;\n  ll v = 1;\n  while (n) {\n \
-    \   if (n & 1) v = i128(v) * p % mod;\n    p = i128(p) * p % mod;\n    n >>= 1;\n\
-    \  }\n  return v;\n}\n#line 3 \"Mod/mod_sqrt.hpp\"\ntemplate <typename T>\nT mod_sqrt(const\
+    \ a, u32 b) {\n    return rem(u64(a) * b);\n  }\n};\n\n//u64 version:\nstruct\
+    \ Barrett_64 {\n  u128 mod, mh, ml;\n\n  explicit Barrett_64(u64 mod = 1) : mod(mod)\
+    \ {\n    u128 m = u128(-1) / mod;\n    if (m * mod + mod == u128(0)) ++m;\n  \
+    \  mh = m >> 64;\n    ml = m & u64(-1);\n  }\n\n  u64 umod() const { return mod;\
+    \ }\n\n  u64 rem(u128 x) {\n    u128 z = (x & u64(-1)) * ml;\n    z = (x & u64(-1))\
+    \ * mh + (x >> 64) * ml + (z >> 64);\n    z = (x >> 64) * mh + (z >> 64);\n  \
+    \  x -= z * mod;\n    return x < mod ? x : x - mod;\n  }\n\n  u64 mul(u64 a, u64\
+    \ b) { return rem(u128(a) * b); }\n};\n#line 3 \"Mod/mod_pow.hpp\"\n// int\nll\
+    \ mod_pow(ll a, ll n, int mod) {\n  a %= mod;\n  Barrett bt(mod);\n  ll p = a;\n\
+    \  ll v = 1;\n  while (n) {\n    if (n & 1) v = bt.mul(v, p);\n    p = bt.mul(p,\
+    \ p);\n    n >>= 1;\n  }\n  return v;\n}\n//long long \nll mod_pow_long(ll a,\
+    \ ll n, ll mod) {\n  a %= mod;\n  ll p = a;\n  ll v = 1;\n  while (n) {\n    if\
+    \ (n & 1) v = i128(v) * p % mod;\n    p = i128(p) * p % mod;\n    n >>= 1;\n \
+    \ }\n  return v;\n}\n#line 3 \"Mod/mod_sqrt.hpp\"\ntemplate <typename T>\nT mod_sqrt(const\
     \ T &a, const T &p) {\n  if (a == 0) return 0;\n  if (p == 2) return a;\n  if\
     \ (mod_pow_long(a, (p - 1) >> 1, p) != 1) return -1;\n  T b = 1;\n  while (mod_pow_long(b,\
     \ (p - 1) >> 1, p) == 1) ++b;\n  T e = 0, m = p - 1;\n  while (m % 2 == 0) m >>=\
@@ -131,7 +138,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-05-22 10:47:25+07:00'
+  timestamp: '2024-05-29 22:19:57+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
