@@ -33,7 +33,7 @@ data:
       title: Mod/mod_inv.hpp
     - icon: ':warning:'
       path: Mod/mod_mul.hpp
-      title: mod_mul
+      title: Mod/mod_mul.hpp
     - icon: ':heavy_check_mark:'
       path: Mod/mod_pow.hpp
       title: Mod/mod_pow.hpp

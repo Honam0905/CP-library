@@ -31,7 +31,6 @@ data:
   verifiedWith: []
 documentation_of: Mod/mod_mul.hpp
 layout: document
-title: mod_mul
 ---
 
 ## Description:
