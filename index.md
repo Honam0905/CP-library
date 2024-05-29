@@ -37,7 +37,7 @@ data:
     - icon: ':x:'
       path: Mod/mod_pow.hpp
       title: Mod/mod_pow.hpp
-    - icon: ':x:'
+    - icon: ':warning:'
       path: Mod/mod_sqrt.hpp
       title: Mod/mod_sqrt.hpp
   - name: Modint
@@ -152,9 +152,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/enum_prime_4.test.cpp
       title: test/yosupo/Math/enum_prime_4.test.cpp
-    - icon: ':x:'
-      path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
-      title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
     - icon: ':x:'
       path: test/yosupo/Math/prime_test.test.cpp
       title: test/yosupo/Math/prime_test.test.cpp

@@ -8,16 +8,13 @@ data:
     path: Modint/dynamic_modint.hpp
     title: Modint/dynamic_modint.hpp
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':warning:'
     path: Mod/mod_sqrt.hpp
     title: Mod/mod_sqrt.hpp
   - icon: ':x:'
     path: NT/prime/prime_test.hpp
     title: NT/prime/prime_test.hpp
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
-    title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
   - icon: ':x:'
     path: test/yosupo/Math/prime_test.test.cpp
     title: test/yosupo/Math/prime_test.test.cpp
@@ -113,7 +110,6 @@ data:
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/yosupo/Math/prime_test.test.cpp
-  - test/yosupo/Math/mod_sqrt_yosupo.test.cpp
 documentation_of: Mod/mod_pow.hpp
 layout: document
 redirect_from:
