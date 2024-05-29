@@ -17,13 +17,13 @@ data:
       title: DS/fenwick_tree.hpp
   - name: Misc
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Misc/debug.hpp
       title: Misc/debug.hpp
     - icon: ':warning:'
       path: Misc/faster_io.hpp
       title: Misc/faster_io.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Misc/marco.hpp
       title: Misc/marco.hpp
   - name: Mod
@@ -34,7 +34,7 @@ data:
     - icon: ':warning:'
       path: Mod/mod_mul.hpp
       title: Mod/mod_mul.hpp
-    - icon: ':x:'
+    - icon: ':warning:'
       path: Mod/mod_pow.hpp
       title: Mod/mod_pow.hpp
     - icon: ':warning:'
@@ -42,10 +42,10 @@ data:
       title: Mod/mod_sqrt.hpp
   - name: Modint
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Modint/Barrett_reduction.hpp
       title: Modint/Barrett_reduction.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Modint/dynamic_modint.hpp
       title: Modint/dynamic_modint.hpp
     - icon: ':heavy_check_mark:'
@@ -63,7 +63,7 @@ data:
       title: NT/Misc/Bigint.hpp
   - name: NT/prime
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: NT/prime/prime_test.hpp
       title: NT/prime/prime_test.hpp
   - name: NT/prime/sieve
@@ -152,9 +152,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/enum_prime_4.test.cpp
       title: test/yosupo/Math/enum_prime_4.test.cpp
-    - icon: ':x:'
-      path: test/yosupo/Math/prime_test.test.cpp
-      title: test/yosupo/Math/prime_test.test.cpp
   - name: test/yosupo/Tree
     pages:
     - icon: ':heavy_check_mark:'

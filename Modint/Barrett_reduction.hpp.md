@@ -2,28 +2,25 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':warning:'
     path: Mod/mod_pow.hpp
     title: Mod/mod_pow.hpp
   - icon: ':warning:'
     path: Mod/mod_sqrt.hpp
     title: Mod/mod_sqrt.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Modint/dynamic_modint.hpp
     title: Modint/dynamic_modint.hpp
-  - icon: ':x:'
+  - icon: ':warning:'
     path: NT/prime/prime_test.hpp
     title: NT/prime/prime_test.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/BC_prime_mod.test.cpp
     title: test/yosupo/Math/BC_prime_mod.test.cpp
-  - icon: ':x:'
-    path: test/yosupo/Math/prime_test.test.cpp
-    title: test/yosupo/Math/prime_test.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links:
     - https://en.wikipedia.org/wiki/Barrett_reduction
@@ -79,9 +76,8 @@ data:
   - Mod/mod_sqrt.hpp
   - Modint/dynamic_modint.hpp
   timestamp: '2024-05-29 22:19:57+07:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Math/prime_test.test.cpp
   - test/yosupo/Math/BC_prime_mod.test.cpp
 documentation_of: Modint/Barrett_reduction.hpp
 layout: document
