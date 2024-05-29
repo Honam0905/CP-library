@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Misc/debug.hpp
     title: Misc/debug.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Misc/marco.hpp
     title: Misc/marco.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Modint/Barrett_reduction.hpp
     title: Modint/Barrett_reduction.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Modint/dynamic_modint.hpp
     title: Modint/dynamic_modint.hpp
   - icon: ':heavy_check_mark:'

@@ -4,10 +4,10 @@ data:
   - icon: ':question:'
     path: Modint/Barrett_reduction.hpp
     title: Modint/Barrett_reduction.hpp
+  - icon: ':question:'
+    path: Modint/dynamic_modint.hpp
+    title: Modint/dynamic_modint.hpp
   _extendedRequiredBy:
-  - icon: ':x:'
-    path: Mod/mod_pow.hpp
-    title: Mod/mod_pow.hpp
   - icon: ':x:'
     path: Mod/mod_sqrt.hpp
     title: Mod/mod_sqrt.hpp
@@ -15,9 +15,6 @@ data:
     path: NT/prime/prime_test.hpp
     title: NT/prime/prime_test.hpp
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Math/BC_prime_mod.test.cpp
-    title: test/yosupo/Math/BC_prime_mod.test.cpp
   - icon: ':x:'
     path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
     title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
@@ -26,7 +23,7 @@ data:
     title: test/yosupo/Math/prime_test.test.cpp
   _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Modint/Barrett_reduction.hpp\"\n/*\n  @see https://nyaannyaan.github.io/library/modint/barrett-reduction.hpp\n\
@@ -81,58 +78,46 @@ data:
     \ {\n    static Barrett b;\n    return b;\n  }\n\n  static inline int &get_mod()\
     \ {\n    static int mod = 0;\n    return mod;\n  }\n\n  static void set_mod(int\
     \ md) {\n    assert(0 < md && md <= (1LL << 30) - 1);\n    get_mod() = md;\n \
-    \   barrett() = Barrett(md);\n  }\n};\n\nusing modint = dynamic_modint<-1>;\n"
-  code: "#pragma once\n#include \"Modint/Barrett_reduction.hpp\"\ntemplate <int id>\n\
-    struct dynamic_modint {\n  int x;\n\n  dynamic_modint() : x(0) {}\n\n  dynamic_modint(int64_t\
-    \ y) {\n    int z = y % get_mod();\n    if (z < 0) z += get_mod();\n    x = z;\n\
-    \  }\n\n  dynamic_modint &operator+=(const dynamic_modint &p) {\n    if ((x +=\
-    \ p.x) >= get_mod()) x -= get_mod();\n    return *this;\n  }\n\n  dynamic_modint\
-    \ &operator-=(const dynamic_modint &p) {\n    if ((x += get_mod() - p.x) >= get_mod())\
-    \ x -= get_mod();\n    return *this;\n  }\n\n  dynamic_modint &operator*=(const\
-    \ dynamic_modint &p) {\n    x = rem((unsigned long long)x * p.x);\n    return\
-    \ *this;\n  }\n\n  dynamic_modint &operator/=(const dynamic_modint &p) {\n   \
-    \ *this *= p.inv();\n    return *this;\n  }\n\n  dynamic_modint operator-() const\
-    \ { return dynamic_modint(-x); }\n  dynamic_modint operator+() const { return\
-    \ *this; }\n\n  dynamic_modint operator+(const dynamic_modint &p) const {\n  \
-    \  return dynamic_modint(*this) += p;\n  }\n\n  dynamic_modint operator-(const\
-    \ dynamic_modint &p) const {\n    return dynamic_modint(*this) -= p;\n  }\n\n\
-    \  dynamic_modint operator*(const dynamic_modint &p) const {\n    return dynamic_modint(*this)\
-    \ *= p;\n  }\n\n  dynamic_modint operator/(const dynamic_modint &p) const {\n\
-    \    return dynamic_modint(*this) /= p;\n  }\n\n  bool operator==(const dynamic_modint\
-    \ &p) const { return x == p.x; }\n\n  bool operator!=(const dynamic_modint &p)\
-    \ const { return x != p.x; }\n\n  dynamic_modint inv() const {\n    int a = x,\
-    \ b = get_mod(), u = 1, v = 0, t;\n    while (b > 0) {\n      t = a / b;\n   \
-    \   swap(a -= t * b, b);\n      swap(u -= t * v, v);\n    }\n    return dynamic_modint(u);\n\
-    \  }\n\n  dynamic_modint pow(int64_t n) const {\n    dynamic_modint ret(1), mul(x);\n\
-    \    while (n > 0) {\n      if (n & 1) ret *= mul;\n      mul *= mul;\n      n\
-    \ >>= 1;\n    }\n    return ret;\n  }\n\n  friend ostream &operator<<(ostream\
-    \ &os, const dynamic_modint &p) {\n    return os << p.x;\n  }\n\n  friend istream\
-    \ &operator>>(istream &is, dynamic_modint &a) {\n    int64_t t;\n    is >> t;\n\
-    \    a = dynamic_modint(t);\n    return (is);\n  }\n\n  int get() const { return\
-    \ x; }\n\n  inline unsigned int rem(unsigned long long p) { return barrett().rem(p);\
-    \ }\n\n  static inline Barrett &barrett() {\n    static Barrett b;\n    return\
-    \ b;\n  }\n\n  static inline int &get_mod() {\n    static int mod = 0;\n    return\
-    \ mod;\n  }\n\n  static void set_mod(int md) {\n    assert(0 < md && md <= (1LL\
-    \ << 30) - 1);\n    get_mod() = md;\n    barrett() = Barrett(md);\n  }\n};\n\n\
-    using modint = dynamic_modint<-1>;\n"
+    \   barrett() = Barrett(md);\n  }\n};\n\nusing modint = dynamic_modint<-1>;\n\
+    #line 3 \"Mod/mod_pow.hpp\"\nu32 mod_pow(int a, ll n, int mod) {\n  assert(n >=\
+    \ 0);\n  a = ((a %= mod) < 0 ? a + mod : a);\n  if ((mod & 1) && (mod < (1 <<\
+    \ 30))) {\n    using mint = dynamic_modint<202311021>;\n    mint::set_mod(mod);\n\
+    \    return mint(a).pow(n).get();\n  }\n  Barrett bt(mod);\n  int r = 1;\n  while\
+    \ (n) {\n    if (n & 1) r = bt.mul(r, a);\n    a = bt.mul(a, a), n >>= 1;\n  }\n\
+    \  return r;\n}\n\nu64 mod_pow_64(ll a, ll n, u64 mod) {\n  assert(n >= 0);\n\
+    \  a = ((a %= mod) < 0 ? a + mod : a);\n  if ((mod & 1) && (mod < (u64(1) << 62)))\
+    \ {\n    using mint =dynamic_modint<202311021>;\n    mint::set_mod(mod);\n   \
+    \ return mint(a).pow(n).get();\n  }\n  Barrett_64 bt(mod);\n  ll r = 1;\n  while\
+    \ (n) {\n    if (n & 1) r = bt.mul(r, a);\n    a = bt.mul(a, a), n >>= 1;\n  }\n\
+    \  return r;\n}\n"
+  code: "#pragma once\n#include \"Modint/dynamic_modint.hpp\"\nu32 mod_pow(int a,\
+    \ ll n, int mod) {\n  assert(n >= 0);\n  a = ((a %= mod) < 0 ? a + mod : a);\n\
+    \  if ((mod & 1) && (mod < (1 << 30))) {\n    using mint = dynamic_modint<202311021>;\n\
+    \    mint::set_mod(mod);\n    return mint(a).pow(n).get();\n  }\n  Barrett bt(mod);\n\
+    \  int r = 1;\n  while (n) {\n    if (n & 1) r = bt.mul(r, a);\n    a = bt.mul(a,\
+    \ a), n >>= 1;\n  }\n  return r;\n}\n\nu64 mod_pow_64(ll a, ll n, u64 mod) {\n\
+    \  assert(n >= 0);\n  a = ((a %= mod) < 0 ? a + mod : a);\n  if ((mod & 1) &&\
+    \ (mod < (u64(1) << 62))) {\n    using mint =dynamic_modint<202311021>;\n    mint::set_mod(mod);\n\
+    \    return mint(a).pow(n).get();\n  }\n  Barrett_64 bt(mod);\n  ll r = 1;\n \
+    \ while (n) {\n    if (n & 1) r = bt.mul(r, a);\n    a = bt.mul(a, a), n >>= 1;\n\
+    \  }\n  return r;\n}\n"
   dependsOn:
+  - Modint/dynamic_modint.hpp
   - Modint/Barrett_reduction.hpp
   isVerificationFile: false
-  path: Modint/dynamic_modint.hpp
+  path: Mod/mod_pow.hpp
   requiredBy:
   - NT/prime/prime_test.hpp
-  - Mod/mod_pow.hpp
   - Mod/mod_sqrt.hpp
-  timestamp: '2024-05-29 22:19:57+07:00'
-  verificationStatus: LIBRARY_SOME_WA
+  timestamp: '2024-05-29 22:35:44+07:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/yosupo/Math/prime_test.test.cpp
   - test/yosupo/Math/mod_sqrt_yosupo.test.cpp
-  - test/yosupo/Math/BC_prime_mod.test.cpp
-documentation_of: Modint/dynamic_modint.hpp
+documentation_of: Mod/mod_pow.hpp
 layout: document
 redirect_from:
-- /library/Modint/dynamic_modint.hpp
-- /library/Modint/dynamic_modint.hpp.html
-title: Modint/dynamic_modint.hpp
+- /library/Mod/mod_pow.hpp
+- /library/Mod/mod_pow.hpp.html
+title: Mod/mod_pow.hpp
 ---
