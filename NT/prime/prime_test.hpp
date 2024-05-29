@@ -5,7 +5,7 @@
 */
 #include "Mod/mod_pow.hpp"
 bool check_composite(u64 n, u64 a, u64 d, int s) {
-    u64 x = mod_pow_long(a, d, n);
+    u64 x = mod_pow_64(a, d, n);
     if (x == 1 || x == n - 1)
         return false;
     for (int r = 1; r < s; r++) {
