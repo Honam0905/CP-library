@@ -1,21 +1,21 @@
 #pragma once
-#include "Modint/Barrett_reduction.hpp"
-ll modmul(ll a,ll b,ll mod){
-    Barrett br(mod);
-    return br.mul(a, b);
+ll modmul(ll a, ll b,ll mod) {
+    ll ans = 0;
+    while (b) {
+        if (b & 1)
+            (ans += a) %= mod;
+        (a *= 2) %= mod;
+        b /= 2;
+    }
+    return ans;
 }
-
-ll mod_pow(ll a, ll n, ll mod) {
-  a %= mod;
-  Barrett bt(mod);
-  ll p = a;
-  ll v = 1;
-  while (n) {
-    if (n & 1) v = bt.mul(v, p);
-    p = bt.mul(p, p);
-    n >>= 1;
-  }
-  return v;
+ 
+ll modpow(ll a, ll n,ll mod) {
+    ll ans = 1;
+    for (; n; n /= 2, a = mul(a, a, mod))
+        if (n & 1)
+            ans = mul(ans, a, mod);
+    return ans;
 }
 //or
 //only good for long long or int64_t
