@@ -87,9 +87,9 @@ data:
     \ return mint(a).pow(n).get();\n  }\n  Barrett_64 bt(mod);\n  ll r = 1;\n  while\
     \ (n) {\n    if (n & 1) r = bt.mul(r, a);\n    a = bt.mul(a, a), n >>= 1;\n  }\n\
     \  return r;\n}\n#line 7 \"NT/prime/prime_test.hpp\"\nbool check_composite(u64\
-    \ n, u64 a, u64 d, int s) {\n    u64 x = mod_pow_long(a, d, n);\n    if (x ==\
-    \ 1 || x == n - 1)\n        return false;\n    for (int r = 1; r < s; r++) {\n\
-    \        x = (u128)x * x % n;\n        if (x == n - 1)\n            return false;\n\
+    \ n, u64 a, u64 d, int s) {\n    u64 x = mod_pow_64(a, d, n);\n    if (x == 1\
+    \ || x == n - 1)\n        return false;\n    for (int r = 1; r < s; r++) {\n \
+    \       x = (u128)x * x % n;\n        if (x == n - 1)\n            return false;\n\
     \    }\n    return true;\n}\n\nbool MillerRabin(u64 n) {\n    if (n < 2)\n   \
     \     return false;\n\n    // Small primes to check divisibility\n    for (u64\
     \ a : {2, 3, 5, 13, 19, 73, 193, 407521, 299210837}) {\n        if (n % a == 0)\n\
@@ -102,9 +102,9 @@ data:
   code: "#pragma once\n/*\n   Primality tests by CP algorithms with higher bases\n\
     \   @see https://cp-algorithms.com/algebra/primality_tests.html#miller-rabin-primality-test\n\
     */\n#include \"Mod/mod_pow.hpp\"\nbool check_composite(u64 n, u64 a, u64 d, int\
-    \ s) {\n    u64 x = mod_pow_long(a, d, n);\n    if (x == 1 || x == n - 1)\n  \
-    \      return false;\n    for (int r = 1; r < s; r++) {\n        x = (u128)x *\
-    \ x % n;\n        if (x == n - 1)\n            return false;\n    }\n    return\
+    \ s) {\n    u64 x = mod_pow_64(a, d, n);\n    if (x == 1 || x == n - 1)\n    \
+    \    return false;\n    for (int r = 1; r < s; r++) {\n        x = (u128)x * x\
+    \ % n;\n        if (x == n - 1)\n            return false;\n    }\n    return\
     \ true;\n}\n\nbool MillerRabin(u64 n) {\n    if (n < 2)\n        return false;\n\
     \n    // Small primes to check divisibility\n    for (u64 a : {2, 3, 5, 13, 19,\
     \ 73, 193, 407521, 299210837}) {\n        if (n % a == 0)\n            return\
@@ -120,7 +120,7 @@ data:
   isVerificationFile: false
   path: NT/prime/prime_test.hpp
   requiredBy: []
-  timestamp: '2024-05-29 22:35:44+07:00'
+  timestamp: '2024-05-29 22:38:42+07:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/yosupo/Math/prime_test.test.cpp
