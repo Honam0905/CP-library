@@ -12,9 +12,9 @@ ll modmul(ll a, ll b,ll mod) {
  
 ll modpow(ll a, ll n,ll mod) {
     ll ans = 1;
-    for (; n; n /= 2, a = mul(a, a, mod))
+    for (; n; n /= 2, a = modmul(a, a, mod))
         if (n & 1)
-            ans = mul(ans, a, mod);
+            ans = modmul(ans, a, mod);
     return ans;
 }
 //or
