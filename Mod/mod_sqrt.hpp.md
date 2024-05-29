@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: Mod/mod_pow.hpp
     title: Mod/mod_pow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Modint/Barrett_reduction.hpp
     title: Modint/Barrett_reduction.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Modint/dynamic_modint.hpp
     title: Modint/dynamic_modint.hpp
   _extendedRequiredBy: []

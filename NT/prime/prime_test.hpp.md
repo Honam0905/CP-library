@@ -1,20 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: Mod/mod_pow.hpp
     title: Mod/mod_pow.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Modint/Barrett_reduction.hpp
     title: Modint/Barrett_reduction.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Modint/dynamic_modint.hpp
     title: Modint/dynamic_modint.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: test/yosupo/Math/prime_test_yosupo.test.cpp
+    title: test/yosupo/Math/prime_test_yosupo.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links:
     - https://cp-algorithms.com/algebra/primality_tests.html#miller-rabin-primality-test
@@ -118,8 +121,9 @@ data:
   path: NT/prime/prime_test.hpp
   requiredBy: []
   timestamp: '2024-05-29 22:38:42+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - test/yosupo/Math/prime_test_yosupo.test.cpp
 documentation_of: NT/prime/prime_test.hpp
 layout: document
 redirect_from:
