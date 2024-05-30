@@ -11,9 +11,6 @@ data:
   - icon: ':warning:'
     path: Mod/mod_sqrt.hpp
     title: Mod/mod_sqrt.hpp
-  - icon: ':warning:'
-    path: NT/prime/prime_test.hpp
-    title: NT/prime/prime_test.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -101,7 +98,6 @@ data:
   isVerificationFile: false
   path: Mod/mod_pow.hpp
   requiredBy:
-  - NT/prime/prime_test.hpp
   - Mod/mod_sqrt.hpp
   timestamp: '2024-05-29 22:35:44+07:00'
   verificationStatus: LIBRARY_NO_TESTS

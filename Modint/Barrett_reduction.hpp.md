@@ -11,9 +11,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: Modint/dynamic_modint.hpp
     title: Modint/dynamic_modint.hpp
-  - icon: ':warning:'
-    path: NT/prime/prime_test.hpp
-    title: NT/prime/prime_test.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/BC_prime_mod.test.cpp
@@ -71,7 +68,6 @@ data:
   isVerificationFile: false
   path: Modint/Barrett_reduction.hpp
   requiredBy:
-  - NT/prime/prime_test.hpp
   - Mod/mod_pow.hpp
   - Mod/mod_sqrt.hpp
   - Modint/dynamic_modint.hpp

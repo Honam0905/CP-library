@@ -2,122 +2,94 @@
 data:
   _extendedDependsOn:
   - icon: ':warning:'
-    path: Mod/mod_pow.hpp
-    title: Mod/mod_pow.hpp
-  - icon: ':heavy_check_mark:'
-    path: Modint/Barrett_reduction.hpp
-    title: Modint/Barrett_reduction.hpp
-  - icon: ':heavy_check_mark:'
-    path: Modint/dynamic_modint.hpp
-    title: Modint/dynamic_modint.hpp
+    path: Mod/mod_mul.hpp
+    title: Mod/mod_mul.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
-    links:
-    - https://cp-algorithms.com/algebra/primality_tests.html#miller-rabin-primality-test
-  bundledCode: "#line 2 \"NT/prime/prime_test.hpp\"\n/*\n   Primality tests by CP\
-    \ algorithms with higher bases\n   @see https://cp-algorithms.com/algebra/primality_tests.html#miller-rabin-primality-test\n\
-    */\n#line 2 \"Modint/Barrett_reduction.hpp\"\n/*\n  @see https://nyaannyaan.github.io/library/modint/barrett-reduction.hpp\n\
-    \  @see https://en.wikipedia.org/wiki/Barrett_reduction\n*/\nstruct Barrett {\n\
-    \  using u32 = unsigned int;\n  using i64 = long long;\n  using u64 = unsigned\
-    \ long long;\n  u32 m;\n  u64 im;\n  Barrett() : m(), im() {}\n  Barrett(int n)\
-    \ : m(n), im(u64(-1) / m + 1) {}\n  constexpr inline i64 quo(u64 n) {\n    u64\
-    \ x = u64((__uint128_t(n) * im) >> 64);\n    u32 r = n - x * m;\n    return m\
-    \ <= r ? x - 1 : x;\n  }\n  constexpr inline i64 rem(u64 n) {\n    u64 x = u64((__uint128_t(n)\
-    \ * im) >> 64);\n    u32 r = n - x * m;\n    return m <= r ? r + m : r;\n  }\n\
-    \  constexpr inline pair<i64, int> quorem(u64 n) {\n    u64 x = u64((__uint128_t(n)\
-    \ * im) >> 64);\n    u32 r = n - x * m;\n    if (m <= r) return {x - 1, r + m};\n\
-    \    return {x, r};\n  }\n  constexpr inline i64 pow(u64 n, i64 p) {\n    u32\
-    \ a = rem(n), r = m == 1 ? 0 : 1;\n    while (p) {\n      if (p & 1) r = rem(u64(r)\
-    \ * a);\n      a = rem(u64(a) * a);\n      p >>= 1;\n    }\n    return r;\n  }\n\
-    \  constexpr inline u32 mul(u32 a, u32 b) {\n    return rem(u64(a) * b);\n  }\n\
-    };\n\n//u64 version:\nstruct Barrett_64 {\n  u128 mod, mh, ml;\n\n  explicit Barrett_64(u64\
-    \ mod = 1) : mod(mod) {\n    u128 m = u128(-1) / mod;\n    if (m * mod + mod ==\
-    \ u128(0)) ++m;\n    mh = m >> 64;\n    ml = m & u64(-1);\n  }\n\n  u64 umod()\
-    \ const { return mod; }\n\n  u64 rem(u128 x) {\n    u128 z = (x & u64(-1)) * ml;\n\
-    \    z = (x & u64(-1)) * mh + (x >> 64) * ml + (z >> 64);\n    z = (x >> 64) *\
-    \ mh + (z >> 64);\n    x -= z * mod;\n    return x < mod ? x : x - mod;\n  }\n\
-    \n  u64 mul(u64 a, u64 b) { return rem(u128(a) * b); }\n};\n#line 3 \"Modint/dynamic_modint.hpp\"\
-    \ntemplate <int id>\nstruct dynamic_modint {\n  int x;\n\n  dynamic_modint() :\
-    \ x(0) {}\n\n  dynamic_modint(int64_t y) {\n    int z = y % get_mod();\n    if\
-    \ (z < 0) z += get_mod();\n    x = z;\n  }\n\n  dynamic_modint &operator+=(const\
-    \ dynamic_modint &p) {\n    if ((x += p.x) >= get_mod()) x -= get_mod();\n   \
-    \ return *this;\n  }\n\n  dynamic_modint &operator-=(const dynamic_modint &p)\
-    \ {\n    if ((x += get_mod() - p.x) >= get_mod()) x -= get_mod();\n    return\
-    \ *this;\n  }\n\n  dynamic_modint &operator*=(const dynamic_modint &p) {\n   \
-    \ x = rem((unsigned long long)x * p.x);\n    return *this;\n  }\n\n  dynamic_modint\
-    \ &operator/=(const dynamic_modint &p) {\n    *this *= p.inv();\n    return *this;\n\
-    \  }\n\n  dynamic_modint operator-() const { return dynamic_modint(-x); }\n  dynamic_modint\
-    \ operator+() const { return *this; }\n\n  dynamic_modint operator+(const dynamic_modint\
-    \ &p) const {\n    return dynamic_modint(*this) += p;\n  }\n\n  dynamic_modint\
-    \ operator-(const dynamic_modint &p) const {\n    return dynamic_modint(*this)\
-    \ -= p;\n  }\n\n  dynamic_modint operator*(const dynamic_modint &p) const {\n\
-    \    return dynamic_modint(*this) *= p;\n  }\n\n  dynamic_modint operator/(const\
-    \ dynamic_modint &p) const {\n    return dynamic_modint(*this) /= p;\n  }\n\n\
-    \  bool operator==(const dynamic_modint &p) const { return x == p.x; }\n\n  bool\
-    \ operator!=(const dynamic_modint &p) const { return x != p.x; }\n\n  dynamic_modint\
-    \ inv() const {\n    int a = x, b = get_mod(), u = 1, v = 0, t;\n    while (b\
-    \ > 0) {\n      t = a / b;\n      swap(a -= t * b, b);\n      swap(u -= t * v,\
-    \ v);\n    }\n    return dynamic_modint(u);\n  }\n\n  dynamic_modint pow(int64_t\
-    \ n) const {\n    dynamic_modint ret(1), mul(x);\n    while (n > 0) {\n      if\
-    \ (n & 1) ret *= mul;\n      mul *= mul;\n      n >>= 1;\n    }\n    return ret;\n\
-    \  }\n\n  friend ostream &operator<<(ostream &os, const dynamic_modint &p) {\n\
-    \    return os << p.x;\n  }\n\n  friend istream &operator>>(istream &is, dynamic_modint\
-    \ &a) {\n    int64_t t;\n    is >> t;\n    a = dynamic_modint(t);\n    return\
-    \ (is);\n  }\n\n  int get() const { return x; }\n\n  inline unsigned int rem(unsigned\
-    \ long long p) { return barrett().rem(p); }\n\n  static inline Barrett &barrett()\
-    \ {\n    static Barrett b;\n    return b;\n  }\n\n  static inline int &get_mod()\
-    \ {\n    static int mod = 0;\n    return mod;\n  }\n\n  static void set_mod(int\
-    \ md) {\n    assert(0 < md && md <= (1LL << 30) - 1);\n    get_mod() = md;\n \
-    \   barrett() = Barrett(md);\n  }\n};\n\nusing modint = dynamic_modint<-1>;\n\
-    #line 3 \"Mod/mod_pow.hpp\"\nu32 mod_pow(int a, ll n, int mod) {\n  assert(n >=\
-    \ 0);\n  a = ((a %= mod) < 0 ? a + mod : a);\n  if ((mod & 1) && (mod < (1 <<\
-    \ 30))) {\n    using mint = dynamic_modint<202311021>;\n    mint::set_mod(mod);\n\
-    \    return mint(a).pow(n).get();\n  }\n  Barrett bt(mod);\n  int r = 1;\n  while\
-    \ (n) {\n    if (n & 1) r = bt.mul(r, a);\n    a = bt.mul(a, a), n >>= 1;\n  }\n\
-    \  return r;\n}\n\nu64 mod_pow_64(ll a, ll n, u64 mod) {\n  assert(n >= 0);\n\
-    \  a = ((a %= mod) < 0 ? a + mod : a);\n  if ((mod & 1) && (mod < (u64(1) << 62)))\
-    \ {\n    using mint =dynamic_modint<202311021>;\n    mint::set_mod(mod);\n   \
-    \ return mint(a).pow(n).get();\n  }\n  Barrett_64 bt(mod);\n  ll r = 1;\n  while\
-    \ (n) {\n    if (n & 1) r = bt.mul(r, a);\n    a = bt.mul(a, a), n >>= 1;\n  }\n\
-    \  return r;\n}\n#line 7 \"NT/prime/prime_test.hpp\"\nbool check_composite(u64\
-    \ n, u64 a, u64 d, int s) {\n    u64 x = mod_pow_64(a, d, n);\n    if (x == 1\
-    \ || x == n - 1)\n        return false;\n    for (int r = 1; r < s; r++) {\n \
-    \       x = (u128)x * x % n;\n        if (x == n - 1)\n            return false;\n\
-    \    }\n    return true;\n}\n\nbool MillerRabin(u64 n) {\n    if (n < 2)\n   \
-    \     return false;\n\n    // Small primes to check divisibility\n    for (u64\
-    \ a : {2, 3, 5, 13, 19, 73, 193, 407521, 299210837}) {\n        if (n % a == 0)\n\
-    \            return n == a;\n    }\n\n    int r = 0;\n    u64 d = n - 1;\n   \
-    \ while ((d & 1) == 0) {\n        d >>= 1;\n        r++;\n    }\n\n    // Larger\
-    \ bases for checking primality\n    for (u64 a : {2, 325, 9375, 28178, 450775,\
-    \ 9780504, 1795265022}) {\n        if (n == a)\n            return true;\n   \
-    \     if (check_composite(n, a, d, r))\n            return false;\n    }\n   \
-    \ return true;\n}\n"
-  code: "#pragma once\n/*\n   Primality tests by CP algorithms with higher bases\n\
-    \   @see https://cp-algorithms.com/algebra/primality_tests.html#miller-rabin-primality-test\n\
-    */\n#include \"Mod/mod_pow.hpp\"\nbool check_composite(u64 n, u64 a, u64 d, int\
-    \ s) {\n    u64 x = mod_pow_64(a, d, n);\n    if (x == 1 || x == n - 1)\n    \
-    \    return false;\n    for (int r = 1; r < s; r++) {\n        x = (u128)x * x\
-    \ % n;\n        if (x == n - 1)\n            return false;\n    }\n    return\
-    \ true;\n}\n\nbool MillerRabin(u64 n) {\n    if (n < 2)\n        return false;\n\
-    \n    // Small primes to check divisibility\n    for (u64 a : {2, 3, 5, 13, 19,\
-    \ 73, 193, 407521, 299210837}) {\n        if (n % a == 0)\n            return\
-    \ n == a;\n    }\n\n    int r = 0;\n    u64 d = n - 1;\n    while ((d & 1) ==\
-    \ 0) {\n        d >>= 1;\n        r++;\n    }\n\n    // Larger bases for checking\
-    \ primality\n    for (u64 a : {2, 325, 9375, 28178, 450775, 9780504, 1795265022})\
-    \ {\n        if (n == a)\n            return true;\n        if (check_composite(n,\
-    \ a, d, r))\n            return false;\n    }\n    return true;\n}\n"
+    links: []
+  bundledCode: "#line 2 \"Mod/mod_mul.hpp\"\nu64 get_nr(u64 M) {\n    u64 IV = 2 -\
+    \ M;\n    for (int i = 0; i < 5; ++i) {\n        IV *= 2 - M * IV;\n    }\n  \
+    \  return IV;\n}\n\nu64 modmul(u64 x, u64 y, u64 IV, u64 M) {\n    auto t = u128(x)\
+    \ * y;\n    u64 lo = t, hi = t >> 64;\n    return (hi + M) - u64((u128(lo * IV)\
+    \ * M) >> 64);\n}\n \nu64 modpow(u64 a, u64 b, u64 M) {\n    u64 res = 1;\n  \
+    \  u64 IV = get_nr(M);\n    while (b) {\n        if (b & 1) {\n            res\
+    \ = mul(res, a, IV, M);\n        }\n        a = mul(a, a, IV, M);\n        b >>=\
+    \ 1;\n    }\n    return res;\n}\n//or\n//only good for long long or int64_t\n\
+    long long modmul2(long long a,long long b,long long mod){\n   return (a*b)%mod;\n\
+    }\n#line 3 \"NT/prime/prime_test.hpp\"\nbool isPrime(u64 x) {\n    if (x < 64)\
+    \ {\n        return (u64(1) << x) & 0x28208a20a08a28ac;\n    }\n    if (x % 2\
+    \ == 0) {\n        return false;\n    }\n    const int k = __builtin_ctzll(x -\
+    \ 1);\n    const u64 d = (x - 1) >> k, IV = get_nr(x), R = (-x) % x, R2 = (-u128(x))\
+    \ % x, nR = x - R;\n    auto mr7 = [&](u64 t1, u64 t2, u64 t3, u64 t4, u64 t5,\
+    \ u64 t6, u64 t7) {\n        u64 r1 = R, r2 = R, r3 = R, r4 = R, r5 = R, r6 =\
+    \ R, r7 = R;\n        t1 = modmul(t1, R2, IV, x), t2 = modmul(t2, R2, IV, x),\
+    \ t3 = modmul(t3, R2, IV, x);\n        t4 = modmul(t4, R2, IV, x), t5 = modmul(t5,\
+    \ R2, IV, x), t6 = modmul(t6, R2, IV, x), t7 = modmul(t7, R2, IV, x);\n      \
+    \  for (u64 b = d; b; b >>= 1) {\n            if (b & 1) {\n                r1\
+    \ = modmul(r1, t1, IV, x), r2 = modmul(r2, t2, IV, x), r3 = modmul(r3, t3, IV,\
+    \ x);\n                r4 = modmul(r4, t4, IV, x), r5 = modmul(r5, t5, IV, x),\
+    \ r6 = modmul(r6, t6, IV, x), r7 = modmul(r7, t7, IV, x);\n            }\n   \
+    \         t1 = modmul(t1, t1, IV, x), t2 = modmul(t2, t2, IV, x), t3 = modmul(t3,\
+    \ t3, IV, x);\n            t4 = modmul(t4, t4, IV, x), t5 = modmul(t5, t5, IV,\
+    \ x), t6 = modmul(t6, t6, IV, x), t7 = modmul(t7, t7, IV, x);\n        }\n   \
+    \     r1 = min(r1, r1 - x), r2 = min(r2, r2 - x), r3 = min(r3, r3 - x);\n    \
+    \    r4 = min(r4, r4 - x), r5 = min(r5, r5 - x), r6 = min(r6, r6 - x), r7 = min(r7,\
+    \ r7 - x);\n        int res1 = (r1 == R) | (r1 == nR), res2 = (r2 == R) | (r2\
+    \ == nR), res3 = (r3 == R) | (r3 == nR);\n        int res4 = (r4 == R) | (r4 ==\
+    \ nR), res5 = (r5 == R) | (r5 == nR), res6 = (r6 == R) | (r6 == nR), res7 = (r7\
+    \ == R) | (r7 == nR);\n        for (int j = 0; j < k - 1; ++j) {\n           \
+    \ r1 = modmul(r1, r1, IV, x), r2 = modmul(r2, r2, IV, x), r3 = modmul(r3, r3,\
+    \ IV, x);\n            r4 = modmul(r4, r4, IV, x), r5 = modmul(r5, r5, IV, x),\
+    \ r6 = modmul(r6, r6, IV, x), r7 = modmul(r7, r7, IV, x);\n            res1 |=\
+    \ (min(r1, r1 - x) == nR), res2 |= (min(r2, r2 - x) == nR), res3 |= (min(r3, r3\
+    \ - x) == nR);\n            res4 |= (min(r4, r4 - x) == nR), res5 |= (min(r5,\
+    \ r5 - x) == nR), res6 |= (min(r6, r6 - x) == nR), res7 |= (min(r7, r7 - x) ==\
+    \ nR);\n        }\n        return res1 & res2 & res3 & res4 & res5 & res6 & res7;\n\
+    \    };\n    if (x == 2 || x == 3 || x == 5 || x == 13 || x == 19 || x == 73 ||\
+    \ x == 193 || x == 407521 || x == 299210837) {\n        return true;\n    }\n\
+    \    return mr7(2, 325, 9375, 28178, 450775, 9780504, 1795265022);\n}\n"
+  code: "#pragma once\n#include \"Mod/mod_mul.hpp\"\nbool isPrime(u64 x) {\n    if\
+    \ (x < 64) {\n        return (u64(1) << x) & 0x28208a20a08a28ac;\n    }\n    if\
+    \ (x % 2 == 0) {\n        return false;\n    }\n    const int k = __builtin_ctzll(x\
+    \ - 1);\n    const u64 d = (x - 1) >> k, IV = get_nr(x), R = (-x) % x, R2 = (-u128(x))\
+    \ % x, nR = x - R;\n    auto mr7 = [&](u64 t1, u64 t2, u64 t3, u64 t4, u64 t5,\
+    \ u64 t6, u64 t7) {\n        u64 r1 = R, r2 = R, r3 = R, r4 = R, r5 = R, r6 =\
+    \ R, r7 = R;\n        t1 = modmul(t1, R2, IV, x), t2 = modmul(t2, R2, IV, x),\
+    \ t3 = modmul(t3, R2, IV, x);\n        t4 = modmul(t4, R2, IV, x), t5 = modmul(t5,\
+    \ R2, IV, x), t6 = modmul(t6, R2, IV, x), t7 = modmul(t7, R2, IV, x);\n      \
+    \  for (u64 b = d; b; b >>= 1) {\n            if (b & 1) {\n                r1\
+    \ = modmul(r1, t1, IV, x), r2 = modmul(r2, t2, IV, x), r3 = modmul(r3, t3, IV,\
+    \ x);\n                r4 = modmul(r4, t4, IV, x), r5 = modmul(r5, t5, IV, x),\
+    \ r6 = modmul(r6, t6, IV, x), r7 = modmul(r7, t7, IV, x);\n            }\n   \
+    \         t1 = modmul(t1, t1, IV, x), t2 = modmul(t2, t2, IV, x), t3 = modmul(t3,\
+    \ t3, IV, x);\n            t4 = modmul(t4, t4, IV, x), t5 = modmul(t5, t5, IV,\
+    \ x), t6 = modmul(t6, t6, IV, x), t7 = modmul(t7, t7, IV, x);\n        }\n   \
+    \     r1 = min(r1, r1 - x), r2 = min(r2, r2 - x), r3 = min(r3, r3 - x);\n    \
+    \    r4 = min(r4, r4 - x), r5 = min(r5, r5 - x), r6 = min(r6, r6 - x), r7 = min(r7,\
+    \ r7 - x);\n        int res1 = (r1 == R) | (r1 == nR), res2 = (r2 == R) | (r2\
+    \ == nR), res3 = (r3 == R) | (r3 == nR);\n        int res4 = (r4 == R) | (r4 ==\
+    \ nR), res5 = (r5 == R) | (r5 == nR), res6 = (r6 == R) | (r6 == nR), res7 = (r7\
+    \ == R) | (r7 == nR);\n        for (int j = 0; j < k - 1; ++j) {\n           \
+    \ r1 = modmul(r1, r1, IV, x), r2 = modmul(r2, r2, IV, x), r3 = modmul(r3, r3,\
+    \ IV, x);\n            r4 = modmul(r4, r4, IV, x), r5 = modmul(r5, r5, IV, x),\
+    \ r6 = modmul(r6, r6, IV, x), r7 = modmul(r7, r7, IV, x);\n            res1 |=\
+    \ (min(r1, r1 - x) == nR), res2 |= (min(r2, r2 - x) == nR), res3 |= (min(r3, r3\
+    \ - x) == nR);\n            res4 |= (min(r4, r4 - x) == nR), res5 |= (min(r5,\
+    \ r5 - x) == nR), res6 |= (min(r6, r6 - x) == nR), res7 |= (min(r7, r7 - x) ==\
+    \ nR);\n        }\n        return res1 & res2 & res3 & res4 & res5 & res6 & res7;\n\
+    \    };\n    if (x == 2 || x == 3 || x == 5 || x == 13 || x == 19 || x == 73 ||\
+    \ x == 193 || x == 407521 || x == 299210837) {\n        return true;\n    }\n\
+    \    return mr7(2, 325, 9375, 28178, 450775, 9780504, 1795265022);\n}\n"
   dependsOn:
-  - Mod/mod_pow.hpp
-  - Modint/dynamic_modint.hpp
-  - Modint/Barrett_reduction.hpp
+  - Mod/mod_mul.hpp
   isVerificationFile: false
   path: NT/prime/prime_test.hpp
   requiredBy: []
-  timestamp: '2024-05-29 22:38:42+07:00'
+  timestamp: '2024-05-30 07:48:17+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: NT/prime/prime_test.hpp

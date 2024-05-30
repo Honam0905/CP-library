@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: NT/prime/prime_test.hpp
+    title: NT/prime/prime_test.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -30,7 +33,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: Mod/mod_mul.hpp
-  requiredBy: []
+  requiredBy:
+  - NT/prime/prime_test.hpp
   timestamp: '2024-05-29 23:07:58+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

@@ -11,9 +11,6 @@ data:
   - icon: ':warning:'
     path: Mod/mod_sqrt.hpp
     title: Mod/mod_sqrt.hpp
-  - icon: ':warning:'
-    path: NT/prime/prime_test.hpp
-    title: NT/prime/prime_test.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/BC_prime_mod.test.cpp
@@ -114,7 +111,6 @@ data:
   isVerificationFile: false
   path: Modint/dynamic_modint.hpp
   requiredBy:
-  - NT/prime/prime_test.hpp
   - Mod/mod_pow.hpp
   - Mod/mod_sqrt.hpp
   timestamp: '2024-05-29 22:19:57+07:00'
