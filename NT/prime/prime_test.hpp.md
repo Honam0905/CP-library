@@ -1,17 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':warning:'
     path: Mod/mod_mul.hpp
     title: Mod/mod_mul.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/yosupo/Math/prime_test_yosupo.test.cpp
-    title: test/yosupo/Math/prime_test_yosupo.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Mod/mod_mul.hpp\"\nu64 get_nr(u64 M) {\n    u64 IV = 2 -\
@@ -91,9 +88,8 @@ data:
   path: NT/prime/prime_test.hpp
   requiredBy: []
   timestamp: '2024-05-30 11:03:55+07:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/yosupo/Math/prime_test_yosupo.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: NT/prime/prime_test.hpp
 layout: document
 redirect_from:
