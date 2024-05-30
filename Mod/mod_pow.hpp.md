@@ -8,13 +8,16 @@ data:
     path: Modint/dynamic_modint.hpp
     title: Modint/dynamic_modint.hpp
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Mod/mod_sqrt.hpp
     title: Mod/mod_sqrt.hpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
+    title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Modint/Barrett_reduction.hpp\"\n/*\n  @see https://nyaannyaan.github.io/library/modint/barrett-reduction.hpp\n\
@@ -100,8 +103,9 @@ data:
   requiredBy:
   - Mod/mod_sqrt.hpp
   timestamp: '2024-05-29 22:35:44+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Math/mod_sqrt_yosupo.test.cpp
 documentation_of: Mod/mod_pow.hpp
 layout: document
 redirect_from:

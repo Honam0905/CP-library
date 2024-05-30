@@ -2,10 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Mod/mod_pow.hpp
     title: Mod/mod_pow.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Mod/mod_sqrt.hpp
     title: Mod/mod_sqrt.hpp
   - icon: ':heavy_check_mark:'
@@ -15,6 +15,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/BC_prime_mod.test.cpp
     title: test/yosupo/Math/BC_prime_mod.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
+    title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -74,6 +77,7 @@ data:
   timestamp: '2024-05-29 22:19:57+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/yosupo/Math/mod_sqrt_yosupo.test.cpp
   - test/yosupo/Math/BC_prime_mod.test.cpp
 documentation_of: Modint/Barrett_reduction.hpp
 layout: document
