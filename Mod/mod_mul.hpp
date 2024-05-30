@@ -7,7 +7,8 @@ u64 get_nr(u64 M) {
     return IV;
 }
 
-u64 modmul(u64 x, u64 y, u64 IV, u64 M) {
+u64 modmul(u64 x, u64 y, u64 M) {
+    u64 IV=get_nr(M);
     auto t = u128(x) * y;
     u64 lo = t, hi = t >> 64;
     return (hi + M) - u64((u128(lo * IV) * M) >> 64);
