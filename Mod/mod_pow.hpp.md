@@ -1,26 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Modint/Barrett_reduction.hpp
     title: Modint/Barrett_reduction.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Modint/dynamic_modint.hpp
     title: Modint/dynamic_modint.hpp
   _extendedRequiredBy:
   - icon: ':warning:'
     path: Mod/mod_sqrt.hpp
     title: Mod/mod_sqrt.hpp
-  - icon: ':x:'
+  - icon: ':warning:'
     path: NT/prime/prime_test.hpp
     title: NT/prime/prime_test.hpp
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: test/yosupo/Math/prime_test_yosupo.test.cpp
-    title: test/yosupo/Math/prime_test_yosupo.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Modint/Barrett_reduction.hpp\"\n/*\n  @see https://nyaannyaan.github.io/library/modint/barrett-reduction.hpp\n\
@@ -107,9 +104,8 @@ data:
   - NT/prime/prime_test.hpp
   - Mod/mod_sqrt.hpp
   timestamp: '2024-05-29 22:35:44+07:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - test/yosupo/Math/prime_test_yosupo.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: Mod/mod_pow.hpp
 layout: document
 redirect_from:
