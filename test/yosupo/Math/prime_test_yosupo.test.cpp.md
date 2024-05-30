@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Misc/debug.hpp
     title: Misc/debug.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Misc/marco.hpp
     title: Misc/marco.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Mod/mod_mul.hpp
     title: Mod/mod_mul.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: NT/prime/prime_test.hpp
     title: NT/prime/prime_test.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/primality_test
@@ -84,15 +84,15 @@ data:
     \nconst int INF=1e9;\nconst ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT,\
     \ Saigon-----------------\n#line 2 \"Mod/mod_mul.hpp\"\nu64 get_nr(u64 M) {\n\
     \    u64 IV = 2 - M;\n    for (int i = 0; i < 5; ++i) {\n        IV *= 2 - M *\
-    \ IV;\n    }\n    return IV;\n}\n\nu64 modmul(u64 x, u64 y, u64 IV, u64 M) {\n\
-    \    auto t = u128(x) * y;\n    u64 lo = t, hi = t >> 64;\n    return (hi + M)\
-    \ - u64((u128(lo * IV) * M) >> 64);\n}\n \nu64 modpow(u64 a, u64 b, u64 M) {\n\
-    \    u64 res = 1;\n    u64 IV = get_nr(M);\n    while (b) {\n        if (b & 1)\
-    \ {\n            res = modmul(res, a, IV, M);\n        }\n        a = modmul(a,\
-    \ a, IV, M);\n        b >>= 1;\n    }\n    return res;\n}\n//or\n//only good for\
-    \ long long or int64_t\nlong long modmul2(long long a,long long b,long long mod){\n\
-    \   return (a*b)%mod;\n}\n#line 3 \"NT/prime/prime_test.hpp\"\nbool isPrime(u64\
-    \ x) {\n    if (x < 64) {\n        return (u64(1) << x) & 0x28208a20a08a28ac;\n\
+    \ IV;\n    }\n    return IV;\n}\n\nu64 modmul(u64 x, u64 y, u64 M) {\n    u64\
+    \ IV=get_nr(M);\n    auto t = u128(x) * y;\n    u64 lo = t, hi = t >> 64;\n  \
+    \  return (hi + M) - u64((u128(lo * IV) * M) >> 64);\n}\n \nu64 modpow(u64 a,\
+    \ u64 b, u64 M) {\n    u64 res = 1;\n    u64 IV = get_nr(M);\n    while (b) {\n\
+    \        if (b & 1) {\n            res = modmul(res, a, IV, M);\n        }\n \
+    \       a = modmul(a, a, IV, M);\n        b >>= 1;\n    }\n    return res;\n}\n\
+    //or\n//only good for long long or int64_t\nlong long modmul2(long long a,long\
+    \ long b,long long mod){\n   return (a*b)%mod;\n}\n#line 3 \"NT/prime/prime_test.hpp\"\
+    \nbool isPrime(u64 x) {\n    if (x < 64) {\n        return (u64(1) << x) & 0x28208a20a08a28ac;\n\
     \    }\n    if (x % 2 == 0) {\n        return false;\n    }\n    const int k =\
     \ __builtin_ctzll(x - 1);\n    const u64 d = (x - 1) >> k, IV = get_nr(x), R =\
     \ (-x) % x, R2 = (-u128(x)) % x, nR = x - R;\n    auto mr7 = [&](u64 t1, u64 t2,\
@@ -140,8 +140,8 @@ data:
   isVerificationFile: true
   path: test/yosupo/Math/prime_test_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-05-30 08:00:52+07:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2024-05-30 10:59:39+07:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/yosupo/Math/prime_test_yosupo.test.cpp
 layout: document
