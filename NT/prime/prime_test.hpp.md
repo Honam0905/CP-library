@@ -17,9 +17,9 @@ data:
     \    auto t = u128(x) * y;\n    u64 lo = t, hi = t >> 64;\n    return (hi + M)\
     \ - u64((u128(lo * IV) * M) >> 64);\n}\n \nu64 modpow(u64 a, u64 b, u64 M) {\n\
     \    u64 res = 1;\n    u64 IV = get_nr(M);\n    while (b) {\n        if (b & 1)\
-    \ {\n            res = modmul(res, a, IV, M);\n        }\n        a = modmul(a,\
-    \ a, IV, M);\n        b >>= 1;\n    }\n    return res;\n}\n//or\n//only good for\
-    \ long long or int64_t\nlong long modmul2(long long a,long long b,long long mod){\n\
+    \ {\n            res = modmul(res, a, M);\n        }\n        a = modmul(a, a,\
+    \ M);\n        b >>= 1;\n    }\n    return res;\n}\n//or\n//only good for long\
+    \ long or int64_t\nlong long modmul2(long long a,long long b,long long mod){\n\
     \   return (a*b)%mod;\n}\n#line 3 \"NT/prime/prime_test.hpp\"\nbool isPrime(u64\
     \ x) {\n    if (x < 64) {\n        return (u64(1) << x) & 0x28208a20a08a28ac;\n\
     \    }\n    if (x % 2 == 0) {\n        return false;\n    }\n    const int k =\
@@ -87,7 +87,7 @@ data:
   isVerificationFile: false
   path: NT/prime/prime_test.hpp
   requiredBy: []
-  timestamp: '2024-05-30 11:03:55+07:00'
+  timestamp: '2024-05-30 11:12:13+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: NT/prime/prime_test.hpp
