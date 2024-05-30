@@ -18,9 +18,9 @@ u64 modpow(u64 a, u64 b, u64 M) {
     u64 IV = get_nr(M);
     while (b) {
         if (b & 1) {
-            res = mul(res, a, IV, M);
+            res = modmul(res, a, IV, M);
         }
-        a = mul(a, a, IV, M);
+        a = modmul(a, a, IV, M);
         b >>= 1;
     }
     return res;
