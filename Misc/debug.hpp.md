@@ -43,6 +43,9 @@ data:
     path: test/yosupo/Math/enum_prime_4.test.cpp
     title: test/yosupo/Math/enum_prime_4.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/enum_prime_5.test.cpp
+    title: test/yosupo/Math/enum_prime_5.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
     title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
@@ -197,6 +200,7 @@ data:
   - test/yosupo/Ds/PARS_yosupo.test.cpp
   - test/yosupo/string/Zalgorithm.test.cpp
   - test/yosupo/Graph/MST_yosupo.test.cpp
+  - test/yosupo/Math/enum_prime_5.test.cpp
   - test/yosupo/Math/enum_prime_2.test.cpp
   - test/yosupo/Math/enum_prime_1.test.cpp
   - test/yosupo/Math/enum_prime_4.test.cpp
