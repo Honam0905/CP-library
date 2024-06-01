@@ -26,8 +26,12 @@ data:
   verifiedWith: []
 documentation_of: NT/prime/sieve/bool_sieve.hpp
 layout: document
-redirect_from:
-- /library/NT/prime/sieve/bool_sieve.hpp
-- /library/NT/prime/sieve/bool_sieve.hpp.html
-title: NT/prime/sieve/bool_sieve.hpp
 ---
+
+## Description:
+Prime sieve that return bool useful when to check number 
+is prime or not
+
+## Time:
+
+* $O(Nloglog(N))$
