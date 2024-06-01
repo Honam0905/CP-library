@@ -74,6 +74,9 @@ data:
     - icon: ':warning:'
       path: NT/prime/sieve/block_sieve.hpp
       title: NT/prime/sieve/block_sieve.hpp
+    - icon: ':warning:'
+      path: NT/prime/sieve/bool_sieve.hpp
+      title: NT/prime/sieve/bool_sieve.hpp
     - icon: ':heavy_check_mark:'
       path: NT/prime/sieve/fast_sieve.hpp
       title: NT/prime/sieve/fast_sieve.hpp
