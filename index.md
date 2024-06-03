@@ -31,7 +31,7 @@ data:
     - icon: ':warning:'
       path: Mod/Primitive_root.hpp
       title: Mod/Primitive_root.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Mod/mod_inv.hpp
       title: Mod/mod_inv.hpp
     - icon: ':heavy_check_mark:'
@@ -45,7 +45,7 @@ data:
       title: Mod/mod_sqrt.hpp
   - name: Modint
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Modint/Barrett_2.hpp
       title: Modint/Barrett_2.hpp
     - icon: ':heavy_check_mark:'
@@ -72,7 +72,7 @@ data:
       title: NT/Misc/Bigint.hpp
   - name: NT/prime
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: NT/prime/factorize.hpp
       title: NT/prime/factorize.hpp
     - icon: ':heavy_check_mark:'
@@ -170,6 +170,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/enum_prime_5.test.cpp
       title: test/yosupo/Math/enum_prime_5.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Math/factorize_yosupo.test.cpp
+      title: test/yosupo/Math/factorize_yosupo.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
       title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp

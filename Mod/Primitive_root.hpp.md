@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Mod/mod_inv.hpp
     title: Mod/mod_inv.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Modint/Barrett_2.hpp
     title: Modint/Barrett_2.hpp
   _extendedRequiredBy: []

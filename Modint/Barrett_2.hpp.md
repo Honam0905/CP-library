@@ -1,20 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Mod/mod_inv.hpp
     title: Mod/mod_inv.hpp
   _extendedRequiredBy:
   - icon: ':warning:'
     path: Mod/Primitive_root.hpp
     title: Mod/Primitive_root.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: NT/prime/factorize.hpp
     title: NT/prime/factorize.hpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/factorize_yosupo.test.cpp
+    title: test/yosupo/Math/factorize_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Mod/mod_inv.hpp\"\n\n#include <cassert>\n#include <type_traits>\n\
@@ -121,8 +124,9 @@ data:
   - NT/prime/factorize.hpp
   - Mod/Primitive_root.hpp
   timestamp: '2024-06-03 12:35:51+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Math/factorize_yosupo.test.cpp
 documentation_of: Modint/Barrett_2.hpp
 layout: document
 redirect_from:

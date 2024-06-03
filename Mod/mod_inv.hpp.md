@@ -5,19 +5,22 @@ data:
   - icon: ':warning:'
     path: Mod/Primitive_root.hpp
     title: Mod/Primitive_root.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Modint/Barrett_2.hpp
     title: Modint/Barrett_2.hpp
   - icon: ':warning:'
     path: Modint/montgomery_multiplication.hpp
     title: Modint/montgomery_multiplication.hpp
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: NT/prime/factorize.hpp
     title: NT/prime/factorize.hpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/factorize_yosupo.test.cpp
+    title: test/yosupo/Math/factorize_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Mod/mod_inv.hpp\"\n\n#include <cassert>\n#include <type_traits>\n\
@@ -41,8 +44,9 @@ data:
   - Modint/Barrett_2.hpp
   - Modint/montgomery_multiplication.hpp
   timestamp: '2024-05-29 09:05:18+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Math/factorize_yosupo.test.cpp
 documentation_of: Mod/mod_inv.hpp
 layout: document
 redirect_from:
