@@ -51,6 +51,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/prime_test_yosupo.test.cpp
     title: test/yosupo/Math/prime_test_yosupo.test.cpp
+  - icon: ':x:'
+    path: test/yosupo/Math/primitive_root_yosupo.test.cpp
+    title: test/yosupo/Math/primitive_root_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/LCA_yosupo.test.cpp
     title: test/yosupo/Tree/LCA_yosupo.test.cpp
@@ -63,9 +66,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/string/Zalgorithm.test.cpp
     title: test/yosupo/string/Zalgorithm.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: '#line 1 "Misc/debug.hpp"
@@ -189,7 +192,7 @@ data:
   path: Misc/debug.hpp
   requiredBy: []
   timestamp: '2024-05-13 12:48:47+07:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aizu/2_segment_tree.test.cpp
   - test/aizu/disjointset.test.cpp
@@ -206,6 +209,7 @@ data:
   - test/yosupo/Math/enum_prime_4.test.cpp
   - test/yosupo/Math/prime_test_yosupo.test.cpp
   - test/yosupo/Math/mod_sqrt_yosupo.test.cpp
+  - test/yosupo/Math/primitive_root_yosupo.test.cpp
   - test/yosupo/Math/enum_prime_3.test.cpp
   - test/yosupo/Math/BC_prime_mod.test.cpp
   - test/yosupo/Tree/tree_diameter_yosupo.test.cpp
