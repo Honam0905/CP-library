@@ -72,6 +72,9 @@ data:
       title: NT/Misc/Bigint.hpp
   - name: NT/prime
     pages:
+    - icon: ':warning:'
+      path: NT/prime/factorize.hpp
+      title: NT/prime/factorize.hpp
     - icon: ':heavy_check_mark:'
       path: NT/prime/prime_test.hpp
       title: NT/prime/prime_test.hpp

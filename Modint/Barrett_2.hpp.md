@@ -8,6 +8,9 @@ data:
   - icon: ':warning:'
     path: Mod/Primitive_root.hpp
     title: Mod/Primitive_root.hpp
+  - icon: ':warning:'
+    path: NT/prime/factorize.hpp
+    title: NT/prime/factorize.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -115,6 +118,7 @@ data:
   isVerificationFile: false
   path: Modint/Barrett_2.hpp
   requiredBy:
+  - NT/prime/factorize.hpp
   - Mod/Primitive_root.hpp
   timestamp: '2024-06-03 12:35:51+07:00'
   verificationStatus: LIBRARY_NO_TESTS

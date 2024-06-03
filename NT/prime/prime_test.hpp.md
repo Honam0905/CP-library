@@ -4,7 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: Mod/mod_mul.hpp
     title: Mod/mod_mul.hpp
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: NT/prime/factorize.hpp
+    title: NT/prime/factorize.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/prime_test_yosupo.test.cpp
@@ -89,7 +92,8 @@ data:
   - Mod/mod_mul.hpp
   isVerificationFile: false
   path: NT/prime/prime_test.hpp
-  requiredBy: []
+  requiredBy:
+  - NT/prime/factorize.hpp
   timestamp: '2024-05-30 11:12:13+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

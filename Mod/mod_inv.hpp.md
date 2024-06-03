@@ -11,6 +11,9 @@ data:
   - icon: ':warning:'
     path: Modint/montgomery_multiplication.hpp
     title: Modint/montgomery_multiplication.hpp
+  - icon: ':warning:'
+    path: NT/prime/factorize.hpp
+    title: NT/prime/factorize.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -33,6 +36,7 @@ data:
   isVerificationFile: false
   path: Mod/mod_inv.hpp
   requiredBy:
+  - NT/prime/factorize.hpp
   - Mod/Primitive_root.hpp
   - Modint/Barrett_2.hpp
   - Modint/montgomery_multiplication.hpp
