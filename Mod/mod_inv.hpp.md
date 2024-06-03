@@ -5,6 +5,9 @@ data:
   - icon: ':warning:'
     path: Modint/Barrett_2.hpp
     title: Modint/Barrett_2.hpp
+  - icon: ':warning:'
+    path: Modint/montgomery_multiplication.hpp
+    title: Modint/montgomery_multiplication.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -28,6 +31,7 @@ data:
   path: Mod/mod_inv.hpp
   requiredBy:
   - Modint/Barrett_2.hpp
+  - Modint/montgomery_multiplication.hpp
   timestamp: '2024-05-29 09:05:18+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

@@ -54,6 +54,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Modint/montgomery_modint.hpp
       title: montgomery modint(static modint)
+    - icon: ':warning:'
+      path: Modint/montgomery_multiplication.hpp
+      title: Modint/montgomery_multiplication.hpp
   - name: NT/Combinatorics
     pages:
     - icon: ':heavy_check_mark:'
