@@ -2,22 +2,19 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':warning:'
     path: Mod/Primitive_root.hpp
     title: Mod/Primitive_root.hpp
-  - icon: ':x:'
+  - icon: ':warning:'
     path: Modint/Barrett_2.hpp
     title: Modint/Barrett_2.hpp
   - icon: ':warning:'
     path: Modint/montgomery_multiplication.hpp
     title: Modint/montgomery_multiplication.hpp
-  _extendedVerifiedWith:
-  - icon: ':x:'
-    path: primitive_root_yosupo.test.cpp
-    title: primitive_root_yosupo.test.cpp
-  _isVerificationFailed: true
+  _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Mod/mod_inv.hpp\"\n\n#include <cassert>\n#include <type_traits>\n\
@@ -40,9 +37,8 @@ data:
   - Modint/Barrett_2.hpp
   - Modint/montgomery_multiplication.hpp
   timestamp: '2024-05-29 09:05:18+07:00'
-  verificationStatus: LIBRARY_ALL_WA
-  verifiedWith:
-  - primitive_root_yosupo.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: Mod/mod_inv.hpp
 layout: document
 redirect_from:

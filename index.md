@@ -17,21 +17,21 @@ data:
       title: DS/fenwick_tree.hpp
   - name: Misc
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Misc/debug.hpp
       title: Misc/debug.hpp
     - icon: ':warning:'
       path: Misc/faster_io.hpp
       title: Misc/faster_io.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Misc/marco.hpp
       title: Misc/marco.hpp
   - name: Mod
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: Mod/Primitive_root.hpp
       title: Mod/Primitive_root.hpp
-    - icon: ':x:'
+    - icon: ':warning:'
       path: Mod/mod_inv.hpp
       title: Mod/mod_inv.hpp
     - icon: ':heavy_check_mark:'
@@ -45,7 +45,7 @@ data:
       title: Mod/mod_sqrt.hpp
   - name: Modint
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: Modint/Barrett_2.hpp
       title: Modint/Barrett_2.hpp
     - icon: ':heavy_check_mark:'
@@ -117,9 +117,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: example.test.cpp
       title: example.test.cpp
-    - icon: ':x:'
-      path: primitive_root_yosupo.test.cpp
-      title: primitive_root_yosupo.test.cpp
   - name: test/aizu
     pages:
     - icon: ':heavy_check_mark:'
