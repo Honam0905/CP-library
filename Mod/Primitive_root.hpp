@@ -1,11 +1,11 @@
 #pragma once
 #include "Modint/Barrett_2.hpp"
-u64 primitive_root (u64 p) {
+ll primitive_root (ll p) {
     if(p==2) return 1;
-    vector<u64> fact;
+    vector<ll> fact;
     Barrett_u64 br;
     br.set(p);
-    u64 phi = p-1,  n = phi;
+    ll phi = p-1,  n = phi;
     for (int i=2; i*i<=n; ++i)
         if (n % i == 0) {
             fact.push_back (i);
