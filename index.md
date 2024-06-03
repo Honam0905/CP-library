@@ -29,9 +29,6 @@ data:
   - name: Mod
     pages:
     - icon: ':warning:'
-      path: Mod/Barrett_2.hpp
-      title: Mod/Barrett_2.hpp
-    - icon: ':warning:'
       path: Mod/mod_inv.hpp
       title: Mod/mod_inv.hpp
     - icon: ':heavy_check_mark:'
@@ -45,6 +42,9 @@ data:
       title: Mod/mod_sqrt.hpp
   - name: Modint
     pages:
+    - icon: ':warning:'
+      path: Modint/Barrett_2.hpp
+      title: Modint/Barrett_2.hpp
     - icon: ':heavy_check_mark:'
       path: Modint/Barrett_reduction.hpp
       title: Modint/Barrett_reduction.hpp

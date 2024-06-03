@@ -3,8 +3,8 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
-    path: Mod/Barrett_2.hpp
-    title: Mod/Barrett_2.hpp
+    path: Modint/Barrett_2.hpp
+    title: Modint/Barrett_2.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -27,7 +27,7 @@ data:
   isVerificationFile: false
   path: Mod/mod_inv.hpp
   requiredBy:
-  - Mod/Barrett_2.hpp
+  - Modint/Barrett_2.hpp
   timestamp: '2024-05-29 09:05:18+07:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
