@@ -136,9 +136,9 @@ data:
     \ *b, u64 a, u64 k) {\n    u64 ret = 1ull, deg = k;\n    while (deg > 0) {\n \
     \       if (deg & 1) {\n            ret = mul_b64(b, ret, a);\n        }\n   \
     \     a = mul_b64(b, a, a);\n        deg >>= 1;\n    }\n    return ret;\n}\n#line\
-    \ 3 \"Mod/Primitive_root.hpp\"\nll primitive_root (ll p) {\n    if(p==2) return\
-    \ 1;\n    vector<ll> fact;\n    Barrett_u64 br;\n    br.set(p);\n    ll phi =\
-    \ p-1,  n = phi;\n    for (int i=2; i*i<=n; ++i)\n        if (n % i == 0) {\n\
+    \ 3 \"Mod/Primitive_root.hpp\"\nu64 primitive_root (u64 p) {\n    if(p==2) return\
+    \ 1;\n    vector<u64> fact;\n    Barrett_u64 br;\n    br.set(p);\n    u64 phi\
+    \ = p-1,  n = phi;\n    for (int i=2; i*i<=n; ++i)\n        if (n % i == 0) {\n\
     \            fact.push_back (i);\n            while (n % i == 0)\n           \
     \     n /= i;\n        }\n    if (n > 1)\n        fact.push_back (n);\n    for\
     \ (int res=2; res<=p; ++res) {\n        bool ok = true;\n        for (size_t i=0;\
@@ -162,7 +162,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/Math/primitive_root_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-06-03 13:23:11+07:00'
+  timestamp: '2024-06-03 13:29:01+07:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/yosupo/Math/primitive_root_yosupo.test.cpp
