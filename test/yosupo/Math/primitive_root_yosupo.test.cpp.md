@@ -144,15 +144,15 @@ data:
     \ (int res=2; res<=p; ++res) {\n        bool ok = true;\n        for (size_t i=0;\
     \ i<fact.size() && ok; ++i)\n            ok &= pow_b64(&br,res, phi / fact[i])\
     \ != 1;\n        if (ok)  return res;\n    }\n    return -1;\n}\n#line 8 \"test/yosupo/Math/primitive_root_yosupo.test.cpp\"\
-    \n\nint main() {\n    FT;\n    int t; cin>>t;\n    while(t--){\n      ll n; cin>>n;\n\
-    \      ll ans=primitive_root(n);\n      cout<<ans<<'\\n';\n    } \n   return 0;\n\
-    }\n"
+    \n\nint main() {\n    FT;\n    int t; cin>>t;\n    while(t--){\n      u64 n; cin>>n;\n\
+    \      u64 ans=primitive_root(n);\n      cout<<ans<<'\\n';\n    } \n   return\
+    \ 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/primitive_root\"\n#include\
     \ \"Misc/marco.hpp\"\n#include \"Misc/debug.hpp\"\nconst int INF=1e9;\nconst ll\
     \ INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT, Saigon-----------------\n\
     #include \"Mod/Primitive_root.hpp\"\n\nint main() {\n    FT;\n    int t; cin>>t;\n\
-    \    while(t--){\n      ll n; cin>>n;\n      ll ans=primitive_root(n);\n     \
-    \ cout<<ans<<'\\n';\n    } \n   return 0;\n}\n"
+    \    while(t--){\n      u64 n; cin>>n;\n      u64 ans=primitive_root(n);\n   \
+    \   cout<<ans<<'\\n';\n    } \n   return 0;\n}\n"
   dependsOn:
   - Misc/marco.hpp
   - Misc/debug.hpp
@@ -162,7 +162,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/Math/primitive_root_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-06-03 13:29:01+07:00'
+  timestamp: '2024-06-03 13:35:07+07:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/yosupo/Math/primitive_root_yosupo.test.cpp
