@@ -29,6 +29,9 @@ data:
   - name: Mod
     pages:
     - icon: ':warning:'
+      path: Mod/Barrett_2.hpp
+      title: Mod/Barrett_2.hpp
+    - icon: ':warning:'
       path: Mod/mod_inv.hpp
       title: Mod/mod_inv.hpp
     - icon: ':heavy_check_mark:'
