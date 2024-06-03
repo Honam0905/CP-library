@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: Mod/mod_inv.hpp
     title: Mod/mod_inv.hpp
   _extendedRequiredBy: []
