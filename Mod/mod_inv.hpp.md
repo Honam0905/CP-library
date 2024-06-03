@@ -3,6 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy:
   - icon: ':warning:'
+    path: Mod/Primitive_root.hpp
+    title: Mod/Primitive_root.hpp
+  - icon: ':warning:'
     path: Modint/Barrett_2.hpp
     title: Modint/Barrett_2.hpp
   - icon: ':warning:'
@@ -30,6 +33,7 @@ data:
   isVerificationFile: false
   path: Mod/mod_inv.hpp
   requiredBy:
+  - Mod/Primitive_root.hpp
   - Modint/Barrett_2.hpp
   - Modint/montgomery_multiplication.hpp
   timestamp: '2024-05-29 09:05:18+07:00'

@@ -29,6 +29,9 @@ data:
   - name: Mod
     pages:
     - icon: ':warning:'
+      path: Mod/Primitive_root.hpp
+      title: Mod/Primitive_root.hpp
+    - icon: ':warning:'
       path: Mod/mod_inv.hpp
       title: Mod/mod_inv.hpp
     - icon: ':heavy_check_mark:'
