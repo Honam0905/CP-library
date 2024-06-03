@@ -3,6 +3,9 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
+  - icon: ':x:'
+    path: primitive_root_yosupo.test.cpp
+    title: primitive_root_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
     path: test/aizu/1_seg_tree.test.cpp
     title: test/aizu/1_seg_tree.test.cpp
@@ -63,9 +66,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/string/Zalgorithm.test.cpp
     title: test/yosupo/string/Zalgorithm.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Misc/marco.hpp\"\n// Judges with GCC >= 12 only needs Ofast\n\
@@ -149,7 +152,7 @@ data:
   path: Misc/marco.hpp
   requiredBy: []
   timestamp: '2024-05-13 12:33:07+07:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/aizu/2_segment_tree.test.cpp
   - test/aizu/disjointset.test.cpp
@@ -171,6 +174,7 @@ data:
   - test/yosupo/Tree/tree_diameter_yosupo.test.cpp
   - test/yosupo/Tree/LCA_yosupo_2.test.cpp
   - test/yosupo/Tree/LCA_yosupo.test.cpp
+  - primitive_root_yosupo.test.cpp
 documentation_of: Misc/marco.hpp
 layout: document
 redirect_from:
