@@ -1,5 +1,5 @@
-#include "NT/prime/factorize.hpp"
 #pragma once
+#include "NT/prime/factorize.hpp"
 u64 PrimitiveRoot(u64 p){
    u64 x=0;
    auto mi=factor(p-1);
