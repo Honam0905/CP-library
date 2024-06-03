@@ -11,7 +11,8 @@ int main() {
     int t; cin>>t;
     while(t--){
       ll n; cin>>n;
-      cout<<primitive_root(n)<<'\n';
+      ll ans=primitive_root(n);
+      cout<<ans<<'\n';
     } 
    return 0;
 }
