@@ -10,8 +10,8 @@ int main() {
     FT;
     int t; cin>>t;
     while(t--){
-      ll n; cin>>n;
-      ll ans=primitive_root(n);
+      u64 n; cin>>n;
+      u64 ans=primitive_root(n);
       cout<<ans<<'\n';
     } 
    return 0;
