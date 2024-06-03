@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: primitive_root_yosupo.test.cpp
+    title: primitive_root_yosupo.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Misc/faster_io.hpp\"\n\n#include <unistd.h>\n#include <algorithm>\n\
@@ -324,8 +327,9 @@ data:
   path: Misc/faster_io.hpp
   requiredBy: []
   timestamp: '2024-05-13 12:28:24+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - primitive_root_yosupo.test.cpp
 documentation_of: Misc/faster_io.hpp
 layout: document
 redirect_from:

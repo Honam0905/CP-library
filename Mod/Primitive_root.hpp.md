@@ -1,17 +1,20 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: Mod/mod_inv.hpp
     title: Mod/mod_inv.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: Modint/Barrett_2.hpp
     title: Modint/Barrett_2.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: primitive_root_yosupo.test.cpp
+    title: primitive_root_yosupo.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Mod/mod_inv.hpp\"\n\n#include <cassert>\n#include <type_traits>\n\
@@ -89,8 +92,9 @@ data:
   path: Mod/Primitive_root.hpp
   requiredBy: []
   timestamp: '2024-06-03 13:29:01+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - primitive_root_yosupo.test.cpp
 documentation_of: Mod/Primitive_root.hpp
 layout: document
 redirect_from:
