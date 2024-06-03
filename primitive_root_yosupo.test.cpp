@@ -9,7 +9,8 @@ int main() {
     int t; cin>>t;
     while(t--){
         u64 n; cin>>n;
-        printf("%llu\n", primitive_root(n));
+        int64_t ans=primitive_root(n)
+        cout<<ans<<'\n';
     }
     fflush(stdout); 
     return 0;
