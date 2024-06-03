@@ -17,10 +17,13 @@ data:
     path: NT/prime/prime_test.hpp
     title: NT/prime/prime_test.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/primitive_root.test.cpp
+    title: test/yosupo/Math/primitive_root.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"Mod/mod_inv.hpp\"\n\n#include <cassert>\n#include <type_traits>\n\
@@ -141,8 +144,9 @@ data:
   path: Mod/Primitive_root.hpp
   requiredBy: []
   timestamp: '2024-06-03 16:39:23+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Math/primitive_root.test.cpp
 documentation_of: Mod/Primitive_root.hpp
 layout: document
 redirect_from:

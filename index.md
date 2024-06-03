@@ -28,7 +28,7 @@ data:
       title: Misc/marco.hpp
   - name: Mod
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Mod/Primitive_root.hpp
       title: Mod/Primitive_root.hpp
     - icon: ':heavy_check_mark:'
@@ -179,6 +179,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/prime_test_yosupo.test.cpp
       title: test/yosupo/Math/prime_test_yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Math/primitive_root.test.cpp
+      title: test/yosupo/Math/primitive_root.test.cpp
   - name: test/yosupo/Tree
     pages:
     - icon: ':heavy_check_mark:'

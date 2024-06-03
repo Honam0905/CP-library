@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: Mod/Primitive_root.hpp
     title: Mod/Primitive_root.hpp
   - icon: ':heavy_check_mark:'
@@ -18,6 +18,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/factorize_yosupo.test.cpp
     title: test/yosupo/Math/factorize_yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/primitive_root.test.cpp
+    title: test/yosupo/Math/primitive_root.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -47,6 +50,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Math/factorize_yosupo.test.cpp
+  - test/yosupo/Math/primitive_root.test.cpp
 documentation_of: Mod/mod_inv.hpp
 layout: document
 redirect_from:
