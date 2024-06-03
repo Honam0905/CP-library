@@ -117,9 +117,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: example.test.cpp
       title: example.test.cpp
-    - icon: ':x:'
-      path: primitive_root_yosupo.test.cpp
-      title: primitive_root_yosupo.test.cpp
   - name: test/aizu
     pages:
     - icon: ':heavy_check_mark:'
