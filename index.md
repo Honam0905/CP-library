@@ -20,7 +20,7 @@ data:
     - icon: ':question:'
       path: Misc/debug.hpp
       title: Misc/debug.hpp
-    - icon: ':x:'
+    - icon: ':warning:'
       path: Misc/faster_io.hpp
       title: Misc/faster_io.hpp
     - icon: ':question:'
