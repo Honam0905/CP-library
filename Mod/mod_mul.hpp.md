@@ -2,6 +2,9 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':warning:'
+    path: Mod/Primitive_root.hpp
+    title: Mod/Primitive_root.hpp
   - icon: ':heavy_check_mark:'
     path: NT/prime/factorize.hpp
     title: NT/prime/factorize.hpp
@@ -46,6 +49,7 @@ data:
   requiredBy:
   - NT/prime/factorize.hpp
   - NT/prime/prime_test.hpp
+  - Mod/Primitive_root.hpp
   timestamp: '2024-05-30 11:12:13+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
