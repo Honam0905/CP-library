@@ -145,14 +145,14 @@ data:
     \ i<fact.size() && ok; ++i)\n            ok &= pow_b64(&br,res, phi / fact[i])\
     \ != 1;\n        if (ok)  return res;\n    }\n    return -1;\n}\n#line 8 \"primitive_root_yosupo.test.cpp\"\
     \nint main() {\n    int t; cin>>t;\n    while(t--){\n        u64 n; cin>>n;\n\
-    \        printf(\"%llu\\n\", primitive_root(n));\n    }\n    fflush(stdout); \n\
-    \    return 0;\n}\n"
+    \        int64_t ans=primitive_root(n)\n        cout<<ans<<'\\n';\n    }\n   \
+    \ fflush(stdout); \n    return 0;\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/primitive_root\"\n#include\
     \ \"Misc/marco.hpp\"\n#include \"Misc/debug.hpp\"\nconst int INF=1e9;\nconst ll\
     \ INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT, Saigon-----------------\n\
     #include \"Mod/Primitive_root.hpp\"\nint main() {\n    int t; cin>>t;\n    while(t--){\n\
-    \        u64 n; cin>>n;\n        printf(\"%llu\\n\", primitive_root(n));\n   \
-    \ }\n    fflush(stdout); \n    return 0;\n}\n"
+    \        u64 n; cin>>n;\n        int64_t ans=primitive_root(n)\n        cout<<ans<<'\\\
+    n';\n    }\n    fflush(stdout); \n    return 0;\n}\n"
   dependsOn:
   - Misc/marco.hpp
   - Misc/debug.hpp
@@ -162,7 +162,7 @@ data:
   isVerificationFile: true
   path: primitive_root_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2024-06-03 13:57:02+07:00'
+  timestamp: '2024-06-03 14:00:12+07:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: primitive_root_yosupo.test.cpp
