@@ -65,6 +65,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: NT/Combinatorics/Comb_common.hpp
       title: NT/Combinatorics/Comb_common.hpp
+  - name: NT/Fast_NT
+    pages:
+    - icon: ':warning:'
+      path: NT/Fast_NT/binary_gcd.hpp
+      title: Binary gcd
   - name: NT/Misc
     pages:
     - icon: ':warning:'
