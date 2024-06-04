@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/mod_inv.test.cpp
+    title: test/yosupo/Math/mod_inv.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links:
     - https://cp-algorithms.com/algebra/montgomery_multiplication.html
@@ -131,8 +134,9 @@ data:
   path: Modint/montgomery_multiplication.hpp
   requiredBy: []
   timestamp: '2024-06-04 11:24:19+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Math/mod_inv.test.cpp
 documentation_of: Modint/montgomery_multiplication.hpp
 layout: document
 redirect_from:

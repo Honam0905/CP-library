@@ -49,6 +49,9 @@ data:
     path: test/yosupo/Math/factorize_yosupo.test.cpp
     title: test/yosupo/Math/factorize_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Math/mod_inv.test.cpp
+    title: test/yosupo/Math/mod_inv.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
     title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
@@ -210,6 +213,7 @@ data:
   - test/yosupo/Math/enum_prime_5.test.cpp
   - test/yosupo/Math/enum_prime_2.test.cpp
   - test/yosupo/Math/enum_prime_1.test.cpp
+  - test/yosupo/Math/mod_inv.test.cpp
   - test/yosupo/Math/primitive_root.test.cpp
   - test/yosupo/Math/enum_prime_4.test.cpp
   - test/yosupo/Math/prime_test_yosupo.test.cpp

@@ -57,7 +57,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Modint/montgomery_modint.hpp
       title: montgomery modint(static modint)
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Modint/montgomery_multiplication.hpp
       title: Modint/montgomery_multiplication.hpp
   - name: NT/Combinatorics
@@ -178,6 +178,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/factorize_yosupo.test.cpp
       title: test/yosupo/Math/factorize_yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Math/mod_inv.test.cpp
+      title: test/yosupo/Math/mod_inv.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
       title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
