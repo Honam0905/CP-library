@@ -1,5 +1,48 @@
-#pragma once
-#include "Mod/mod_inv.hpp"
+/*
+  inv_mod from atcoder library
+  reference:https://github.com/atcoder/ac-library/blob/master/atcoder/math.hpp
+*/
+template<class T>
+constexpr T safe_mod(T x, T m) {
+    x %= m;
+    if (x < 0) x += m;
+    return x;
+}
+template<class T>
+constexpr std::pair<T, T> inv_gcd(T a, T b) {
+    a = safe_mod(a, b);
+    if (a == 0) return {b, 0};
+
+    T s = b, t = a;
+    T m0 = 0, m1 = 1;
+
+    while (t) {
+        T u = s / t;
+        s -= t * u;
+        m0 -= m1 * u;
+        auto tmp = s;
+        s = t;
+        t = tmp;
+        tmp = m0;
+        m0 = m1;
+        m1 = tmp;
+    }
+
+    if (m0 < 0) m0 += b / s;
+    return {s, m0};
+}
+template<class T>
+T mod_inv(T x, T m) {
+    assert(1 <= m);
+    auto z = inv_gcd(x, m);
+    assert(z.first == 1);
+    return z.second;
+}
+/*
+  montgomery multiplication
+  @see https://en.wikipedia.org/wiki/Montgomery_modular_multiplication
+  @see https://cp-algorithms.com/algebra/montgomery_multiplication.html
+*/
 struct Montgomery_u32 {
     u32 n, n2, ni, r1, r2, r3;
 
@@ -54,7 +97,7 @@ struct Montgomery_u32 {
     }
 
     u32 inv(u32 a) {
-        return reduce((u64)r3 * inv_mod(a, n));
+        return reduce((u64)r3 * mod_inv(a, n));
     }
 };
 
@@ -113,7 +156,7 @@ struct Montgomery_u64 {
     }
 
     u64 inv(u64 a) {
-        return reduce((u128)r3 * inv_mod(a, n));
+        return reduce((u128)r3 * mod_inv(a, n));
     }
 };
 // Montgomery multiplication - 32-bit
