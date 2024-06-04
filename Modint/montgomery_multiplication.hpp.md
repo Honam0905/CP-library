@@ -14,7 +14,7 @@ data:
     - https://cp-algorithms.com/algebra/montgomery_multiplication.html
     - https://en.wikipedia.org/wiki/Montgomery_modular_multiplication
     - https://github.com/atcoder/ac-library/blob/master/atcoder/math.hpp
-  bundledCode: "#line 1 \"Modint/montgomery_multiplication.hpp\"\n/*\n  inv_mod from\
+  bundledCode: "#line 2 \"Modint/montgomery_multiplication.hpp\"\n/*\n  inv_mod from\
     \ atcoder library\n  reference:https://github.com/atcoder/ac-library/blob/master/atcoder/math.hpp\n\
     */\ntemplate<class T>\nconstexpr T safe_mod(T x, T m) {\n    x %= m;\n    if (x\
     \ < 0) x += m;\n    return x;\n}\ntemplate<class T>\nconstexpr std::pair<T, T>\
@@ -72,7 +72,7 @@ data:
     \        if (deg & 1) {\n            ret = mul_m64(m, ret, a);\n        }\n  \
     \      a = mul_m64(m, a, a);\n        deg >>= 1;\n    }\n    return m->from(ret);\n\
     }\n"
-  code: "/*\n  inv_mod from atcoder library\n  reference:https://github.com/atcoder/ac-library/blob/master/atcoder/math.hpp\n\
+  code: "#pragma once\n/*\n  inv_mod from atcoder library\n  reference:https://github.com/atcoder/ac-library/blob/master/atcoder/math.hpp\n\
     */\ntemplate<class T>\nconstexpr T safe_mod(T x, T m) {\n    x %= m;\n    if (x\
     \ < 0) x += m;\n    return x;\n}\ntemplate<class T>\nconstexpr std::pair<T, T>\
     \ inv_gcd(T a, T b) {\n    a = safe_mod(a, b);\n    if (a == 0) return {b, 0};\n\
@@ -133,7 +133,7 @@ data:
   isVerificationFile: false
   path: Modint/montgomery_multiplication.hpp
   requiredBy: []
-  timestamp: '2024-06-04 11:24:19+07:00'
+  timestamp: '2024-06-04 14:27:49+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Math/montgomery_multiplication.test.cpp

@@ -80,7 +80,7 @@ data:
     \ cerr << \", \"; dbg_out(T...); }\n#define dbg(...) cerr << \"[\" << #__VA_ARGS__\
     \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/Math/montgomery_multiplication.test.cpp\"\
     \nconst int INF=1e9;\nconst ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT,\
-    \ Saigon-----------------\n#line 1 \"Modint/montgomery_multiplication.hpp\"\n\
+    \ Saigon-----------------\n#line 2 \"Modint/montgomery_multiplication.hpp\"\n\
     /*\n  inv_mod from atcoder library\n  reference:https://github.com/atcoder/ac-library/blob/master/atcoder/math.hpp\n\
     */\ntemplate<class T>\nconstexpr T safe_mod(T x, T m) {\n    x %= m;\n    if (x\
     \ < 0) x += m;\n    return x;\n}\ntemplate<class T>\nconstexpr std::pair<T, T>\
@@ -217,7 +217,7 @@ data:
   isVerificationFile: true
   path: test/yosupo/Math/montgomery_multiplication.test.cpp
   requiredBy: []
-  timestamp: '2024-06-04 11:49:29+07:00'
+  timestamp: '2024-06-04 14:27:49+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Math/montgomery_multiplication.test.cpp
