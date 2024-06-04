@@ -1,3 +1,4 @@
+#pragma once
 /*
   inv_mod from atcoder library
   reference:https://github.com/atcoder/ac-library/blob/master/atcoder/math.hpp
