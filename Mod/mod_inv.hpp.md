@@ -8,9 +8,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: Modint/Barrett_2.hpp
     title: Modint/Barrett_2.hpp
-  - icon: ':warning:'
-    path: Modint/montgomery_multiplication.hpp
-    title: Modint/montgomery_multiplication.hpp
   - icon: ':heavy_check_mark:'
     path: NT/prime/factorize.hpp
     title: NT/prime/factorize.hpp
@@ -45,7 +42,6 @@ data:
   - NT/prime/factorize.hpp
   - Mod/Primitive_root.hpp
   - Modint/Barrett_2.hpp
-  - Modint/montgomery_multiplication.hpp
   timestamp: '2024-05-29 09:05:18+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
