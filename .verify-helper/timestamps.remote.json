@@ -15,6 +15,7 @@
 "test/yosupo/Math/enum_prime_4.test.cpp": "2024-05-24 23:35:26 +0700",
 "test/yosupo/Math/enum_prime_5.test.cpp": "2024-06-01 22:51:21 +0700",
 "test/yosupo/Math/factorize_yosupo.test.cpp": "2024-06-03 16:28:05 +0700",
+"test/yosupo/Math/mod_inv.test.cpp": "2024-06-04 11:46:33 +0700",
 "test/yosupo/Math/mod_sqrt_yosupo.test.cpp": "2024-05-30 08:22:17 +0700",
 "test/yosupo/Math/prime_test_yosupo.test.cpp": "2024-05-30 11:16:41 +0700",
 "test/yosupo/Math/primitive_root.test.cpp": "2024-06-03 16:43:33 +0700",
