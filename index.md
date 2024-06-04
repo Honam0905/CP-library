@@ -70,6 +70,9 @@ data:
     - icon: ':warning:'
       path: NT/Fast_NT/binary_gcd.hpp
       title: Binary gcd
+    - icon: ':warning:'
+      path: NT/Fast_NT/fast_modinv.hpp
+      title: NT/Fast_NT/fast_modinv.hpp
   - name: NT/Misc
     pages:
     - icon: ':warning:'
@@ -120,11 +123,6 @@ data:
       path: tree/Tree_diameter.hpp
       title: tree/Tree_diameter.hpp
   verificationCategories:
-  - name: NT/Fast_NT
-    pages:
-    - icon: ':x:'
-      path: NT/Fast_NT/fast_modinv.test.cpp
-      title: NT/Fast_NT/fast_modinv.test.cpp
   - name: .
     pages:
     - icon: ':heavy_check_mark:'
