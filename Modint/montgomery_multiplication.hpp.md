@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/yosupo/Math/mod_inv.test.cpp
-    title: test/yosupo/Math/mod_inv.test.cpp
+    path: test/yosupo/Math/montgomery_multiplication.test.cpp
+    title: test/yosupo/Math/montgomery_multiplication.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -136,7 +136,7 @@ data:
   timestamp: '2024-06-04 11:24:19+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Math/mod_inv.test.cpp
+  - test/yosupo/Math/montgomery_multiplication.test.cpp
 documentation_of: Modint/montgomery_multiplication.hpp
 layout: document
 redirect_from:

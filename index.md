@@ -179,11 +179,11 @@ data:
       path: test/yosupo/Math/factorize_yosupo.test.cpp
       title: test/yosupo/Math/factorize_yosupo.test.cpp
     - icon: ':heavy_check_mark:'
-      path: test/yosupo/Math/mod_inv.test.cpp
-      title: test/yosupo/Math/mod_inv.test.cpp
-    - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
       title: test/yosupo/Math/mod_sqrt_yosupo.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Math/montgomery_multiplication.test.cpp
+      title: test/yosupo/Math/montgomery_multiplication.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/prime_test_yosupo.test.cpp
       title: test/yosupo/Math/prime_test_yosupo.test.cpp

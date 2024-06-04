@@ -20,15 +20,16 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/primality_test
     links:
     - https://judge.yosupo.jp/problem/primality_test
-  bundledCode: "#line 1 \"test/yosupo/Math/mod_inv.test.cpp\"\n#define PROBLEM \"\
-    https://judge.yosupo.jp/problem/primality_test\"\n#line 2 \"Misc/marco.hpp\"\n\
-    // Judges with GCC >= 12 only needs Ofast\n// #pragma GCC optimize(\"O3,no-stack-protector,fast-math,unroll-loops,tree-vectorize\"\
-    )\n// MLE optimization\n// #pragma GCC optimize(\"conserve-stack\")\n// Old judges\n\
-    // #pragma GCC target(\"sse4.2,popcnt,lzcnt,abm,mmx,fma,bmi,bmi2\")\n// New judges.\
-    \ Test with assert(__builtin_cpu_supports(\"avx2\"));\n// #pragma GCC target(\"\
-    avx2,popcnt,lzcnt,abm,bmi,bmi2,fma,tune=native\")\n// Atcoder\n// #pragma GCC\
-    \ target(\"avx2,popcnt,lzcnt,abm,bmi,bmi2,fma\")\n/*\n#include <ext/pb_ds/assoc_container.hpp>\n\
-    #include <ext/pb_ds/tree_policy.hpp>\nusing namespace __gnu_pbds;\ntypedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update>\
+  bundledCode: "#line 1 \"test/yosupo/Math/montgomery_multiplication.test.cpp\"\n\
+    #define PROBLEM \"https://judge.yosupo.jp/problem/primality_test\"\n#line 2 \"\
+    Misc/marco.hpp\"\n// Judges with GCC >= 12 only needs Ofast\n// #pragma GCC optimize(\"\
+    O3,no-stack-protector,fast-math,unroll-loops,tree-vectorize\")\n// MLE optimization\n\
+    // #pragma GCC optimize(\"conserve-stack\")\n// Old judges\n// #pragma GCC target(\"\
+    sse4.2,popcnt,lzcnt,abm,mmx,fma,bmi,bmi2\")\n// New judges. Test with assert(__builtin_cpu_supports(\"\
+    avx2\"));\n// #pragma GCC target(\"avx2,popcnt,lzcnt,abm,bmi,bmi2,fma,tune=native\"\
+    )\n// Atcoder\n// #pragma GCC target(\"avx2,popcnt,lzcnt,abm,bmi,bmi2,fma\")\n\
+    /*\n#include <ext/pb_ds/assoc_container.hpp>\n#include <ext/pb_ds/tree_policy.hpp>\n\
+    using namespace __gnu_pbds;\ntypedef tree<int,null_type,less<int>,rb_tree_tag,tree_order_statistics_node_update>\
     \ ods;\n- insert(x),erase(x)\n- find_by_order(k): return iterator to the k-th\
     \ smallest element\n- order_of_key(x): the number of elements that are strictly\
     \ smaller\n*/\n#include<bits/stdc++.h>\nusing namespace std;\n\nusing ld = long\
@@ -77,7 +78,7 @@ data:
     \ _print(v...);}\n\nvoid dbg_out() { cerr << endl; }\ntemplate<typename Head,\
     \ typename... Tail> void dbg_out(Head H, Tail... T) { __print(H); if (sizeof...(T))\
     \ cerr << \", \"; dbg_out(T...); }\n#define dbg(...) cerr << \"[\" << #__VA_ARGS__\
-    \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/Math/mod_inv.test.cpp\"\
+    \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/Math/montgomery_multiplication.test.cpp\"\
     \nconst int INF=1e9;\nconst ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT,\
     \ Saigon-----------------\n#line 1 \"Modint/montgomery_multiplication.hpp\"\n\
     /*\n  inv_mod from atcoder library\n  reference:https://github.com/atcoder/ac-library/blob/master/atcoder/math.hpp\n\
@@ -136,14 +137,14 @@ data:
     \ *m, u64 a, u64 k) {\n    u64 ret = m->r1, deg = k;\n    while (deg > 0) {\n\
     \        if (deg & 1) {\n            ret = mul_m64(m, ret, a);\n        }\n  \
     \      a = mul_m64(m, a, a);\n        deg >>= 1;\n    }\n    return m->from(ret);\n\
-    }\n#line 8 \"test/yosupo/Math/mod_inv.test.cpp\"\nbool isPrime(u64 x) {\n    if\
-    \ (x < 64) {\n        return (u64(1) << x) & 0x28208a20a08a28ac;\n    }\n    if\
-    \ (x % 2 == 0) {\n        return false;\n    }\n    \n    Montgomery_u64 m;\n\
-    \    m.set(x);\n    \n    const int k = __builtin_ctzll(x - 1);\n    const u64\
-    \ d = (x - 1) >> k, IV = m.ni, R = m.r1, R2 = m.r2, nR = m.min(R);\n    \n   \
-    \ auto mr7 = [&](u64 t1, u64 t2, u64 t3, u64 t4, u64 t5, u64 t6, u64 t7) {\n \
-    \       u64 r1 = R, r2 = R, r3 = R, r4 = R, r5 = R, r6 = R, r7 = R;\n        t1\
-    \ = mul_m64(&m, t1, R2), t2 = mul_m64(&m, t2, R2), t3 = mul_m64(&m, t3, R2);\n\
+    }\n#line 8 \"test/yosupo/Math/montgomery_multiplication.test.cpp\"\nbool isPrime(u64\
+    \ x) {\n    if (x < 64) {\n        return (u64(1) << x) & 0x28208a20a08a28ac;\n\
+    \    }\n    if (x % 2 == 0) {\n        return false;\n    }\n    \n    Montgomery_u64\
+    \ m;\n    m.set(x);\n    \n    const int k = __builtin_ctzll(x - 1);\n    const\
+    \ u64 d = (x - 1) >> k, IV = m.ni, R = m.r1, R2 = m.r2, nR = m.min(R);\n    \n\
+    \    auto mr7 = [&](u64 t1, u64 t2, u64 t3, u64 t4, u64 t5, u64 t6, u64 t7) {\n\
+    \        u64 r1 = R, r2 = R, r3 = R, r4 = R, r5 = R, r6 = R, r7 = R;\n       \
+    \ t1 = mul_m64(&m, t1, R2), t2 = mul_m64(&m, t2, R2), t3 = mul_m64(&m, t3, R2);\n\
     \        t4 = mul_m64(&m, t4, R2), t5 = mul_m64(&m, t5, R2), t6 = mul_m64(&m,\
     \ t6, R2), t7 = mul_m64(&m, t7, R2);\n        for (u64 b = d; b; b >>= 1) {\n\
     \            if (b & 1) {\n                r1 = mul_m64(&m, r1, t1), r2 = mul_m64(&m,\
@@ -214,15 +215,15 @@ data:
   - Misc/debug.hpp
   - Modint/montgomery_multiplication.hpp
   isVerificationFile: true
-  path: test/yosupo/Math/mod_inv.test.cpp
+  path: test/yosupo/Math/montgomery_multiplication.test.cpp
   requiredBy: []
-  timestamp: '2024-06-04 11:46:33+07:00'
+  timestamp: '2024-06-04 11:49:29+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/yosupo/Math/mod_inv.test.cpp
+documentation_of: test/yosupo/Math/montgomery_multiplication.test.cpp
 layout: document
 redirect_from:
-- /verify/test/yosupo/Math/mod_inv.test.cpp
-- /verify/test/yosupo/Math/mod_inv.test.cpp.html
-title: test/yosupo/Math/mod_inv.test.cpp
+- /verify/test/yosupo/Math/montgomery_multiplication.test.cpp
+- /verify/test/yosupo/Math/montgomery_multiplication.test.cpp.html
+title: test/yosupo/Math/montgomery_multiplication.test.cpp
 ---
