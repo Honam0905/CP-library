@@ -1,6 +1,5 @@
 #pragma once
 #include <cassert>
-using namespace std;
  
 struct fast_modinv {
   using u32 = unsigned int;
