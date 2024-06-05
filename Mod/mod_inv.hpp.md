@@ -24,17 +24,17 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"Mod/mod_inv.hpp\"\n\n#include <cassert>\n#include <type_traits>\n\
-    using namespace std;\n\n// gcd(a, m) != 1 return -1 \ntemplate <typename T>\n\
-    T inv_mod(T a, T m) {\n  if (m == 1) return 0;\n  if (a >= m) a %= m;\n  if (a\
-    \ < 0) a += m;\n  if(__gcd(a,m)!=1) return -1;\n  T b = m, s = 1, t = 0;\n  while\
-    \ (true) {\n    if (a == 1) return s;\n    t -= b / a * s;\n    b %= a;\n    if\
-    \ (b == 1) return t + m;\n    s -= a / b * t;\n    a %= b;\n  }\n}\n"
-  code: "#pragma once\n\n#include <cassert>\n#include <type_traits>\nusing namespace\
-    \ std;\n\n// gcd(a, m) != 1 return -1 \ntemplate <typename T>\nT inv_mod(T a,\
-    \ T m) {\n  if (m == 1) return 0;\n  if (a >= m) a %= m;\n  if (a < 0) a += m;\n\
-    \  if(__gcd(a,m)!=1) return -1;\n  T b = m, s = 1, t = 0;\n  while (true) {\n\
-    \    if (a == 1) return s;\n    t -= b / a * s;\n    b %= a;\n    if (b == 1)\
-    \ return t + m;\n    s -= a / b * t;\n    a %= b;\n  }\n}\n"
+    \n// gcd(a, m) != 1 return -1 \ntemplate <typename T>\nT inv_mod(T a, T m) {\n\
+    \  if (m == 1) return 0;\n  if (a >= m) a %= m;\n  if (a < 0) a += m;\n  if(__gcd(a,m)!=1)\
+    \ return -1;\n  T b = m, s = 1, t = 0;\n  while (true) {\n    if (a == 1) return\
+    \ s;\n    t -= b / a * s;\n    b %= a;\n    if (b == 1) return t + m;\n    s -=\
+    \ a / b * t;\n    a %= b;\n  }\n}\n"
+  code: "#pragma once\n\n#include <cassert>\n#include <type_traits>\n\n// gcd(a, m)\
+    \ != 1 return -1 \ntemplate <typename T>\nT inv_mod(T a, T m) {\n  if (m == 1)\
+    \ return 0;\n  if (a >= m) a %= m;\n  if (a < 0) a += m;\n  if(__gcd(a,m)!=1)\
+    \ return -1;\n  T b = m, s = 1, t = 0;\n  while (true) {\n    if (a == 1) return\
+    \ s;\n    t -= b / a * s;\n    b %= a;\n    if (b == 1) return t + m;\n    s -=\
+    \ a / b * t;\n    a %= b;\n  }\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: Mod/mod_inv.hpp
@@ -42,7 +42,7 @@ data:
   - NT/prime/factorize.hpp
   - Mod/Primitive_root.hpp
   - Modint/Barrett_2.hpp
-  timestamp: '2024-05-29 09:05:18+07:00'
+  timestamp: '2024-06-05 18:50:12+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Math/factorize_yosupo.test.cpp
