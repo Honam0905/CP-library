@@ -12,7 +12,7 @@ data:
     title: Mod/mod_inv.hpp
   - icon: ':heavy_check_mark:'
     path: NT/Fast_NT/fast_modinv.hpp
-    title: NT/Fast_NT/fast_modinv.hpp
+    title: fast mod_inv
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false

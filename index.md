@@ -72,7 +72,7 @@ data:
       title: Binary gcd
     - icon: ':heavy_check_mark:'
       path: NT/Fast_NT/fast_modinv.hpp
-      title: NT/Fast_NT/fast_modinv.hpp
+      title: fast mod_inv
   - name: NT/Misc
     pages:
     - icon: ':warning:'
