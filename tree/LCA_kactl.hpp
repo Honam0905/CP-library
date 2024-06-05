@@ -2,7 +2,7 @@
 #include "DS/Sparse_table.hpp"
 struct LCA {
 	int T = 0;
-	vi time, path, ret;
+	vi time, path, ret,depth;
 	sparsetable<int> rmq;
 
 	LCA(vector<vi>& C) : time(sz(C)), rmq((dfs(C,0,-1), ret)) {}
