@@ -21,17 +21,17 @@ data:
     \ 1][j], jmp[k - 1][j + pw]);\n\t\t}\n\t}\n\tT query(int a, int b) {\n\t\tassert(a\
     \ < b); // or return inf if a == b\n\t\tint dep = 31 - __builtin_clz(b - a);\n\
     \t\treturn min(jmp[dep][a], jmp[dep][b - (1 << dep)]);\n\t}\n};\n#line 3 \"tree/LCA_kactl.hpp\"\
-    \nstruct LCA {\n\tint T = 0;\n\tvi time, path, ret;\n\tsparsetable<int> rmq;\n\
-    \n\tLCA(vector<vi>& C) : time(sz(C)), rmq((dfs(C,0,-1), ret)) {}\n\tvoid dfs(vector<vi>&\
-    \ C, int v, int par) {\n\t\ttime[v] = T++;\n\t\tfor (int y : C[v]) if (y != par)\
-    \ {\n\t\t\tpath.push_back(v), ret.push_back(time[v]);\n\t\t\tdfs(C, y, v);\n\t\
-    \t}\n\t}\n\n\tint lca(int a, int b) {\n\t\tif (a == b) return a;\n\t\ttie(a, b)\
-    \ = minmax(time[a], time[b]);\n\t\treturn path[rmq.query(a, b)];\n\t}\n\t//dist(a,b){return\
-    \ depth[a] + depth[b] - 2*depth[lca(a,b)];}\n};\n"
+    \nstruct LCA {\n\tint T = 0;\n\tvi time, path, ret,depth;\n\tsparsetable<int>\
+    \ rmq;\n\n\tLCA(vector<vi>& C) : time(sz(C)), rmq((dfs(C,0,-1), ret)) {}\n\tvoid\
+    \ dfs(vector<vi>& C, int v, int par) {\n\t\ttime[v] = T++;\n\t\tfor (int y : C[v])\
+    \ if (y != par) {\n\t\t\tpath.push_back(v), ret.push_back(time[v]);\n\t\t\tdfs(C,\
+    \ y, v);\n\t\t}\n\t}\n\n\tint lca(int a, int b) {\n\t\tif (a == b) return a;\n\
+    \t\ttie(a, b) = minmax(time[a], time[b]);\n\t\treturn path[rmq.query(a, b)];\n\
+    \t}\n\t//dist(a,b){return depth[a] + depth[b] - 2*depth[lca(a,b)];}\n};\n"
   code: "#pragma once\n#include \"DS/Sparse_table.hpp\"\nstruct LCA {\n\tint T = 0;\n\
-    \tvi time, path, ret;\n\tsparsetable<int> rmq;\n\n\tLCA(vector<vi>& C) : time(sz(C)),\
-    \ rmq((dfs(C,0,-1), ret)) {}\n\tvoid dfs(vector<vi>& C, int v, int par) {\n\t\t\
-    time[v] = T++;\n\t\tfor (int y : C[v]) if (y != par) {\n\t\t\tpath.push_back(v),\
+    \tvi time, path, ret,depth;\n\tsparsetable<int> rmq;\n\n\tLCA(vector<vi>& C) :\
+    \ time(sz(C)), rmq((dfs(C,0,-1), ret)) {}\n\tvoid dfs(vector<vi>& C, int v, int\
+    \ par) {\n\t\ttime[v] = T++;\n\t\tfor (int y : C[v]) if (y != par) {\n\t\t\tpath.push_back(v),\
     \ ret.push_back(time[v]);\n\t\t\tdfs(C, y, v);\n\t\t}\n\t}\n\n\tint lca(int a,\
     \ int b) {\n\t\tif (a == b) return a;\n\t\ttie(a, b) = minmax(time[a], time[b]);\n\
     \t\treturn path[rmq.query(a, b)];\n\t}\n\t//dist(a,b){return depth[a] + depth[b]\
@@ -41,7 +41,7 @@ data:
   isVerificationFile: false
   path: tree/LCA_kactl.hpp
   requiredBy: []
-  timestamp: '2024-05-22 23:06:51+07:00'
+  timestamp: '2024-06-05 22:01:24+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Tree/LCA_yosupo_2.test.cpp
