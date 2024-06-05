@@ -21,7 +21,7 @@
 "test/yosupo/Math/primitive_root.test.cpp": "2024-06-05 18:50:12 +0700",
 "test/yosupo/Sample/fast_modinv.test.cpp": "2024-06-05 19:06:59 +0700",
 "test/yosupo/Tree/LCA_yosupo.test.cpp": "2024-05-20 13:19:42 +0700",
-"test/yosupo/Tree/LCA_yosupo_2.test.cpp": "2024-05-22 23:06:51 +0700",
+"test/yosupo/Tree/LCA_yosupo_2.test.cpp": "2024-06-05 22:01:24 +0700",
 "test/yosupo/Tree/tree_diameter_yosupo.test.cpp": "2024-05-20 13:22:14 +0700",
 "test/yosupo/string/Zalgorithm.test.cpp": "2024-05-26 22:08:31 +0700"
 }
