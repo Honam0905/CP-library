@@ -70,7 +70,7 @@ data:
     - icon: ':warning:'
       path: NT/Fast_NT/binary_gcd.hpp
       title: Binary gcd
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: NT/Fast_NT/fast_modinv.hpp
       title: NT/Fast_NT/fast_modinv.hpp
   - name: NT/Misc
@@ -193,6 +193,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Math/primitive_root.test.cpp
       title: test/yosupo/Math/primitive_root.test.cpp
+  - name: test/yosupo/Sample
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Sample/fast_modinv.test.cpp
+      title: test/yosupo/Sample/fast_modinv.test.cpp
   - name: test/yosupo/Tree
     pages:
     - icon: ':heavy_check_mark:'

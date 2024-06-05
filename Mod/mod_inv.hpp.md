@@ -18,6 +18,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/primitive_root.test.cpp
     title: test/yosupo/Math/primitive_root.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Sample/fast_modinv.test.cpp
+    title: test/yosupo/Sample/fast_modinv.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -47,6 +50,7 @@ data:
   verifiedWith:
   - test/yosupo/Math/factorize_yosupo.test.cpp
   - test/yosupo/Math/primitive_root.test.cpp
+  - test/yosupo/Sample/fast_modinv.test.cpp
 documentation_of: Mod/mod_inv.hpp
 layout: document
 redirect_from:

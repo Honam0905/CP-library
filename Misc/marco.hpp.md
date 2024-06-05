@@ -61,6 +61,9 @@ data:
     path: test/yosupo/Math/primitive_root.test.cpp
     title: test/yosupo/Math/primitive_root.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Sample/fast_modinv.test.cpp
+    title: test/yosupo/Sample/fast_modinv.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/LCA_yosupo.test.cpp
     title: test/yosupo/Tree/LCA_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
@@ -183,6 +186,7 @@ data:
   - test/yosupo/Tree/tree_diameter_yosupo.test.cpp
   - test/yosupo/Tree/LCA_yosupo_2.test.cpp
   - test/yosupo/Tree/LCA_yosupo.test.cpp
+  - test/yosupo/Sample/fast_modinv.test.cpp
 documentation_of: Misc/marco.hpp
 layout: document
 redirect_from:

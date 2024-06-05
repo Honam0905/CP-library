@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Sample/fast_modinv.test.cpp
+    title: test/yosupo/Sample/fast_modinv.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"NT/Fast_NT/fast_modinv.hpp\"\n#include <cassert>\n \nstruct\
@@ -57,8 +60,9 @@ data:
   path: NT/Fast_NT/fast_modinv.hpp
   requiredBy: []
   timestamp: '2024-06-05 18:52:37+07:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/yosupo/Sample/fast_modinv.test.cpp
 documentation_of: NT/Fast_NT/fast_modinv.hpp
 layout: document
 redirect_from:
