@@ -2,7 +2,6 @@
 
 #include <cassert>
 #include <type_traits>
-using namespace std;
 
 // gcd(a, m) != 1 return -1 
 template <typename T>
