@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: DS/Sparse_table.hpp
     title: Sparse table(KACTL version)
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Misc/debug.hpp
     title: Misc/debug.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Misc/marco.hpp
     title: Misc/marco.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: tree/LCA_kactl.hpp
     title: tree/LCA_kactl.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/lca
@@ -89,16 +89,14 @@ data:
     \t\t\t\tjmp[k][j] = min(jmp[k - 1][j], jmp[k - 1][j + pw]);\n\t\t}\n\t}\n\tT query(int\
     \ a, int b) {\n\t\tassert(a < b); // or return inf if a == b\n\t\tint dep = 31\
     \ - __builtin_clz(b - a);\n\t\treturn min(jmp[dep][a], jmp[dep][b - (1 << dep)]);\n\
-    \t}\n};\n#line 3 \"tree/LCA_kactl.hpp\"\nstruct LCA {\n    int T = 0;\n    vi\
-    \ time, path, ret, depth;\n    sparsetable<int> rmq;\n\n    LCA(vector<vi>& C)\
-    \ : time(sz(C)), depth(sz(C)), rmq((dfs(C, 0, -1, 0), ret)) {}\n\n    void dfs(vector<vi>&\
-    \ C, int v, int par, int d) {\n        time[v] = T++;\n        depth[v] = d;\n\
-    \        for (int y : C[v]) if (y != par) {\n            path.push_back(v), ret.push_back(time[v]);\n\
-    \            dfs(C, y, v, d + 1);\n            path.push_back(v), ret.push_back(time[v]);\n\
-    \        }\n    }\n\n    int lca(int a, int b) {\n        if (a == b) return a;\n\
-    \        tie(a, b) = minmax(time[a], time[b]);\n        return path[rmq.query(a,\
-    \ b)];\n    }\n\n    int dist(int a, int b) { return depth[a] + depth[b] - 2 *\
-    \ depth[lca(a, b)]; }\n};\n#line 10 \"test/yosupo/Tree/LCA_yosupo_2.test.cpp\"\
+    \t}\n};\n#line 3 \"tree/LCA_kactl.hpp\"\nstruct LCA {\n\tint T = 0;\n\tvi time,\
+    \ path, ret,depth;\n\tsparsetable<int> rmq;\n\n\tLCA(vector<vi>& C) : time(sz(C)),\
+    \ rmq((dfs(C,0,-1), ret)) {}\n\tvoid dfs(vector<vi>& C, int v, int par) {\n\t\t\
+    time[v] = T++;\n\t\tfor (int y : C[v]) if (y != par) {\n\t\t\tpath.push_back(v),\
+    \ ret.push_back(time[v]);\n\t\t\tdfs(C, y, v);\n\t\t}\n\t}\n\n\tint lca(int a,\
+    \ int b) {\n\t\tif (a == b) return a;\n\t\ttie(a, b) = minmax(time[a], time[b]);\n\
+    \t\treturn path[rmq.query(a, b)];\n\t}\n\tint dist(int a,int b){return depth[a]\
+    \ + depth[b] - 2*depth[lca(a,b)];}\n};\n#line 10 \"test/yosupo/Tree/LCA_yosupo_2.test.cpp\"\
     \n\nint main() {\n    int n,q,u,v,x; cin>>n>>q;\n    vvc<int>g(n);\n    For(i,1,n){\n\
     \        cin>>x;\n        g[i].push_back(x);\n        g[x].push_back(i);\n   \
     \ }\n    LCA lca(g);\n    while(q--){\n        cin>>u>>v;\n        cout<<lca.lca(u,v)<<'\\\
@@ -119,8 +117,8 @@ data:
   isVerificationFile: true
   path: test/yosupo/Tree/LCA_yosupo_2.test.cpp
   requiredBy: []
-  timestamp: '2024-06-26 10:37:02+07:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2024-06-26 10:40:27+07:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/yosupo/Tree/LCA_yosupo_2.test.cpp
 layout: document

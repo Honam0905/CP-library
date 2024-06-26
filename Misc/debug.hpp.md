@@ -66,7 +66,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/LCA_yosupo.test.cpp
     title: test/yosupo/Tree/LCA_yosupo.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Tree/LCA_yosupo_2.test.cpp
     title: test/yosupo/Tree/LCA_yosupo_2.test.cpp
   - icon: ':heavy_check_mark:'
@@ -75,9 +75,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/string/Zalgorithm.test.cpp
     title: test/yosupo/string/Zalgorithm.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: '#line 1 "Misc/debug.hpp"
@@ -201,7 +201,7 @@ data:
   path: Misc/debug.hpp
   requiredBy: []
   timestamp: '2024-05-13 12:48:47+07:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/yosupo/Ds/PARS_yosupo.test.cpp
   - test/yosupo/Ds/unionfind_yosupo.test.cpp

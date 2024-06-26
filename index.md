@@ -9,7 +9,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DS/Segment_tree.hpp
       title: Segment tree
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: DS/Sparse_table.hpp
       title: Sparse table(KACTL version)
     - icon: ':heavy_check_mark:'
@@ -17,13 +17,13 @@ data:
       title: DS/fenwick_tree.hpp
   - name: Misc
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Misc/debug.hpp
       title: Misc/debug.hpp
     - icon: ':warning:'
       path: Misc/faster_io.hpp
       title: Misc/faster_io.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Misc/marco.hpp
       title: Misc/marco.hpp
   - name: Mod
@@ -113,7 +113,7 @@ data:
       title: Z algorithm
   - name: tree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: tree/LCA_kactl.hpp
       title: tree/LCA_kactl.hpp
     - icon: ':heavy_check_mark:'
@@ -203,7 +203,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Tree/LCA_yosupo.test.cpp
       title: test/yosupo/Tree/LCA_yosupo.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: test/yosupo/Tree/LCA_yosupo_2.test.cpp
       title: test/yosupo/Tree/LCA_yosupo_2.test.cpp
     - icon: ':heavy_check_mark:'
