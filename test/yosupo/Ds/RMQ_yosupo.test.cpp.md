@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: DS/Sparse_table.hpp
     title: Sparse table(KACTL version)
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Misc/debug.hpp
     title: Misc/debug.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Misc/marco.hpp
     title: Misc/marco.hpp
   _extendedRequiredBy: []

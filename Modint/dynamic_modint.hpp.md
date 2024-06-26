@@ -119,8 +119,8 @@ data:
   timestamp: '2024-05-29 22:19:57+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Math/mod_sqrt_yosupo.test.cpp
   - test/yosupo/Math/BC_prime_mod.test.cpp
+  - test/yosupo/Math/mod_sqrt_yosupo.test.cpp
 documentation_of: Modint/dynamic_modint.hpp
 layout: document
 redirect_from:

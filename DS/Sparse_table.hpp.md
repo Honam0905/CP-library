@@ -2,19 +2,19 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: tree/LCA_kactl.hpp
     title: tree/LCA_kactl.hpp
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Ds/RMQ_yosupo.test.cpp
     title: test/yosupo/Ds/RMQ_yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/yosupo/Tree/LCA_yosupo_2.test.cpp
     title: test/yosupo/Tree/LCA_yosupo_2.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"DS/Sparse_table.hpp\"\n\ntemplate<class T>\nstruct sparsetable\
@@ -37,7 +37,7 @@ data:
   requiredBy:
   - tree/LCA_kactl.hpp
   timestamp: '2024-05-22 23:06:51+07:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/yosupo/Ds/RMQ_yosupo.test.cpp
   - test/yosupo/Tree/LCA_yosupo_2.test.cpp

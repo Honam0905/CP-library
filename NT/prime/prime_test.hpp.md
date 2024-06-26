@@ -107,9 +107,9 @@ data:
   timestamp: '2024-05-30 11:12:13+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Math/factorize_yosupo.test.cpp
-  - test/yosupo/Math/primitive_root.test.cpp
   - test/yosupo/Math/prime_test_yosupo.test.cpp
+  - test/yosupo/Math/primitive_root.test.cpp
+  - test/yosupo/Math/factorize_yosupo.test.cpp
 documentation_of: NT/prime/prime_test.hpp
 layout: document
 redirect_from:

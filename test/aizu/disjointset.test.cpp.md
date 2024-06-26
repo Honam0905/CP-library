@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: DS/DSU.hpp
     title: DSU
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Misc/debug.hpp
     title: Misc/debug.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Misc/marco.hpp
     title: Misc/marco.hpp
   _extendedRequiredBy: []
