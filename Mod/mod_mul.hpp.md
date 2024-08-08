@@ -50,15 +50,15 @@ data:
   isVerificationFile: false
   path: Mod/mod_mul.hpp
   requiredBy:
-  - NT/prime/factorize.hpp
-  - NT/prime/prime_test.hpp
   - Mod/Primitive_root.hpp
+  - NT/prime/prime_test.hpp
+  - NT/prime/factorize.hpp
   timestamp: '2024-05-30 11:12:13+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Math/prime_test_yosupo.test.cpp
-  - test/yosupo/Math/primitive_root.test.cpp
   - test/yosupo/Math/factorize_yosupo.test.cpp
+  - test/yosupo/Math/primitive_root.test.cpp
+  - test/yosupo/Math/prime_test_yosupo.test.cpp
 documentation_of: Mod/mod_mul.hpp
 layout: document
 ---
