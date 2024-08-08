@@ -18,8 +18,6 @@
 
 namespace yosupo {
 
-namespace internal {
-
 template <class T>
 using is_signed_int128 =
     typename std::conditional<std::is_same<T, __int128_t>::value ||
@@ -43,8 +41,8 @@ using make_unsigned_int128 =
 template <class T>
 using is_integral =
     typename std::conditional<std::is_integral<T>::value ||
-                                  internal::is_signed_int128<T>::value ||
-                                  internal::is_unsigned_int128<T>::value,
+                                  is_signed_int128<T>::value ||
+                                  is_unsigned_int128<T>::value,
                               std::true_type,
                               std::false_type>::type;
 
@@ -81,12 +79,6 @@ template <class T>
 using is_unsigned_int_t = std::enable_if_t<is_unsigned_int<T>::value>;
 
 template <class T> using to_unsigned_t = typename to_unsigned<T>::type;
-
-}  // namespace internal
-
-}  // namespace yosupo
-
-namespace yosupo {
 
 struct Scanner {
   public:
@@ -147,10 +139,10 @@ struct Scanner {
     }
 
     template <class T,
-              internal::is_signed_int_t<T>* = nullptr,
+              is_signed_int_t<T>* = nullptr,
               std::enable_if_t<!std::is_same<T, char>::value>* = nullptr>
     bool read_single(T& sref) {
-        using U = internal::to_unsigned_t<T>;
+        using U = to_unsigned_t<T>;
         if (!skip_space<50>()) return false;
         bool neg = false;
         if (line[st] == '-') {
@@ -165,7 +157,7 @@ struct Scanner {
         return true;
     }
     template <class U,
-              internal::is_unsigned_int_t<U>* = nullptr,
+              is_unsigned_int_t<U>* = nullptr,
               std::enable_if_t<!std::is_same<U, char>::value>* = nullptr>
     bool read_single(U& ref) {
         if (!skip_space<50>()) return false;
@@ -264,10 +256,10 @@ struct Printer {
     }
 
     template <class T,
-              internal::is_signed_int_t<T>* = nullptr,
+              is_signed_int_t<T>* = nullptr,
               std::enable_if_t<!std::is_same<char, T>::value>* = nullptr>
     void write_single(const T& val) {
-        using U = internal::to_unsigned_t<T>;
+        using U = to_unsigned_t<T>;
         if (val == 0) {
             write_single('0');
             return;
@@ -281,7 +273,7 @@ struct Printer {
         write_unsigned(uval);
     }
 
-    template <class U, internal::is_unsigned_int_t<U>* = nullptr>
+    template <class U, is_unsigned_int_t<U>* = nullptr>
     void write_single(U uval) {
         if (uval == 0) {
             write_single('0');
@@ -301,7 +293,7 @@ struct Printer {
     }
 
     template <class U,
-              internal::is_unsigned_int_t<U>* = nullptr,
+              is_unsigned_int_t<U>* = nullptr,
               std::enable_if_t<2 >= sizeof(U)>* = nullptr>
     void write_unsigned(U uval) {
         size_t len = calc_len(uval);
@@ -321,7 +313,7 @@ struct Printer {
     }
 
     template <class U,
-              internal::is_unsigned_int_t<U>* = nullptr,
+              is_unsigned_int_t<U>* = nullptr,
               std::enable_if_t<4 == sizeof(U)>* = nullptr>
     void write_unsigned(U uval) {
         std::array<char, 8> buf;
@@ -349,7 +341,7 @@ struct Printer {
     }
 
     template <class U,
-              internal::is_unsigned_int_t<U>* = nullptr,
+              is_unsigned_int_t<U>* = nullptr,
               std::enable_if_t<8 == sizeof(U)>* = nullptr>
     void write_unsigned(U uval) {
         size_t len = calc_len(uval);
@@ -370,7 +362,7 @@ struct Printer {
 
     template <
         class U,
-        std::enable_if_t<internal::is_unsigned_int128<U>::value>* = nullptr>
+        std::enable_if_t<is_unsigned_int128<U>::value>* = nullptr>
     void write_unsigned(U uval) {
         static std::array<char, 50> buf;
         size_t len = 0;
@@ -419,9 +411,7 @@ std::array<unsigned long long, 20> Printer::tens = [] {
 }();
 
 }  // namespace yosupo
-//sc.read(type) to enter input
-//sc.write(type) to print out answer
-//sc.writeln() to go break the line
+
 using namespace yosupo;
 Scanner sc(stdin);
 Printer pr(stdout);
