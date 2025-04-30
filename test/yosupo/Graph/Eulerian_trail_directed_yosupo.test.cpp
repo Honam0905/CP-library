@@ -4,7 +4,7 @@
 const int INF=1e9;
 const ll INFI=1e15;
 //----------Author: Nguyen Ho Nam,UIT, Saigon-----------------
-#include "Graph/Eulerian_trail (directed).hpp"
+#include "Graph/Eulerian_trail.hpp"
 int main(){
   int t; cin>>t;
   while(t--){
