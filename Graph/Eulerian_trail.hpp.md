@@ -2,35 +2,29 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp
-    title: test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/Graph/Eulerian_trail_undirected_yosupo.test.cpp
-    title: test/yosupo/Graph/Eulerian_trail_undirected_yosupo.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"Graph/Eulerian_trail (directed).hpp\"\ntemplate<typename\
-    \ T,bool directed>\nstruct eulerian_trail {\n    int n, m, E, ptr = 0;\n    vector<int>head,\
-    \ link, to, eid, it_prev, it_cur;\n    vector<bool>used;\n    vector<T>path;\n\
-    \    vector<int>edge_path;\n\n    eulerian_trail(int _n, int _m) : n(_n), m(_m)\
-    \ {\n        E = directed ? m : 2*m;\n        head.assign(n, 0);\n        link.assign(E+1,\
-    \ 0);\n        to.assign(E+1, 0);\n        eid.assign(E+1, 0);\n        used.assign(m,\
-    \ false);\n        it_prev.assign(n, 0);\n        it_cur.assign(n, 0);\n    }\n\
-    \n    void add_edge(int u, int v, int id) {\n        auto ins = [&](int U, int\
-    \ V, int EID){\n            int idx = ++ptr;\n            to[idx] = V;\n     \
-    \       eid[idx] = EID;\n            int old = head[U];\n            link[idx]\
-    \ = 0 ^ old;\n            if(old) link[old] ^= 0 ^ idx;\n            head[U] =\
-    \ idx;\n        };\n        if constexpr(directed) ins(u, v, id);\n        else\
-    \ { ins(u, v, id); ins(v, u, id); }\n    }\n\n    bool is_eulerian() {\n     \
-    \   if constexpr(directed) {\n            int start=0, end=0;\n            vector<int>in(n,0),\
-    \ out(n,0);\n            for(int u=0; u<n; u++){\n                int prev=0,\
-    \ cur=head[u];\n                while(cur){\n                    out[u]++; in[to[cur]]++;\n\
-    \                    int nxt = prev ^ link[cur];\n                    prev = cur;\
+  bundledCode: "#line 2 \"Graph/Eulerian_trail.hpp\"\ntemplate<typename T,bool directed>\n\
+    struct eulerian_trail {\n    int n, m, E, ptr = 0;\n    vector<int>head, link,\
+    \ to, eid, it_prev, it_cur;\n    vector<bool>used;\n    vector<T>path;\n    vector<int>edge_path;\n\
+    \n    eulerian_trail(int _n, int _m) : n(_n), m(_m) {\n        E = directed ?\
+    \ m : 2*m;\n        head.assign(n, 0);\n        link.assign(E+1, 0);\n       \
+    \ to.assign(E+1, 0);\n        eid.assign(E+1, 0);\n        used.assign(m, false);\n\
+    \        it_prev.assign(n, 0);\n        it_cur.assign(n, 0);\n    }\n\n    void\
+    \ add_edge(int u, int v, int id) {\n        auto ins = [&](int U, int V, int EID){\n\
+    \            int idx = ++ptr;\n            to[idx] = V;\n            eid[idx]\
+    \ = EID;\n            int old = head[U];\n            link[idx] = 0 ^ old;\n \
+    \           if(old) link[old] ^= 0 ^ idx;\n            head[U] = idx;\n      \
+    \  };\n        if constexpr(directed) ins(u, v, id);\n        else { ins(u, v,\
+    \ id); ins(v, u, id); }\n    }\n\n    bool is_eulerian() {\n        if constexpr(directed)\
+    \ {\n            int start=0, end=0;\n            vector<int>in(n,0), out(n,0);\n\
+    \            for(int u=0; u<n; u++){\n                int prev=0, cur=head[u];\n\
+    \                while(cur){\n                    out[u]++; in[to[cur]]++;\n \
+    \                   int nxt = prev ^ link[cur];\n                    prev = cur;\
     \ cur = nxt;\n                }\n            }\n            for(int i=0;i<n;i++){\n\
     \                int d = out[i] - in[i];\n                if(d==1) start++;\n\
     \                else if(d==-1) end++;\n                else if(d!=0) return false;\n\
@@ -122,17 +116,15 @@ data:
     };\n"
   dependsOn: []
   isVerificationFile: false
-  path: Graph/Eulerian_trail (directed).hpp
+  path: Graph/Eulerian_trail.hpp
   requiredBy: []
-  timestamp: '2025-04-30 09:00:15+07:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/yosupo/Graph/Eulerian_trail_undirected_yosupo.test.cpp
-  - test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp
-documentation_of: Graph/Eulerian_trail (directed).hpp
+  timestamp: '2025-04-30 09:28:18+07:00'
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
+documentation_of: Graph/Eulerian_trail.hpp
 layout: document
 redirect_from:
-- /library/Graph/Eulerian_trail (directed).hpp
-- /library/Graph/Eulerian_trail (directed).hpp.html
-title: Graph/Eulerian_trail (directed).hpp
+- /library/Graph/Eulerian_trail.hpp
+- /library/Graph/Eulerian_trail.hpp.html
+title: Graph/Eulerian_trail.hpp
 ---
