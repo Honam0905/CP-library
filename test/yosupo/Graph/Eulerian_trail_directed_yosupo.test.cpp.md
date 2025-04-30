@@ -20,11 +20,11 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/eulerian_trail_directed
     links:
     - https://judge.yosupo.jp/problem/eulerian_trail_directed
-  bundledCode: "#line 1 \"test/yosupo/Graph/Eulerian_trail_yosupo.test.cpp\"\n#define\
-    \ PROBLEM \"https://judge.yosupo.jp/problem/eulerian_trail_directed\"\n#line 2\
-    \ \"Misc/marco.hpp\"\n// Judges with GCC >= 12 only needs Ofast\n// #pragma GCC\
-    \ optimize(\"O3,no-stack-protector,fast-math,unroll-loops,tree-vectorize\")\n\
-    // MLE optimization\n// #pragma GCC optimize(\"conserve-stack\")\n// Old judges\n\
+  bundledCode: "#line 1 \"test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp\"\
+    \n#define PROBLEM \"https://judge.yosupo.jp/problem/eulerian_trail_directed\"\n\
+    #line 2 \"Misc/marco.hpp\"\n// Judges with GCC >= 12 only needs Ofast\n// #pragma\
+    \ GCC optimize(\"O3,no-stack-protector,fast-math,unroll-loops,tree-vectorize\"\
+    )\n// MLE optimization\n// #pragma GCC optimize(\"conserve-stack\")\n// Old judges\n\
     // #pragma GCC target(\"sse4.2,popcnt,lzcnt,abm,mmx,fma,bmi,bmi2\")\n// New judges.\
     \ Test with assert(__builtin_cpu_supports(\"avx2\"));\n// #pragma GCC target(\"\
     avx2,popcnt,lzcnt,abm,bmi,bmi2,fma,tune=native\")\n// Atcoder\n// #pragma GCC\
@@ -78,7 +78,7 @@ data:
     \ _print(v...);}\n\nvoid dbg_out() { cerr << endl; }\ntemplate<typename Head,\
     \ typename... Tail> void dbg_out(Head H, Tail... T) { __print(H); if (sizeof...(T))\
     \ cerr << \", \"; dbg_out(T...); }\n#define dbg(...) cerr << \"[\" << #__VA_ARGS__\
-    \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/Graph/Eulerian_trail_yosupo.test.cpp\"\
+    \ << \"]:\"; dbg_out(__VA_ARGS__);\n#line 4 \"test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp\"\
     \nconst int INF=1e9;\nconst ll INFI=1e15;\n//----------Author: Nguyen Ho Nam,UIT,\
     \ Saigon-----------------\n#line 2 \"Graph/Eulerian_trail (directed).hpp\"\ntemplate<typename\
     \ T,bool directed>\nstruct eulerian_trail {\n    int n, m, E, ptr = 0;\n    vector<int>head,\
@@ -132,8 +132,8 @@ data:
     \            st.pop();\n            CONTINUE: ;\n        }\n        if((int)path.size()!=m+1)\n\
     \            return false;\n        reverse(path.begin(),path.end());\n      \
     \  reverse(edge_path.begin(),edge_path.end());\n        return true;\n    }\n\
-    };\n#line 8 \"test/yosupo/Graph/Eulerian_trail_yosupo.test.cpp\"\nint main(){\n\
-    \  int t; cin>>t;\n  while(t--){\n    int n,m; cin>>n>>m;\n    eulerian_trail<int,true>et(n,m);\n\
+    };\n#line 8 \"test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp\"\nint\
+    \ main(){\n  int t; cin>>t;\n  while(t--){\n    int n,m; cin>>n>>m;\n    eulerian_trail<int,true>et(n,m);\n\
     \    rep(i,m){\n        int u,v; cin>>u>>v;\n        et.add_edge(u,v,i);\n   \
     \ }\n     if(!et.get_trail()){\n        cout<<\"No\"<<'\\n';\n     }else{\n  \
     \      cout<<\"Yes\"<<'\\n';\n        rep(i,(int)et.path.size()){\n          \
@@ -158,15 +158,15 @@ data:
   - Misc/debug.hpp
   - Graph/Eulerian_trail (directed).hpp
   isVerificationFile: true
-  path: test/yosupo/Graph/Eulerian_trail_yosupo.test.cpp
+  path: test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp
   requiredBy: []
-  timestamp: '2025-04-30 09:16:36+07:00'
+  timestamp: '2025-04-30 09:19:38+07:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/yosupo/Graph/Eulerian_trail_yosupo.test.cpp
+documentation_of: test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp
 layout: document
 redirect_from:
-- /verify/test/yosupo/Graph/Eulerian_trail_yosupo.test.cpp
-- /verify/test/yosupo/Graph/Eulerian_trail_yosupo.test.cpp.html
-title: test/yosupo/Graph/Eulerian_trail_yosupo.test.cpp
+- /verify/test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp
+- /verify/test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp.html
+title: test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp
 ---
