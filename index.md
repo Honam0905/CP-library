@@ -166,6 +166,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/yosupo/Graph/eulerian_trail_directed.test.cpp
       title: test/yosupo/Graph/eulerian_trail_directed.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/yosupo/Graph/eulerian_trail_undirected.test.cpp
+      title: test/yosupo/Graph/eulerian_trail_undirected.test.cpp
   - name: test/yosupo/Math
     pages:
     - icon: ':heavy_check_mark:'

@@ -31,6 +31,9 @@ data:
     path: test/yosupo/Graph/eulerian_trail_directed.test.cpp
     title: test/yosupo/Graph/eulerian_trail_directed.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Graph/eulerian_trail_undirected.test.cpp
+    title: test/yosupo/Graph/eulerian_trail_undirected.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Math/BC_prime_mod.test.cpp
     title: test/yosupo/Math/BC_prime_mod.test.cpp
   - icon: ':heavy_check_mark:'
@@ -214,6 +217,7 @@ data:
   - test/yosupo/Tree/LCA_yosupo_2.test.cpp
   - test/yosupo/Tree/tree_diameter_yosupo.test.cpp
   - test/yosupo/Sample/fast_modinv.test.cpp
+  - test/yosupo/Graph/eulerian_trail_undirected.test.cpp
   - test/yosupo/Graph/MST_yosupo.test.cpp
   - test/yosupo/Graph/eulerian_trail_directed.test.cpp
   - test/yosupo/string/Zalgorithm.test.cpp
