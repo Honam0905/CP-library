@@ -25,6 +25,9 @@ data:
     path: test/yosupo/Ds/unionfind_yosupo.test.cpp
     title: test/yosupo/Ds/unionfind_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/yosupo/Eulerian_trail_yosupo.test.cpp
+    title: test/yosupo/Eulerian_trail_yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/MST_yosupo.test.cpp
     title: test/yosupo/Graph/MST_yosupo.test.cpp
   - icon: ':heavy_check_mark:'
@@ -170,6 +173,7 @@ data:
   - test/yosupo/Tree/LCA_yosupo.test.cpp
   - test/yosupo/Tree/LCA_yosupo_2.test.cpp
   - test/yosupo/Tree/tree_diameter_yosupo.test.cpp
+  - test/yosupo/Eulerian_trail_yosupo.test.cpp
   - test/yosupo/Sample/fast_modinv.test.cpp
   - test/yosupo/Graph/MST_yosupo.test.cpp
   - test/yosupo/string/Zalgorithm.test.cpp
