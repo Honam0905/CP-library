@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp
     title: test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: test/yosupo/Graph/Eulerian_trail_undirected_yosupo.test.cpp
+    title: test/yosupo/Graph/Eulerian_trail_undirected_yosupo.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -124,6 +127,7 @@ data:
   timestamp: '2025-04-30 09:00:15+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - test/yosupo/Graph/Eulerian_trail_undirected_yosupo.test.cpp
   - test/yosupo/Graph/Eulerian_trail_directed_yosupo.test.cpp
 documentation_of: Graph/Eulerian_trail (directed).hpp
 layout: document
