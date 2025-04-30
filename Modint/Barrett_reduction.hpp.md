@@ -71,9 +71,9 @@ data:
   isVerificationFile: false
   path: Modint/Barrett_reduction.hpp
   requiredBy:
+  - Modint/dynamic_modint.hpp
   - Mod/mod_pow.hpp
   - Mod/mod_sqrt.hpp
-  - Modint/dynamic_modint.hpp
   timestamp: '2024-05-29 22:19:57+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

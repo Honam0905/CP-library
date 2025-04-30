@@ -51,8 +51,8 @@ data:
   path: Mod/mod_mul.hpp
   requiredBy:
   - Mod/Primitive_root.hpp
-  - NT/prime/prime_test.hpp
   - NT/prime/factorize.hpp
+  - NT/prime/prime_test.hpp
   timestamp: '2024-05-30 11:12:13+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

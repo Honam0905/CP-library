@@ -39,8 +39,8 @@ data:
   timestamp: '2024-05-22 23:06:51+07:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/yosupo/Ds/RMQ_yosupo.test.cpp
   - test/yosupo/Tree/LCA_yosupo_2.test.cpp
+  - test/yosupo/Ds/RMQ_yosupo.test.cpp
 documentation_of: DS/Sparse_table.hpp
 layout: document
 title: Sparse table(KACTL version)

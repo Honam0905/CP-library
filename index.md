@@ -15,6 +15,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: DS/fenwick_tree.hpp
       title: DS/fenwick_tree.hpp
+  - name: Graph
+    pages:
+    - icon: ':warning:'
+      path: Graph/Eulerian_trail (directed).hpp
+      title: Graph/Eulerian_trail (directed).hpp
   - name: Misc
     pages:
     - icon: ':heavy_check_mark:'
